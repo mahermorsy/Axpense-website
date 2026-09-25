@@ -1,0 +1,13 @@
+@api = http://localhost:5080
+
+### Login
+POST {{api}}/api/auth/login
+Content-Type: application/json
+
+{ "email": "admin@axpense.local", "password": "Admin12345!" }
+
+### Submit a lead (public)
+POST {{api}}/api/public/leads
+Content-Type: application/json
+
+{ "name": "Test Lead", "company": "Nile Logistics", "email": "test@example.com", "phone": "+20 100 000 0000", "industry": "Logistics & Transportation", "sourcePage": "/demo", "lang": "en" }

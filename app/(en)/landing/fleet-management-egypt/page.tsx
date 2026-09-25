@@ -1,0 +1,7 @@
+import type { Metadata } from 'next';
+import { CampaignLandingPage, type CampaignData } from '@/components/landing/CampaignLandingPage';
+import { buildMetadata } from '@/lib/seo';
+
+const data: CampaignData = { title:'Fleet Management Software for Businesses in Egypt', description:'Manage vehicles, drivers, maintenance, fuel, expenses and fleet records from one platform built around day-to-day operations in Egypt', problem:['Vehicle records spread across spreadsheets','Maintenance dates and documents tracked manually','Fuel and operating costs difficult to review by vehicle','Driver and vehicle assignments hard to keep current'], benefits:['Centralize vehicle and driver records','Keep maintenance and inspection information connected to vehicles','Track fuel and operating expenses in context','Use reports instead of manual monthly consolidation'], features:['Fleet management','Vehicle management','Preventive maintenance','Fuel management','Expense management','Reports & analytics'], faq:[{q:'What businesses can use Axpense?',a:'Axpense is designed for businesses that manage vehicles, fleets, equipment or physical assets, including logistics, transportation, construction, manufacturing and other operations.'},{q:'Can I request a demo?',a:'Yes. Submit the form on this page and the Axpense team can follow up with your requirements.'}] };
+export const metadata: Metadata = buildMetadata({ title:data.title, description:data.description, path:'/landing/fleet-management-egypt' });
+export default function Page() { return <CampaignLandingPage data={data} />; }

@@ -1,0 +1,226 @@
+[
+  {
+    "page": "home",
+    "language": "en",
+    "question": "Who is Axpense built for?",
+    "answer": "Businesses in Egypt and MENA that manage vehicles, equipment, or other physical assets — logistics, construction, manufacturing, real estate, and more.",
+    "sortOrder": 0
+  },
+  {
+    "page": "home",
+    "language": "en",
+    "question": "How do I get started?",
+    "answer": "Book a demo. The Axpense team will walk you through the product and set up your account.",
+    "sortOrder": 1
+  },
+  {
+    "page": "home",
+    "language": "en",
+    "question": "Does Axpense work in Arabic?",
+    "answer": "The Axpense website includes Arabic pages, and the product can be discussed with the team for your language and workflow requirements.",
+    "sortOrder": 2
+  },
+  {
+    "page": "home",
+    "language": "en",
+    "question": "How are maintenance reminders triggered?",
+    "answer": "Service intervals can be set by kilometres driven or by date, so each vehicle is reminded based on how it is actually used.",
+    "sortOrder": 3
+  },
+  {
+    "page": "en-eg",
+    "language": "en",
+    "question": "What can Axpense manage in Egypt?",
+    "answer": "Axpense can centralize vehicles, drivers, maintenance, work orders, inspections, fuel, expenses, assets and operational reporting.",
+    "sortOrder": 0
+  },
+  {
+    "page": "en-eg",
+    "language": "en",
+    "question": "Is Axpense only for transportation companies?",
+    "answer": "No. The platform is relevant to any business that manages vehicles, equipment or physical assets, including logistics, construction, manufacturing, real estate and other operations.",
+    "sortOrder": 1
+  },
+  {
+    "page": "ar-eg",
+    "language": "ar",
+    "question": "ماذا يمكن لأكسبنس إدارته في مصر؟",
+    "answer": "يمكن لأكسبنس تجميع بيانات المركبات والسائقين والصيانة وأوامر الشغل والفحوصات والوقود والمصروفات والأصول والتقارير التشغيلية.",
+    "sortOrder": 0
+  },
+  {
+    "page": "ar-eg",
+    "language": "ar",
+    "question": "هل أكسبنس مخصص لشركات النقل فقط؟",
+    "answer": "لا. المنصة مناسبة للشركات التي تدير مركبات أو معدات أو أصولًا مادية، ومنها اللوجستيات والإنشاءات والتصنيع والعقارات وغيرها.",
+    "sortOrder": 1
+  },
+  {
+    "page": "en-sa",
+    "language": "en",
+    "question": "Can Axpense manage both vehicles and equipment?",
+    "answer": "Yes. Axpense is designed to centralize vehicle, fleet, equipment and asset records with maintenance and cost information.",
+    "sortOrder": 0
+  },
+  {
+    "page": "en-sa",
+    "language": "en",
+    "question": "Can Saudi businesses use Axpense for maintenance management?",
+    "answer": "Yes. The maintenance workflows cover scheduled maintenance, work orders and service history.",
+    "sortOrder": 1
+  },
+  {
+    "page": "ar-sa",
+    "language": "ar",
+    "question": "هل يمكن لأكسبنس إدارة المركبات والمعدات معًا؟",
+    "answer": "نعم. يجمع أكسبنس سجلات المركبات والأسطول والمعدات والأصول مع بيانات الصيانة والتكاليف.",
+    "sortOrder": 0
+  },
+  {
+    "page": "ar-sa",
+    "language": "ar",
+    "question": "هل يمكن استخدام أكسبنس لإدارة صيانة الأسطول في السعودية؟",
+    "answer": "نعم. تشمل المنصة الصيانة المجدولة وأوامر الشغل وسجل الصيانة.",
+    "sortOrder": 1
+  },
+  {
+    "page": "en-ae",
+    "language": "en",
+    "question": "What does Axpense cover for UAE fleet operations?",
+    "answer": "Vehicle records, driver assignments, maintenance, work orders, inspections, fuel, expenses, assets and reports are all part of the platform.",
+    "sortOrder": 0
+  },
+  {
+    "page": "en-ae",
+    "language": "en",
+    "question": "Can Axpense support mixed fleets and equipment?",
+    "answer": "Yes. The product is positioned for organizations managing vehicles alongside equipment and other physical assets.",
+    "sortOrder": 1
+  },
+  {
+    "page": "ar-ae",
+    "language": "ar",
+    "question": "ماذا يغطي أكسبنس لإدارة الأسطول في الإمارات؟",
+    "answer": "تشمل المنصة سجلات المركبات وتعيين السائقين والصيانة وأوامر الشغل والفحوصات والوقود والمصروفات والأصول والتقارير.",
+    "sortOrder": 0
+  },
+  {
+    "page": "ar-ae",
+    "language": "ar",
+    "question": "هل يدعم أكسبنس المركبات والمعدات معًا؟",
+    "answer": "نعم. يمكن إدارة المركبات والمعدات والأصول المادية ضمن نفس المنصة.",
+    "sortOrder": 1
+  },
+  {
+    "page": "en-qa",
+    "language": "en",
+    "question": "Is Axpense suitable for businesses managing equipment in Qatar?",
+    "answer": "Yes. Axpense covers equipment and asset records alongside vehicle and fleet workflows.",
+    "sortOrder": 0
+  },
+  {
+    "page": "en-qa",
+    "language": "en",
+    "question": "Can maintenance and expenses be connected?",
+    "answer": "Yes. Maintenance work and operating expenses can be kept in the context of the relevant vehicle or asset.",
+    "sortOrder": 1
+  },
+  {
+    "page": "ar-qa",
+    "language": "ar",
+    "question": "هل يناسب أكسبنس الشركات التي تدير معدات في قطر؟",
+    "answer": "نعم. يغطي أكسبنس سجلات المعدات والأصول بجانب إدارة المركبات والأسطول.",
+    "sortOrder": 0
+  },
+  {
+    "page": "ar-qa",
+    "language": "ar",
+    "question": "هل يمكن ربط الصيانة بالمصروفات؟",
+    "answer": "نعم. يمكن الاحتفاظ بأعمال الصيانة والمصروفات ضمن سجل المركبة أو الأصل المعني.",
+    "sortOrder": 1
+  },
+  {
+    "page": "en-jo",
+    "language": "en",
+    "question": "What types of businesses can use Axpense in Jordan?",
+    "answer": "Any organization managing vehicles, equipment or physical assets can evaluate Axpense, including logistics, transportation, construction, manufacturing and service operations.",
+    "sortOrder": 0
+  },
+  {
+    "page": "en-jo",
+    "language": "en",
+    "question": "Does Axpense replace spreadsheet-based fleet records?",
+    "answer": "It is designed to centralize the records and workflows that teams often keep across separate spreadsheets and files.",
+    "sortOrder": 1
+  },
+  {
+    "page": "ar-jo",
+    "language": "ar",
+    "question": "ما أنواع الشركات التي يمكنها استخدام أكسبنس في الأردن؟",
+    "answer": "يمكن لأي مؤسسة تدير مركبات أو معدات أو أصولًا مادية تقييم أكسبنس، ومنها اللوجستيات والنقل والإنشاءات والتصنيع والخدمات.",
+    "sortOrder": 0
+  },
+  {
+    "page": "ar-jo",
+    "language": "ar",
+    "question": "هل يمكن لأكسبنس تقليل الاعتماد على جداول إكسل؟",
+    "answer": "تم تصميمه لتجميع السجلات وسير العمل التي قد تكون موزعة بين جداول وملفات منفصلة.",
+    "sortOrder": 1
+  },
+  {
+    "page": "en-iq",
+    "language": "en",
+    "question": "Can Axpense manage vehicles and equipment together in Iraq?",
+    "answer": "Yes. The product supports vehicle, equipment and general asset records in the same operational model.",
+    "sortOrder": 0
+  },
+  {
+    "page": "en-iq",
+    "language": "en",
+    "question": "Does Axpense include preventive maintenance?",
+    "answer": "Yes. Preventive maintenance is a core workflow alongside work orders and maintenance history.",
+    "sortOrder": 1
+  },
+  {
+    "page": "ar-iq",
+    "language": "ar",
+    "question": "هل يمكن لأكسبنس إدارة المركبات والمعدات معًا في العراق؟",
+    "answer": "نعم. يدعم المنتج سجلات المركبات والمعدات والأصول ضمن نموذج تشغيلي واحد.",
+    "sortOrder": 0
+  },
+  {
+    "page": "ar-iq",
+    "language": "ar",
+    "question": "هل يشمل أكسبنس الصيانة الوقائية؟",
+    "answer": "نعم. الصيانة الوقائية جزء أساسي بجانب أوامر الشغل وسجل الصيانة.",
+    "sortOrder": 1
+  },
+  {
+    "page": "en-mena",
+    "language": "en",
+    "question": "Can one Axpense account cover operations in several countries?",
+    "answer": "Yes. Vehicles, equipment and sites in different locations can be managed from the same Axpense account, with users and roles controlling who sees and edits what.",
+    "sortOrder": 0
+  },
+  {
+    "page": "en-mena",
+    "language": "en",
+    "question": "Is Axpense available in Arabic?",
+    "answer": "The Axpense website is available in English and Arabic. Contact the team to discuss language and localization needs for your users.",
+    "sortOrder": 1
+  },
+  {
+    "page": "ar-mena",
+    "language": "ar",
+    "question": "هل يمكن إدارة عمليات في أكثر من دولة من حساب واحد؟",
+    "answer": "نعم. يمكن إدارة المركبات والمعدات والمواقع المختلفة من نفس حساب أكسبنس، مع صلاحيات المستخدمين والأدوار للتحكم في من يرى ومن يعدّل.",
+    "sortOrder": 0
+  },
+  {
+    "page": "ar-mena",
+    "language": "ar",
+    "question": "هل أكسبنس متاح باللغة العربية؟",
+    "answer": "موقع أكسبنس متاح بالعربية والإنجليزية. تواصل مع الفريق لمناقشة احتياجات اللغة لمستخدميك.",
+    "sortOrder": 1
+  }
+]

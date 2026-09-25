@@ -1,0 +1,58 @@
+# Full stack: SQL Server + .NET API + Next.js website/admin.
+#   cp .env.example .env   (then edit the secrets)
+#   docker compose up --build
+# Website: http://localhost:3000   Admin: http://localhost:3000/admin   API docs: http://localhost:8080/swagger
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?set MSSQL_SA_PASSWORD in .env}
+      MSSQL_PID: Express
+    volumes:
+      - sqldata:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -C -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ./backend
+      target: runtime
+    environment:
+      ConnectionStrings__Default: "Server=db,1433;Database=Axpense;User Id=sa;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True;Encrypt=True"
+      Jwt__Key: ${JWT_KEY:?set JWT_KEY in .env (32+ characters)}
+      Jwt__ExpiryMinutes: ${JWT_EXPIRY_MINUTES:-480}
+      Seed__AdminName: ${ADMIN_NAME:-Administrator}
+      Seed__AdminEmail: ${ADMIN_EMAIL:?set ADMIN_EMAIL in .env}
+      Seed__AdminPassword: ${ADMIN_PASSWORD:?set ADMIN_PASSWORD in .env}
+      Cors__Origins__0: ${WEB_ORIGIN:-http://localhost:3000}
+      Swagger__Enabled: ${SWAGGER_ENABLED:-true}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_API_URL: ${PUBLIC_API_URL:-http://localhost:8080}
+    environment:
+      # Server-side calls (lead form) go straight to the API container.
+      API_INTERNAL_URL: http://api:8080
+      LEADS_WEBHOOK_URL: ${LEADS_WEBHOOK_URL:-}
+    depends_on:
+      - api
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes:
+  sqldata:

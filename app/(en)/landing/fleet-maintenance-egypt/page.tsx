@@ -1,0 +1,7 @@
+import type { Metadata } from 'next';
+import { CampaignLandingPage, type CampaignData } from '@/components/landing/CampaignLandingPage';
+import { buildMetadata } from '@/lib/seo';
+
+const data: CampaignData = { title:'Fleet Maintenance Software for Businesses in Egypt', description:'Plan preventive maintenance, track work orders and keep vehicle service history visible from one maintenance workflow.', problem:['Scheduled maintenance managed through separate reminders','Repair requests and work orders difficult to track','Service history disconnected from costs','Maintenance issues discovered during operations instead of planned work'], benefits:['Plan recurring maintenance','Track work orders through completion','Keep service history with the vehicle','Connect maintenance activity with operating costs'], features:['Preventive maintenance','Work orders','Fleet maintenance','Inspections','Vehicle management','Expense management'], faq:[{q:'Does Axpense support preventive maintenance?',a:'Yes. Preventive maintenance is a core workflow alongside work orders and maintenance history.'},{q:'Can maintenance costs be tracked?',a:'Yes. Maintenance expenses can be connected to the relevant vehicle or asset.'}] };
+export const metadata: Metadata = buildMetadata({ title:data.title, description:data.description, path:'/landing/fleet-maintenance-egypt' });
+export default function Page() { return <CampaignLandingPage data={data} />; }

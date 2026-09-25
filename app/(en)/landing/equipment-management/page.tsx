@@ -1,0 +1,7 @@
+import type { Metadata } from 'next';
+import { CampaignLandingPage, type CampaignData } from '@/components/landing/CampaignLandingPage';
+import { buildMetadata } from '@/lib/seo';
+
+const data: CampaignData = { title:'Equipment Management Software for Businesses', description:'Track equipment, assignments, maintenance, inspections and operating costs alongside your other physical assets.', problem:['Equipment records kept in spreadsheets','Assignments and current status are difficult to trace','Maintenance history is separated from asset records','Equipment costs are hard to review by asset'], benefits:['Centralize equipment records','Track assignments and status','Schedule maintenance and work orders','Connect inspections and costs to equipment'], features:['Asset management','Equipment management','Preventive maintenance','Work orders','Inspections','Expense management'], faq:[{q:'Can Axpense manage equipment as well as vehicles?',a:'Yes. Axpense is positioned to manage equipment and general assets alongside vehicle and fleet records.'},{q:'Can equipment maintenance be tracked?',a:'Yes. Maintenance schedules, work orders and service history can be connected to the relevant asset.'}] };
+export const metadata: Metadata = buildMetadata({ title:data.title, description:data.description, path:'/landing/equipment-management' });
+export default function Page() { return <CampaignLandingPage data={data} />; }

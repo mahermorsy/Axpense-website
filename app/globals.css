@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme copied from the Axpense product UI (axpense.lovable.app) so the
+   marketing site and the app look like one product. */
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 210 40% 98%;
+    --foreground: 213 45% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 45% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 45% 15%;
+    --primary: 176 58% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-strong: 176 40% 34%;
+    --secondary: 195 25% 92%;
+    --secondary-foreground: 213 45% 20%;
+    --muted: 210 30% 94%;
+    --muted-foreground: 215 20% 45%;
+    --ink-soft: 213 25% 32%;
+    --accent: 176 58% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 213 20% 88%;
+    --input: 213 20% 92%;
+    --ring: 176 58% 40%;
+    --radius: 0.75rem;
+
+    --axpense-light-1: 210 40% 98%;
+    --axpense-light-2: 210 30% 96%;
+    --axpense-panel-1: 176 30% 94%;
+    --axpense-panel-2: 176 25% 90%;
+    --axpense-panel-3: 176 20% 85%;
+    --axpense-panel-4: 176 25% 80%;
+    --axpense-teal: 176 58% 40%;
+    --axpense-teal-glow: 176 58% 45%;
+    --axpense-neutral: 213 10% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--axpense-teal)) 0%, hsl(180 45% 35%) 100%);
+    --gradient-light: linear-gradient(180deg, hsl(var(--axpense-light-1)) 0%, hsl(var(--axpense-light-2)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 100%);
+    --gradient-panel: linear-gradient(135deg, hsl(var(--axpense-panel-1)) 0%, hsl(var(--axpense-panel-2)) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(210 35% 95%) 100%);
+    --shadow-glow: 0 0 40px hsl(var(--axpense-teal) / 0.12);
+    --shadow-card: 0 4px 24px hsl(213 45% 50% / 0.08);
+    --shadow-elevated: 0 8px 40px hsl(213 45% 50% / 0.12);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 213 45% 25%;
+    --sidebar-primary: 176 58% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 176 25% 94%;
+    --sidebar-accent-foreground: 213 45% 20%;
+    --sidebar-border: 213 20% 90%;
+    --sidebar-ring: 176 58% 40%;
+  }
+
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground antialiased; }
+  :focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
+}
+
+/* Reusable pieces matching the app's shadcn components. */
+@layer components {
+  /* Card: rounded-lg border bg-gradient-card shadow-sm, teal border on hover */
+  .card-app {
+    @apply rounded-lg border border-border bg-gradient-card text-card-foreground shadow-sm transition-colors;
+  }
+  a.card-app:hover, .card-app-hover:hover { @apply border-primary/30 shadow-card; }
+
+  /* Pill badge like the app's status chips */
+  .badge-app {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary;
+  }
+
+  /* 48px gradient icon tile used on dashboard stat cards */
+  .icon-tile {
+    @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary/60 text-primary-foreground;
+  }
+  .icon-tile-green { @apply bg-gradient-to-br from-green-600 to-green-400; }
+  .icon-tile-amber { @apply bg-gradient-to-br from-yellow-600 to-yellow-400; }
+  .icon-tile-navy { @apply bg-gradient-to-br from-[hsl(213_45%_30%)] to-[hsl(213_45%_45%)]; }
+
+  /* Inputs: shadcn Input */
+  .input-app {
+    @apply flex h-10 w-full rounded-lg border border-input bg-card px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground
+      transition-colors focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/30;
+  }
+  textarea.input-app { @apply h-auto min-h-[96px]; }
+  .label-app { @apply mb-1.5 block text-sm font-medium text-foreground; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@layer utilities {
+  /* Gradient text used for accent words in headings (same as the app) */
+  .text-gradient { background-image: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; color: transparent; }
+}

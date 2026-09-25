@@ -1,0 +1,7 @@
+import type { Metadata } from 'next';
+import { CampaignLandingPage, type CampaignData } from '@/components/landing/CampaignLandingPage';
+import { buildMetadata } from '@/lib/seo';
+
+const data: CampaignData = { title:'Vehicle Expense Management Software', description:'Track fuel, repairs and operating expenses against the vehicles they belong to so your team can understand fleet costs.', problem:['Receipts and expenses scattered across files','Fleet-wide totals hide vehicle-level cost differences','Fuel and repairs reviewed only at month-end','Manual spreadsheet reconciliation takes time'], benefits:['Record expenses against vehicles or assets','Track fuel and repair costs in context','Build a consistent expense history','Use reports for operational cost review'], features:['Expense management','Fuel management','Vehicle management','Fleet cost management','Reports & analytics','Maintenance'], faq:[{q:'What expenses can be managed?',a:'Axpense is designed to centralize fuel, repairs and other operating expenses associated with vehicles and assets.'},{q:'Can I review cost by vehicle?',a:'The product model connects expenses to the relevant vehicle or asset so operational teams can review costs in context.'}] };
+export const metadata: Metadata = buildMetadata({ title:data.title, description:data.description, path:'/landing/vehicle-expense-management' });
+export default function Page() { return <CampaignLandingPage data={data} />; }
