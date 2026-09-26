@@ -48,6 +48,9 @@ services:
       # Server-side calls (lead form) go straight to the API container.
       API_INTERNAL_URL: http://api:8080
       LEADS_WEBHOOK_URL: ${LEADS_WEBHOOK_URL:-}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      LEADS_EMAIL_TO: ${LEADS_EMAIL_TO:-}
+      LEADS_EMAIL_FROM: ${LEADS_EMAIL_FROM:-Axpense <leads@axpense.net>}
     depends_on:
       - api
     ports:

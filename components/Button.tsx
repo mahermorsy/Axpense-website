@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import type { ReactNode } from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 import { trackEvent } from '@/lib/analytics';
+import { isDemoHref, openDemoModal } from './DemoCtaLink';
 
 // Same variants as the Axpense app's shadcn Button:
 // primary = teal gradient with teal shadow ("Add Vehicle"),
@@ -21,7 +22,12 @@ const sizes = { sm: 'h-9 px-4 text-xs', md: 'h-10 px-5 text-sm', lg: 'h-11 px-5 
 
 export function Button({ href, variant = 'primary', size = 'md', children, external = false }: { href: string; variant?: Variant; size?: 'sm' | 'md' | 'lg'; children: ReactNode; external?: boolean }) {
   const className = `${base} ${sizes[size]} ${styles[variant]}`;
-  const onClick = () => trackEvent('cta_click', { href });
+  const onClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    trackEvent('cta_click', { href });
+    if (!isDemoHref(href)) return;
+    event.preventDefault();
+    openDemoModal();
+  };
   if (external || href.startsWith('http')) return <a href={href} onClick={onClick} className={className}>{children}</a>;
   return <Link href={href} onClick={onClick} className={className}>{children}</Link>;
 }

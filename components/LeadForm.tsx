@@ -12,7 +12,7 @@ const T = {
     name: 'Name', company: 'Company', email: 'Work Email', phone: 'Phone (with country code)', size: 'Company Size', sizePh: 'Select company size',
     assets: 'Number of Vehicles / Assets', industry: 'Industry', industryPh: 'Select an industry', message: 'What do you want to manage?',
     sending: 'Sending…', submit: 'Submit', or: 'Or email', thanks: 'Thank you. Your request has been submitted.', follow: 'The Axpense team will follow up using the details you provided.',
-    errors: {} as Record<string, string>, fallback: 'Unable to submit the form right now.',
+    done: 'Close', errors: {} as Record<string, string>, fallback: 'Unable to submit the form right now.',
   },
   ar: {
     industries: ['الخدمات اللوجستية والنقل', 'المقاولات', 'الصناعة والتصنيع', 'العقارات', 'الرعاية الصحية', 'السياحة والضيافة', 'الطاقة والمرافق', 'أخرى'],
@@ -20,6 +20,7 @@ const T = {
     name: 'الاسم', company: 'الشركة', email: 'البريد الإلكتروني للعمل', phone: 'رقم الهاتف (مع كود الدولة)', size: 'حجم الشركة', sizePh: 'اختر حجم الشركة',
     assets: 'عدد المركبات / الأصول', industry: 'القطاع', industryPh: 'اختر القطاع', message: 'ماذا تريد أن تدير؟',
     sending: 'جارٍ الإرسال…', submit: 'إرسال', or: 'أو راسلنا عبر', thanks: 'شكرًا لك. تم إرسال طلبك بنجاح.', follow: 'سيتواصل معك فريق أكسبنس باستخدام البيانات التي أرسلتها.',
+    done: 'إغلاق',
     // Server error codes → Arabic messages (the API returns English text).
     errors: {
       missing: 'يرجى إدخال الاسم والشركة والبريد الإلكتروني.',
@@ -32,7 +33,7 @@ const T = {
   },
 };
 
-export function LeadForm({ lang = 'en' }: { lang?: Lang }) {
+export function LeadForm({ lang = 'en', onDone }: { lang?: Lang; onDone?: () => void }) {
   const t = T[lang];
   const formName = lang === 'ar' ? 'lead_ar' : 'lead';
   const [state, setState] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -66,7 +67,19 @@ export function LeadForm({ lang = 'en' }: { lang?: Lang }) {
     }
   }
 
-  if (state === 'success') return <div role="status" className="rounded-lg border border-primary/20 bg-panel-1 p-8 text-center"><p className="text-lg font-semibold text-ink-900">{t.thanks}</p><p className="mt-2 text-sm text-ink-700">{t.follow}</p></div>;
+  if (state === 'success') {
+    return (
+      <div role="status" className="rounded-lg border border-primary/20 bg-panel-1 p-8 text-center">
+        <p className="text-lg font-semibold text-ink-900">{t.thanks}</p>
+        <p className="mt-2 text-sm text-ink-700">{t.follow}</p>
+        {onDone && (
+          <button type="button" onClick={onDone} className="mt-6 inline-flex h-10 items-center justify-center rounded-lg bg-gradient-to-r from-primary to-[hsl(176_40%_42%)] px-5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/35">
+            {t.done}
+          </button>
+        )}
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} onFocus={handleFirstFocus} className="grid grid-cols-1 gap-4 sm:grid-cols-2">

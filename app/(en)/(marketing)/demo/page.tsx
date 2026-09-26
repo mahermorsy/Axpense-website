@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 import { buildMetadata } from '@/lib/seo';
-import { LeadFormView } from '@/components/pages/FormViews';
-
-const LANG = 'en';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Book a Demo',
@@ -12,5 +10,5 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function Page() {
-  return <LeadFormView kind="demo" lang={LANG} />;
+  redirect('/?demo=1');
 }

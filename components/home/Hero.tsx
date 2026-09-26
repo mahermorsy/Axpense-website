@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { DemoCtaLink } from '@/components/DemoCtaLink';
 import { primaryCta } from '@/lib/cta';
 import type { Lang } from '@/lib/i18n';
 import { TrustLine } from './TrustLine';
@@ -52,10 +52,10 @@ export function Hero({ lang = 'en' }: { lang?: Lang }) {
         <p className="mx-auto mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl">{t.sub}</p>
 
         <div className="mt-9 flex justify-center">
-          <Link href={cta.href} className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-[hsl(176_40%_42%)] px-10 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 sm:w-auto">
+          <DemoCtaLink href={cta.href} className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-[hsl(176_40%_42%)] px-10 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 sm:w-auto">
             {cta.label}
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" aria-hidden="true" />
-          </Link>
+          </DemoCtaLink>
         </div>
 
         <TrustLine lang={lang} className="mt-7" />

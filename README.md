@@ -134,6 +134,9 @@ The source was syntax-checked after implementation. A full production build coul
 
 ### Env vars
 - `LEADS_WEBHOOK_URL`: where form submissions are posted (required for forms to work)
+- `RESEND_API_KEY`: optional; enables email delivery for lead/demo forms
+- `LEADS_EMAIL_TO`: recipient for lead/demo emails
+- `LEADS_EMAIL_FROM`: sender for lead/demo emails; use a verified Resend domain in production
 - `NEXT_PUBLIC_GTM_ID`: Google Tag Manager
 - `NEXT_PUBLIC_APP_URL`: app login URL
 - `NEXT_PUBLIC_SIGNUP_URL`: optional; turns CTAs into "Start Free"

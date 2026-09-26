@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, type LucideIcon } from 'lucide-react';
 import type { ReactNode } from 'react';
+import { DemoCtaLink } from '@/components/DemoCtaLink';
 
 // Building blocks copied from the Axpense app's marketing pages
 // (/features, /pricing, /about) so the website matches them 1:1.
@@ -81,9 +82,9 @@ export function CtaBand({ title, accent, subtitle, primary, secondary, checks }:
         <h2 className="mb-6 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl text-balance">{title} <span className="text-gradient">{accent}</span></h2>
         <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground sm:text-xl">{subtitle}</p>
         <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link href={primary.href} className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-[hsl(176_40%_42%)] px-10 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 sm:w-auto">
+          <DemoCtaLink href={primary.href} className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-[hsl(176_40%_42%)] px-10 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/40 sm:w-auto">
             {primary.label}<ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" aria-hidden="true" />
-          </Link>
+          </DemoCtaLink>
           {secondary && (
             <Link href={secondary.href} className="inline-flex h-14 w-full items-center justify-center rounded-xl border-2 border-primary/50 bg-transparent px-10 text-lg font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/10 sm:w-auto">{secondary.label}</Link>
           )}

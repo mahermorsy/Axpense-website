@@ -20,7 +20,6 @@ const MIRRORED: [string, number, Freq][] = [
   ['/pricing', 0.8, 'monthly'],
   ['/about', 0.5, 'monthly'],
   ['/contact', 0.6, 'monthly'],
-  ['/demo', 0.7, 'monthly'],
   ['/blog', 0.6, 'weekly'],
   ['/resources', 0.5, 'monthly'],
   ['/resources/fleet-cost-calculator', 0.6, 'monthly'],
