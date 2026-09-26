@@ -14,7 +14,7 @@ export function RootDocument({ lang, dir, className, bodyClassName, children }: 
   children: React.ReactNode;
 }) {
   return (
-    <html lang={lang} dir={dir} className={className}>
+    <html lang={lang} dir={dir} className={className} data-scroll-behavior="smooth">
       <body className={bodyClassName}>
         <Analytics />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }} />

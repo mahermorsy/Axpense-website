@@ -1,18 +1,15 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { Globe } from 'lucide-react';
 import { toArabic, toEnglish } from '@/lib/i18n-routes';
 
 // Compact direct toggle. With only two languages, a menu adds an unnecessary click.
 export function LanguageSwitcher({ current }: { current: 'en' | 'ar' }) {
   const pathname = usePathname() || '/';
-  const searchParams = useSearchParams();
   const next = current === 'en' ? 'ar' : 'en';
-  const baseHref = next === 'ar' ? toArabic(pathname) : toEnglish(pathname);
-  const query = searchParams.toString();
-  const href = query ? `${baseHref}?${query}` : baseHref;
+  const href = next === 'ar' ? toArabic(pathname) : toEnglish(pathname);
   const label = next === 'ar' ? 'AR' : 'EN';
   const ariaLabel = current === 'ar' ? 'Switch to English' : 'التبديل إلى العربية';
 
