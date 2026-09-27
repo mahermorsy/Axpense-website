@@ -124,8 +124,8 @@ The source was syntax-checked after implementation. A full production build coul
 - **Per-language root layouts.** `app/(en)/layout.tsx` and `app/(ar)/layout.tsx` now render `<html lang="en" dir="ltr">` / `<html lang="ar" dir="rtl">` on the server. The client-side lang/dir script and `app/ar/layout.tsx` are gone. Arabic market hubs (`/ar-eg`, `/ar-sa`, …) moved into `app/(ar)/` and now load IBM Plex Sans Arabic. URLs are unchanged. Switching between English and Arabic triggers a full page load (expected with multiple root layouts).
 - **404s.** `app/(en)/[notFound]` sends unknown top-level URLs to the branded `app/(en)/not-found.tsx`.
 - **Market pages.** Removed visitor-facing SEO notes ("local search intent", "thin keyword pages") from `CountryLandingPage` and the MENA FAQ.
-- **CTAs.** `lib/cta.ts` controls the primary CTA. While `NEXT_PUBLIC_SIGNUP_URL` is unset, it reads "Request Access" / "اطلب الوصول" and goes to the lead form, so there's no false "Start Free / No credit card" promise. Set that variable once self-serve sign-up exists and every CTA switches to "Start Free".
-- **Log in.** A header link (EN and AR) points to `NEXT_PUBLIC_APP_URL` (default `https://axpense.lovable.app`).
+- **CTAs.** `lib/cta.ts` controls the primary CTA, app login, and read-only product demo links. "Book a Demo" opens the lead form; "View Demo" points to `NEXT_PUBLIC_DEMO_URL`.
+- **Log in.** A header link (EN and AR) points to `NEXT_PUBLIC_APP_URL` (default `https://app.axpense.net/login`).
 - **Arabic pricing** now matches the English page. It previously showed $49/$149 and features (GPS, API, mobile app, AI, 24/7 phone, white-label) that aren't on the English page or in the app.
 - **Messaging.** Homepage (EN and AR) and pricing now lead with kilometre-based preventive maintenance, spare parts lifecycle, driver assignment, inspection checklists and depreciation.
 - **Lead API.** Field allow-list, length limits, honeypot, basic per-IP rate limit, and error codes (the Arabic form shows Arabic errors). `form_start` now fires on first focus. Company size is a dropdown and the phone placeholder isn't Egypt-only.
@@ -139,7 +139,7 @@ The source was syntax-checked after implementation. A full production build coul
 - `LEADS_EMAIL_FROM`: sender for lead/demo emails; use a verified Resend domain in production
 - `NEXT_PUBLIC_GTM_ID`: Google Tag Manager
 - `NEXT_PUBLIC_APP_URL`: app login URL
-- `NEXT_PUBLIC_SIGNUP_URL`: optional; turns CTAs into "Start Free"
+- `NEXT_PUBLIC_DEMO_URL`: read-only product demo URL
 - `NEXT_PUBLIC_API_URL`: required for the production admin dashboard; without it, admin stays disabled
 
 ### Still open (needs your input)

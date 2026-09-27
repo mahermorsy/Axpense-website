@@ -31,7 +31,7 @@ function top<T>(rows: T[], key: (r: T) => string, take: number): CountItem[] {
   return [...m.entries()].map(([label, value]) => ({ label, value })).sort((a, b) => b.value - a.value || a.label.localeCompare(b.label)).slice(0, take);
 }
 
-/** Demo mode: the same calculation the API performs, run on local sample data. */
+/** Shared dashboard calculation used for empty/fallback admin states. */
 export function computeDashboard(leads: Lead[], posts: AdminPost[], faqs: Faq[], days: number, country: string | null, includeLeads: boolean, now = Date.now()): DashboardView {
   const published = posts.filter((p) => p.status === 'published');
   const content = { publishedPosts: published.length, draftPosts: posts.length - published.length, totalViews: published.reduce((s, p) => s + p.views, 0), publishedFaqs: faqs.filter((f) => f.published).length };

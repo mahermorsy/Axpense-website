@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { BarChart3, ChevronDown, ExternalLink, FileText, HelpCircle, LogOut, Menu, RotateCcw, Users, UserSearch, X } from 'lucide-react';
+import { BarChart3, ChevronDown, ExternalLink, FileText, HelpCircle, LogOut, Menu, Users, UserSearch, X } from 'lucide-react';
 import { useAdmin } from '@/lib/admin/store';
 import { can, ROLE_LABEL, type Area } from '@/lib/admin/types';
-import { Avatar, ConfirmDialog, Toasts, cx } from './ui';
+import { Avatar, Toasts, cx } from './ui';
 
 const NAV: { area: Area; label: string; href: string; icon: typeof BarChart3 }[] = [
   { area: 'dashboard', label: 'Analytics', href: '/admin', icon: BarChart3 },
@@ -26,12 +26,11 @@ function areaFor(path: string): Area {
 }
 
 export function AdminShell({ children }: { children: ReactNode }) {
-  const { ready, me, signOut, toasts, leads, resetDemo, toast, mode } = useAdmin();
+  const { ready, me, signOut, toasts, leads } = useAdmin();
   const pathname = usePathname() || '/admin';
   const router = useRouter();
   const [navOpen, setNavOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [confirmReset, setConfirmReset] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => { if (ready && !me) router.replace('/admin/login'); }, [ready, me, router]);
@@ -63,12 +62,6 @@ export function AdminShell({ children }: { children: ReactNode }) {
       ))}
       <div className="mt-auto space-y-1 pb-4 pt-6">
         <a href="/" target="_blank" rel="noopener noreferrer" className="flex h-10 items-center gap-3 rounded-lg px-3 text-sm font-medium text-sidebar-foreground hover:bg-sidebar-accent"><ExternalLink className="h-4 w-4" />View website</a>
-        {mode === 'demo' && (
-          <div className="mx-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
-            <p className="font-semibold">Demo mode</p>
-            <p className="mt-1">Sample data, saved only in this browser. Set NEXT_PUBLIC_API_URL to connect the real backend.</p>
-          </div>
-        )}
       </div>
     </nav>
   );
@@ -111,7 +104,6 @@ export function AdminShell({ children }: { children: ReactNode }) {
             {menuOpen && (
               <div role="menu" className="absolute end-0 top-full z-50 mt-2 w-56 rounded-lg border border-border bg-card p-1 shadow-elevated">
                 <p className="truncate px-3 py-2 text-xs text-muted-foreground">{me.email}</p>
-                {mode === 'demo' && <button role="menuitem" type="button" onClick={() => { setMenuOpen(false); setConfirmReset(true); }} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-foreground hover:bg-muted"><RotateCcw className="h-4 w-4" />Reset demo data</button>}
                 <button role="menuitem" type="button" onClick={() => { signOut(); router.replace('/admin/login'); }} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-foreground hover:bg-muted"><LogOut className="h-4 w-4" />Sign out</button>
               </div>
             )}
@@ -128,7 +120,6 @@ export function AdminShell({ children }: { children: ReactNode }) {
         </main>
       </div>
 
-      <ConfirmDialog open={confirmReset} onCancel={() => setConfirmReset(false)} onConfirm={() => { resetDemo(); setConfirmReset(false); toast('Demo data reset'); }} title="Reset demo data?" body="All leads, articles, FAQs and users go back to the original sample data. Your changes in this browser will be lost." confirmLabel="Reset" />
       <Toasts items={toasts} />
     </div>
   );

@@ -1,10 +1,10 @@
 'use client';
 
 /**
- * Admin data store with two modes:
+ * Admin data store:
  *  - API mode (NEXT_PUBLIC_API_URL set): talks to the .NET backend (JWT auth, SQL Server).
  *    Changes are applied optimistically and rolled back (with an error toast) if the API refuses them.
- *  - Demo mode: opt-in local-only seeded sample data kept in this browser's localStorage.
+ *  - Disabled mode: no backend configured, so protected admin pages cannot be used.
  */
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { DEMO_USERS, seedFaqs, seedLeads, seedPosts } from './seed';
