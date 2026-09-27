@@ -1,0 +1,58 @@
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: axpense-marketing-db
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+      MSSQL_SA_PASSWORD: "${MARKETING_DB_PASSWORD}"
+    volumes:
+      - axpense_marketing_sql:/var/opt/mssql
+    networks:
+      - marketing_internal
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: axpense-marketing-api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+
+      ConnectionStrings__Default: "Server=db,1433;Database=AxpenseMarketing;User Id=sa;Password=${MARKETING_DB_PASSWORD};TrustServerCertificate=True;Encrypt=True"
+
+      Jwt__Key: "${MARKETING_JWT_KEY}"
+      Jwt__ExpiryMinutes: "480"
+
+      Seed__AdminName: "${MARKETING_ADMIN_NAME}"
+      Seed__AdminEmail: "${MARKETING_ADMIN_EMAIL}"
+      Seed__AdminPassword: "${MARKETING_ADMIN_PASSWORD}"
+      Seed__WebsiteContent: "true"
+
+      Cors__Origins__0: "https://axpense.net"
+      Cors__Origins__1: "https://www.axpense.net"
+
+      Swagger__Enabled: "false"
+
+    expose:
+      - "8080"
+
+    depends_on:
+      - db
+
+    networks:
+      - marketing_internal
+      - edge
+
+volumes:
+  axpense_marketing_sql:
+
+networks:
+  marketing_internal:
+    driver: bridge
+
+  edge:
+    external: true

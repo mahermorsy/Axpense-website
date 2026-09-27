@@ -12,3 +12,4 @@ backend/**/obj/
 backend/**/TestResults/
 *.user
 .vs/
+.env.production
