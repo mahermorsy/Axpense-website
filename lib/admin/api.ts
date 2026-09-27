@@ -1,11 +1,12 @@
 /**
- * Client for the Axpense .NET API (backend/). Used when NEXT_PUBLIC_API_URL is set;
- * otherwise the admin runs in demo mode with local sample data.
+ * Client for the Axpense .NET API (backend/). Used when NEXT_PUBLIC_API_URL is set.
+ * Demo mode is disabled for the public website build.
  */
 import type { AdminPost, AdminUser, Faq, Lead, LeadStatus, Role } from './types';
 
 export const API_URL = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/$/, '');
 export const API_MODE = API_URL.length > 0;
+export const DEMO_MODE = false;
 
 const TOKEN_KEY = 'axpense-admin-token';
 export const tokenStore = {

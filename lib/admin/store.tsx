@@ -4,11 +4,11 @@
  * Admin data store with two modes:
  *  - API mode (NEXT_PUBLIC_API_URL set): talks to the .NET backend (JWT auth, SQL Server).
  *    Changes are applied optimistically and rolled back (with an error toast) if the API refuses them.
- *  - Demo mode: seeded sample data kept in this browser's localStorage.
+ *  - Demo mode: opt-in local-only seeded sample data kept in this browser's localStorage.
  */
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { DEMO_USERS, seedFaqs, seedLeads, seedPosts } from './seed';
-import { API_MODE, ApiError, api, fromFaq, fromLead, fromPost, fromUser, roleToApi, toFaqModel, toPostModel, tokenStore, type FaqDto, type LeadDto, type Paged, type PostDto, type UserDto } from './api';
+import { API_MODE, DEMO_MODE, ApiError, api, fromFaq, fromLead, fromPost, fromUser, roleToApi, toFaqModel, toPostModel, tokenStore, type FaqDto, type LeadDto, type Paged, type PostDto, type UserDto } from './api';
 import { computeDashboard, fromDashboardDto, type DashboardView } from './dashboard';
 import { can, type AdminPost, type AdminUser, type Faq, type Lead, type LeadStatus } from './types';
 
@@ -17,7 +17,7 @@ type Toast = { id: number; text: string; tone?: 'ok' | 'error' };
 type LeadPatch = { status?: LeadStatus; ownerId?: string | undefined };
 
 type Store = Data & {
-  mode: 'api' | 'demo';
+  mode: 'api' | 'demo' | 'disabled';
   ready: boolean;
   me?: AdminUser;
   signIn: (userId: string) => void;
@@ -97,9 +97,14 @@ export function AdminProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     (async () => {
-      if (!API_MODE) {
+      if (DEMO_MODE) {
         setData(loadDemo());
         try { setMeId(localStorage.getItem(SESSION) || undefined); } catch { /* ignore */ }
+        setReady(true);
+        return;
+      }
+      if (!API_MODE) {
+        setData(EMPTY);
         setReady(true);
         return;
       }
@@ -117,11 +122,11 @@ export function AdminProvider({ children }: { children: ReactNode }) {
   }, [loadFromApi, signOut]);
 
   useEffect(() => {
-    if (!ready || API_MODE) return;
+    if (!ready || !DEMO_MODE) return;
     try { localStorage.setItem(KEY, JSON.stringify(data)); } catch { /* ignore */ }
   }, [data, ready]);
 
-  const me = API_MODE ? apiMe : data.users.find((u) => u.id === meId && u.status === 'active');
+  const me = API_MODE ? apiMe : DEMO_MODE ? data.users.find((u) => u.id === meId && u.status === 'active') : undefined;
 
   const patchData = useCallback(<K extends keyof Data>(key: K, fn: (arr: Data[K]) => Data[K]) => {
     setData((d) => ({ ...d, [key]: fn(d[key]) }));
@@ -153,7 +158,7 @@ export function AdminProvider({ children }: { children: ReactNode }) {
 
     return {
       ...data,
-      mode: API_MODE ? 'api' : 'demo',
+      mode: API_MODE ? 'api' : DEMO_MODE ? 'demo' : 'disabled',
       ready,
       me,
       toasts,
@@ -162,6 +167,7 @@ export function AdminProvider({ children }: { children: ReactNode }) {
       refresh: async () => { if (API_MODE && apiMe) await guard(() => loadFromApi(apiMe)); },
 
       signIn: (userId) => {
+        if (!DEMO_MODE) return;
         setMeId(userId);
         try { localStorage.setItem(SESSION, userId); } catch { /* ignore */ }
         patchData('users', (a) => a.map((u) => (u.id === userId ? { ...u, lastActiveAt: new Date().toISOString() } : u)));
@@ -205,10 +211,11 @@ export function AdminProvider({ children }: { children: ReactNode }) {
       // ----- Blog -----
       savePost: async (post) => {
         const exists = dataRef.current.posts.some((p) => p.id === post.id);
-        if (!API_MODE) {
+        if (DEMO_MODE) {
           patchData('posts', (a) => (exists ? a.map((p) => (p.id === post.id ? post : p)) : [post, ...a]));
           return post;
         }
+        if (!API_MODE) return null;
         return guard(async () => {
           const d = await api<PostDto>(exists ? `/api/blog/${post.id}` : '/api/blog', { method: exists ? 'PUT' : 'POST', body: toPostModel(post) });
           const saved = fromPost(d);
@@ -249,10 +256,11 @@ export function AdminProvider({ children }: { children: ReactNode }) {
       // ----- Users -----
       saveUser: async (user) => {
         const exists = dataRef.current.users.some((u) => u.id === user.id);
-        if (!API_MODE) {
+        if (DEMO_MODE) {
           patchData('users', (a) => (exists ? a.map((u) => (u.id === user.id ? user : u)) : [...a, user]));
           return {};
         }
+        if (!API_MODE) return null;
         return guard(async () => {
           if (exists) {
             const d = await api<UserDto>(`/api/users/${user.id}`, { method: 'PUT', body: { name: user.name, role: roleToApi(user.role), status: user.status } });
@@ -265,7 +273,8 @@ export function AdminProvider({ children }: { children: ReactNode }) {
         });
       },
       resetUserPassword: async (id) => {
-        if (!API_MODE) return 'Demo-Only-Pass1';
+        if (DEMO_MODE) return null;
+        if (!API_MODE) return null;
         const r = await guard(() => api<{ temporaryPassword?: string | null }>(`/api/users/${id}/reset-password`, { method: 'POST' }));
         return r?.temporaryPassword ?? null;
       },
@@ -277,13 +286,14 @@ export function AdminProvider({ children }: { children: ReactNode }) {
       // ----- Analytics -----
       fetchDashboard: async (days, country) => {
         const includeLeads = can(me?.role, 'leads');
-        if (!API_MODE) return computeDashboard(dataRef.current.leads, dataRef.current.posts, dataRef.current.faqs, days, country, includeLeads);
+        if (DEMO_MODE) return computeDashboard(dataRef.current.leads, dataRef.current.posts, dataRef.current.faqs, days, country, includeLeads);
+        if (!API_MODE) return computeDashboard([], [], [], days, null, false);
         const qs = new URLSearchParams({ days: String(days), ...(country ? { country } : {}) });
         const d = await guard(() => api<DashboardView>(`/api/analytics/dashboard?${qs}`));
         return d ? fromDashboardDto(d) : computeDashboard([], [], [], days, null, false);
       },
 
-      resetDemo: () => { if (!API_MODE) setData(freshDemo()); },
+      resetDemo: () => { if (DEMO_MODE) setData(freshDemo()); },
     };
   }, [data, ready, me, toasts, toast, signOut, apiMe, guard, loadFromApi, patchData]);
 

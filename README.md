@@ -140,6 +140,7 @@ The source was syntax-checked after implementation. A full production build coul
 - `NEXT_PUBLIC_GTM_ID`: Google Tag Manager
 - `NEXT_PUBLIC_APP_URL`: app login URL
 - `NEXT_PUBLIC_SIGNUP_URL`: optional; turns CTAs into "Start Free"
+- `NEXT_PUBLIC_API_URL`: required for the production admin dashboard; without it, admin stays disabled
 
 ### Still open (needs your input)
 - Final Privacy, Terms and Cookie policies, plus a consent banner before enabling GTM.

@@ -19,13 +19,7 @@ function weighted<T>(r: () => number, items: [T, number][]): T {
   return items[0][0];
 }
 
-export const DEMO_USERS: AdminUser[] = [
-  { id: 'u1', name: 'Maher Samir', email: 'maher@axpense.net', role: 'admin', status: 'active', createdAt: '2026-01-10T09:00:00Z' },
-  { id: 'u2', name: 'Sara Fahmy', email: 'sara@axpense.net', role: 'editor', status: 'active', createdAt: '2026-03-02T09:00:00Z' },
-  { id: 'u3', name: 'Omar Adel', email: 'omar@axpense.net', role: 'sales', status: 'active', createdAt: '2026-03-15T09:00:00Z' },
-  { id: 'u4', name: 'Nour Hassan', email: 'nour@axpense.net', role: 'sales', status: 'active', createdAt: '2026-05-20T09:00:00Z' },
-  { id: 'u5', name: 'Karim Mansour', email: 'karim@axpense.net', role: 'editor', status: 'invited', createdAt: '2026-09-18T09:00:00Z' },
-];
+export const DEMO_USERS: AdminUser[] = [];
 
 const FIRST = ['Ahmed', 'Mohamed', 'Mahmoud', 'Youssef', 'Omar', 'Khaled', 'Tarek', 'Hany', 'Amr', 'Sherif', 'Mona', 'Dina', 'Rania', 'Nada', 'Salma', 'Faisal', 'Abdullah', 'Rashid', 'Laila', 'Hassan', 'Ziad', 'Kareem', 'Reem', 'Yara'];
 const LAST = ['Hassan', 'Ali', 'Ibrahim', 'Mostafa', 'Salem', 'Farouk', 'Nabil', 'Saleh', 'Zaki', 'Haddad', 'Khalil', 'Qasim', 'Nasser', 'Rizk', 'Awad', 'Shaker'];

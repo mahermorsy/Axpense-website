@@ -5,7 +5,7 @@
  * - NEXT_PUBLIC_SIGNUP_URL: optional self-serve sign-up URL. When set, the
  *   pricing "Start Free Trial" buttons go there; otherwise they open the demo form.
  */
-export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://axpense.net/login';
+export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.axpense.net/login';
 const SIGNUP_URL = process.env.NEXT_PUBLIC_SIGNUP_URL;
 
 export const PRIMARY_CTA = { label: 'Book a Demo', href: '/demo' };
