@@ -96,10 +96,37 @@ public static class DbInitializer
                     Page = f.Page, Language = f.Language, Question = f.Question, Answer = f.Answer, SortOrder = f.SortOrder, IsPublished = true,
                 }));
             }
+            // Pricing (per-vehicle tiers per currency) — generated from the website's content/pricing.ts.
+            if (!await db.PricingCurrencies.IgnoreQueryFilters().AnyAsync(ct) && File.Exists(Path.Combine(dir, "pricing.json")))
+            {
+                var pricing = JsonSerializer.Deserialize<SeedPricing>(await File.ReadAllTextAsync(Path.Combine(dir, "pricing.json"), ct), Json);
+                if (pricing is not null)
+                {
+                    var order = 0;
+                    foreach (var c in pricing.Currencies)
+                    {
+                        db.PricingCurrencies.Add(new PricingCurrency
+                        {
+                            Code = c.Code, Symbol = c.Symbol, SymbolAr = c.SymbolAr, NameEn = c.Name.En, NameAr = c.Name.Ar, Flag = c.Flag,
+                            Decimals = c.Decimals, AnnualDiscountPercent = c.AnnualDiscountPercent, IsDefault = c.Code == pricing.DefaultCurrency,
+                            SortOrder = order++, IsActive = true,
+                        });
+                        db.PricingTiers.AddRange(c.Tiers.Select(t => new PricingTier
+                        {
+                            CurrencyCode = c.Code, MinVehicles = t.Min, MaxVehicles = t.Max, MonthlyPricePerVehicle = t.Monthly,
+                            ExampleVehicles = t.Example, IsActive = true,
+                        }));
+                    }
+                }
+            }
             await db.SaveChangesAsync(ct);
         }
     }
 
     private sealed record SeedPost(string Slug, string Title, string Excerpt, string Category, ContentLanguage Language, string PublishedAt, List<BlogSection> Sections);
+    private sealed record SeedName(string En, string Ar);
+    private sealed record SeedTier(int Min, int? Max, decimal? Monthly, int? Example);
+    private sealed record SeedCurrency(string Code, string Flag, string Symbol, string SymbolAr, SeedName Name, int Decimals, decimal AnnualDiscountPercent, List<SeedTier> Tiers);
+    private sealed record SeedPricing(string DefaultCurrency, List<SeedCurrency> Currencies);
     private sealed record SeedFaq(string Page, ContentLanguage Language, string Question, string Answer, int SortOrder);
 }

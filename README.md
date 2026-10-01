@@ -99,7 +99,7 @@ Additional CTA/event tracking can be added without changing page components.
 1. Point the production domain to the deployed app and enforce HTTPS.
 2. Set the real `LEADS_WEBHOOK_URL`.
 3. Set the real GTM container ID.
-4. Connect Google Search Console to `https://www.axpense.net`.
+4. Connect Google Search Console to `https://axpense.net`.
 5. Submit `/sitemap.xml`.
 6. Verify canonical URLs and hreflang pairs in Search Console/URL Inspection.
 7. Validate JSON-LD with Google's Rich Results Test.
@@ -159,6 +159,34 @@ Every marketing page exists in both languages with the same layout: `/path` in E
 - The old Arabic feature URLs (`/ar/fleet-management`, …) redirect permanently to `/ar/features/…` (see `next.config.js`).
 - To add a page: build a view that takes `lang`, then add a thin `page.tsx` in `app/(en)/(marketing)/…` and `app/(ar)/ar/…` with the metadata for each language.
 
+## SEO architecture (29–30 Sep 2026)
+
+Full details: `docs/seo/implementation-report.md`. URL changes: `docs/seo/url-map.md`. Writing rules: `docs/seo/content-brief.md`.
+
+**Content**
+- **Commercial pages:** `/fleet-management-software`, `/fleet-maintenance-software`, `/fleet-cost-tracking`, `/vehicle-inspection-software`, each with an `/ar` twin. Content is in `content/seo/commercial*`.
+- **Features, industries and locations:** `content/seo/{features,industries,locations}/*.ts`, rendered by the dynamic routes `features/[slug]`, `industries/[slug]` and `locations/[slug]`.
+- **Content model:** `SeoPage` (`lib/seo-page.ts`). Metadata, hreflang, breadcrumbs, schema and sitemap entries are generated from it.
+- **Blog:** `content/blog/{en,ar}/*.ts`. Fields match the backend `BlogPost`. Arabic twins reuse the English slug.
+- **Tools:** `content/tools/*.ts` for copy, and `components/tools/*` for the calculator and checklists. The PDFs are built by `scripts/build-checklist-pdfs.ts`.
+
+**Rules built into the code**
+- **Capability gate:** `lib/capabilities.ts`. Anything that isn't `confirmed` is hidden, and a page that depends on it is noindex and unlinked.
+- **Redirects:** all in `redirects.js` (308, single hop).
+- **Schema helpers:** `lib/schema.ts`.
+- **Metadata helper:** `buildMetadata` in `lib/seo.ts`.
+- **Canonical host:** `lib/site.ts`.
+
+**Checks**
+- `npm run seo:content`: word counts and FAQ counts before a build.
+- `npm run seo:audit`: crawls a running production build and fails on SEO errors. CI runs it after the build, then Lighthouse CI.
+- `npm run indexnow`: pings IndexNow after a deploy.
+
+**Analytics**
+- Google Consent Mode v2 banner.
+- GTM only loads with `NEXT_PUBLIC_GTM_ID` + `NEXT_PUBLIC_ENABLE_GTM=true`.
+- Events, each with `page_type`, `lang` and `location`: `demo_request`, `contact_submit`, `lead_submit`, `cta_click`, `email_click`, `phone_click`, `whatsapp_click`, `calculator_complete`, `checklist_download`.
+
 ## Admin dashboard (/admin) + backend
 
 - **Frontend:** `app/(admin)` + `components/admin` + `lib/admin`.
@@ -179,3 +207,4 @@ Every marketing page exists in both languages with the same layout: `/path` in E
 | Blog articles | List + editor (sections, slug, category, publish date, SEO + Google preview), preview, publish/draft, delete. |
 | FAQs | Per-page FAQ lists (homepage, pricing, each market EN/AR): add, edit, hide, delete, reorder. |
 | Users | Add users (temporary password shown once), change role, disable/enable, reset password, remove. |
+

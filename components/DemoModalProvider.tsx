@@ -19,6 +19,8 @@ const COPY = {
   },
 } satisfies Record<Lang, { title: string; desc: string; close: string }>;
 
+const PLAN_KEYS = ['vehicles', 'currency', 'billing'] as const;
+
 function isDemoPath(pathname: string) {
   return pathname === '/demo' || pathname === '/ar/demo';
 }
@@ -30,11 +32,21 @@ export function DemoModalProvider({ lang, children }: { lang: Lang; children: Re
   const router = useRouter();
   const t = COPY[lang];
 
-  function openDemoModal() {
-    setOpen(true);
+  // Plan chosen on /pricing (vehicles, currency, billing) travels with the link
+  // (/demo?vehicles=25&currency=EGP&billing=annual) and pre-fills the form.
+  function openDemoModal(fromHref?: string) {
     const nextUrl = new URL(window.location.href);
     nextUrl.searchParams.set('demo', '1');
-    router.replace(`${nextUrl.pathname}?${nextUrl.searchParams.toString()}`, { scroll: false });
+    if (fromHref) {
+      const src = new URL(fromHref, window.location.origin).searchParams;
+      for (const k of PLAN_KEYS) {
+        const v = src.get(k);
+        if (v) nextUrl.searchParams.set(k, v); else nextUrl.searchParams.delete(k);
+      }
+    }
+    // Update the URL synchronously so the form reads the plan when it mounts.
+    window.history.replaceState(window.history.state, '', `${nextUrl.pathname}?${nextUrl.searchParams.toString()}${nextUrl.hash}`);
+    setOpen(true);
   }
 
   useEffect(() => {
@@ -46,7 +58,7 @@ export function DemoModalProvider({ lang, children }: { lang: Lang; children: Re
       if (url.origin !== window.location.origin || !isDemoPath(url.pathname)) return;
 
       event.preventDefault();
-      openDemoModal();
+      openDemoModal(anchor.href);
     }
 
     document.addEventListener('click', onDocumentClick, true);
@@ -54,8 +66,9 @@ export function DemoModalProvider({ lang, children }: { lang: Lang; children: Re
   }, [router]);
 
   useEffect(() => {
-    window.addEventListener('open-demo-modal', openDemoModal);
-    return () => window.removeEventListener('open-demo-modal', openDemoModal);
+    const onOpen = (e: Event) => openDemoModal((e as CustomEvent<{ href?: string }>).detail?.href);
+    window.addEventListener('open-demo-modal', onOpen);
+    return () => window.removeEventListener('open-demo-modal', onOpen);
   });
 
   useEffect(() => {
@@ -77,8 +90,8 @@ export function DemoModalProvider({ lang, children }: { lang: Lang; children: Re
 
   function close() {
     setOpen(false);
-    if (searchParams.get('demo') !== '1') return;
-    const params = new URLSearchParams(searchParams.toString());
+    if (new URLSearchParams(window.location.search).get('demo') !== '1') return;
+    const params = new URLSearchParams(window.location.search);
     params.delete('demo');
     const next = params.toString();
     router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });

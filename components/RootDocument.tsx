@@ -1,5 +1,5 @@
 import { Analytics } from '@/components/Analytics';
-import { organizationJsonLd, websiteJsonLd } from '@/lib/seo';
+import { organizationSchema, websiteSchema } from '@/lib/schema';
 
 /**
  * Shared <html>/<body> shell for the two root layouts (English and Arabic).
@@ -16,9 +16,9 @@ export function RootDocument({ lang, dir, className, bodyClassName, children }: 
   return (
     <html lang={lang} dir={dir} className={className} data-scroll-behavior="smooth">
       <body className={bodyClassName}>
-        <Analytics />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }} />
+        <Analytics lang={lang} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }} />
         {children}
       </body>
     </html>

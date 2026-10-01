@@ -1,16 +1,18 @@
 import type { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
-import { PricingView } from '@/components/pages/FormViews';
+import { PricingView } from '@/components/pricing/PricingView';
+import { loadPricing } from '@/lib/pricing-server';
 
 const LANG = 'ar';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'الأسعار',
-  description: 'خطط أكسبنس تبدأ من 2,000 ج.م شهريًا (40$ · 150 ر.س). ابدأ بتجربة مجانية لمدة 14 يومًا بدون بطاقة ائتمان.',
+  title: "أسعار برنامج إدارة الأسطول",
+  description: "أسعار برنامج إدارة الأسطول حسب المركبة: من 200 جنيه أو 5.75 دولار للمركبة شهريًا، كل المميزات متضمنة، وخصم 20% على الاشتراك السنوي. ابدأ مجانًا.",
   path: '/ar/pricing',
   enPath: '/pricing',
+  pageType: 'page',
 });
 
-export default function Page() {
-  return <PricingView lang={LANG} />;
+export default async function Page() {
+  return <PricingView lang={LANG} config={await loadPricing()} />;
 }

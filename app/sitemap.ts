@@ -1,42 +1,46 @@
 import type { MetadataRoute } from 'next';
-import { SITE_URL } from '@/lib/seo';
-import { getAllSlugs } from '@/lib/blog';
-import { FEATURE_SLUGS } from '@/content/features';
-import { INDUSTRY_SLUGS } from '@/content/industries';
-import { SOLUTION_SLUGS } from '@/content/solutions';
+import { absoluteUrl } from '@/lib/site';
+import { SEO_PAGES, isLive } from '@/content/seo';
+import { TOOLS } from '@/content/tools';
+import { PAGE_UPDATED } from '@/content/page-dates';
+import { getPosts } from '@/lib/blog';
 
-const MARKETS = ['eg', 'sa', 'ae', 'qa', 'jo', 'iq', 'mena'];
+// Every indexable EN + AR page with a real lastmod and hreflang alternates.
+// Excluded: /admin, /api, /landing/*, noindex pages (gated features, legacy
+// industries, legal drafts), redirected URLs and drafts.
+type Entry = MetadataRoute.Sitemap[number];
 
-type Freq = 'weekly' | 'monthly';
-// Every marketing page exists in English (/path) and Arabic (/ar/path).
-const MIRRORED: [string, number, Freq][] = [
-  ['/', 1, 'weekly'],
-  ['/features', 0.8, 'monthly'],
-  ...FEATURE_SLUGS.map((s): [string, number, Freq] => [`/features/${s}`, 0.7, 'monthly']),
-  ['/industries', 0.8, 'monthly'],
-  ...INDUSTRY_SLUGS.map((s): [string, number, Freq] => [`/industries/${s}`, 0.7, 'monthly']),
-  ['/solutions', 0.7, 'monthly'],
-  ...SOLUTION_SLUGS.map((s): [string, number, Freq] => [`/solutions/${s}`, 0.6, 'monthly']),
-  ['/pricing', 0.8, 'monthly'],
-  ['/about', 0.5, 'monthly'],
-  ['/contact', 0.6, 'monthly'],
-  ['/blog', 0.6, 'weekly'],
-  ['/resources', 0.5, 'monthly'],
-  ['/resources/fleet-cost-calculator', 0.6, 'monthly'],
-];
+function pair(enPath: string, lastModified: string, priority: number, codes = { en: 'en', ar: 'ar' }): Entry[] {
+  const en = absoluteUrl(enPath);
+  const ar = absoluteUrl(enPath === '/' ? '/ar' : `/ar${enPath}`);
+  const languages = { [codes.en]: en, [codes.ar]: ar, 'x-default': en };
+  return [
+    { url: en, lastModified, priority, alternates: { languages } },
+    { url: ar, lastModified, priority, alternates: { languages } },
+  ];
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-  const pages: MetadataRoute.Sitemap = [];
-  for (const [path, priority, changeFrequency] of MIRRORED) {
-    pages.push({ url: `${SITE_URL}${path === '/' ? '' : path}`, lastModified: now, changeFrequency, priority });
-    pages.push({ url: `${SITE_URL}/ar${path === '/' ? '' : path}`, lastModified: now, changeFrequency, priority });
+  const out: MetadataRoute.Sitemap = [];
+  // /demo redirects to the demo modal (/?demo=1), so it is not listed.
+  for (const [path, date] of Object.entries(PAGE_UPDATED)) if (path !== '/demo') out.push(...pair(path, date, path === '/' ? 1 : 0.6));
+  for (const p of SEO_PAGES.filter(isLive)) {
+    const prio = p.type === 'commercial' ? 0.9 : p.type === 'location' ? 0.8 : 0.7;
+    out.push(...pair(p.path, p.updatedAt, prio, p.hreflang));
   }
-  // English-only article pages. /landing/* campaign pages are noindex and not listed.
-  for (const slug of getAllSlugs()) pages.push({ url: `${SITE_URL}/blog/${slug}`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 });
-  for (const code of MARKETS) {
-    pages.push({ url: `${SITE_URL}/en-${code}`, lastModified: now, changeFrequency: 'monthly', priority: code === 'eg' ? 0.9 : 0.75 });
-    pages.push({ url: `${SITE_URL}/ar-${code}`, lastModified: now, changeFrequency: 'monthly', priority: code === 'eg' ? 0.9 : 0.75 });
+  for (const t of TOOLS) out.push(...pair(t.path, t.updatedAt, 0.6));
+
+  const ar = new Set(getPosts('ar').map((p) => p.slug));
+  for (const post of getPosts('en')) {
+    const en = absoluteUrl(`/blog/${post.slug}`);
+    if (ar.has(post.slug)) {
+      const arPost = getPosts('ar').find((p) => p.slug === post.slug)!;
+      const languages = { en, ar: absoluteUrl(`/ar/blog/${post.slug}`), 'x-default': en };
+      out.push({ url: en, lastModified: post.updatedAt, priority: 0.5, alternates: { languages } });
+      out.push({ url: absoluteUrl(`/ar/blog/${post.slug}`), lastModified: arPost.updatedAt, priority: 0.5, alternates: { languages } });
+    } else {
+      out.push({ url: en, lastModified: post.updatedAt, priority: 0.5 });
+    }
   }
-  return pages;
+  return out;
 }

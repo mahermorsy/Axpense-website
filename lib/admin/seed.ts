@@ -1,4 +1,5 @@
-import { BLOG_POSTS } from '@/lib/blog';
+import { POSTS } from '@/content/blog';
+import { CATEGORIES } from '@/lib/blog';
 import { MARKETS } from '@/lib/countries';
 import type { AdminPost, AdminUser, Faq, Lead, LeadStatus } from './types';
 
@@ -89,24 +90,23 @@ export function seedLeads(now = new Date()): Lead[] {
 }
 
 export function seedPosts(): AdminPost[] {
-  const views = [1840, 1320, 980, 760];
-  const posts: AdminPost[] = BLOG_POSTS.map((p, i) => ({
+  const views = [1840, 1320, 980, 760, 640, 520, 470, 410, 380, 350, 300, 260, 220, 190, 160];
+  const posts: AdminPost[] = POSTS.map((p, i) => ({
     id: `P-${i + 1}`,
     slug: p.slug,
     title: p.title,
-    excerpt: p.description,
-    category: p.category,
+    excerpt: p.excerpt,
+    category: CATEGORIES[p.category].en,
     status: 'published',
-    lang: 'en',
+    lang: p.language,
     publishedAt: p.publishedAt,
     updatedAt: p.updatedAt,
     views: views[i] ?? 500,
     authorId: 'u2',
-    sections: p.sections.map((s) => ({ heading: s.heading, body: s.body.join('\n\n') })),
+    sections: p.sections.map((s) => ({ heading: s.heading, body: s.body })),
   }));
   posts.push(
-    { id: 'P-5', slug: 'km-based-preventive-maintenance', title: 'Km-Based Preventive Maintenance: A Practical Guide', excerpt: 'Why service intervals by kilometres beat calendar reminders for busy fleets.', category: 'Fleet Maintenance', status: 'draft', lang: 'en', publishedAt: '', updatedAt: '2026-09-20', views: 0, authorId: 'u2', sections: [{ heading: 'Why kilometres', body: 'Calendar intervals ignore how much a vehicle actually works…' }] },
-    { id: 'P-6', slug: 'ma-hia-idarat-al-ustul', title: 'ما هي إدارة الأسطول؟', excerpt: 'دليل مبسط لما تغطيه إدارة الأسطول.', category: 'Fleet Management', status: 'draft', lang: 'ar', publishedAt: '', updatedAt: '2026-09-15', views: 0, authorId: 'u5', sections: [{ heading: 'باختصار', body: 'إدارة الأسطول هي مجموعة العمليات…' }] },
+    { id: 'P-90', slug: 'ma-hia-idarat-al-ustul', title: 'ما هي إدارة الأسطول؟', excerpt: 'دليل مبسط لما تغطيه إدارة الأسطول.', category: 'Fleet Management', status: 'draft', lang: 'ar', publishedAt: '', updatedAt: '2026-09-15', views: 0, authorId: 'u5', sections: [{ heading: 'باختصار', body: 'إدارة الأسطول هي مجموعة العمليات…' }] },
   );
   return posts;
 }
@@ -123,9 +123,9 @@ export function seedFaqs(): Faq[] {
     ['How are maintenance reminders triggered?', 'Service intervals can be set by kilometres driven or by date, so each vehicle is reminded based on how it is actually used.'],
   ].forEach(([q, a], i) => add('home', 'en', q, a, i));
   [
-    ['Can I try Axpense for free?', 'Yes. Every plan starts with a 14-day free trial. No credit card required.'],
-    ['Can I change plans later?', 'Yes. You can upgrade or downgrade at any time.'],
-    ['Which currencies do you bill in?', 'Plans are available in USD, EGP and SAR.'],
+    ['Can I try Axpense for free?', 'Yes. You can start free, with no credit card required.'],
+    ['Can I add or remove vehicles later?', 'Yes. Your price follows your fleet size, so you can add or remove vehicles at any time.'],
+    ['Which currencies do you bill in?', 'Prices are set per market in EGP, USD, SAR, AED, QAR, KWD, BHD, OMR and EUR.'],
   ].forEach(([q, a], i) => add('pricing', 'en', q, a, i));
   for (const m of MARKETS) {
     m.en.faq.forEach((f, i) => add(`en-${m.code}`, 'en', f.q, f.a, i));

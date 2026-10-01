@@ -7,8 +7,8 @@ function isDemoHref(href: string) {
   return href === '/demo' || href === '/ar/demo';
 }
 
-export function openDemoModal() {
-  window.dispatchEvent(new CustomEvent('open-demo-modal'));
+export function openDemoModal(href?: string) {
+  window.dispatchEvent(new CustomEvent('open-demo-modal', { detail: { href } }));
 }
 
 export function DemoCtaLink({ href, className, children }: { href: string; className: string; children: ReactNode }) {
@@ -18,7 +18,7 @@ export function DemoCtaLink({ href, className, children }: { href: string; class
       onClick={(event) => {
         if (!isDemoHref(href)) return;
         event.preventDefault();
-        openDemoModal();
+        openDemoModal(href);
       }}
       className={className}
     >

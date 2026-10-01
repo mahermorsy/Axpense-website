@@ -5,10 +5,12 @@ import { HomeView } from '@/components/pages/HomeView';
 const LANG = 'en';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Fleet & Asset Management Software for Growing Businesses',
-  description: 'Manage vehicles, equipment, maintenance, fuel, expenses and inspections in one platform. Built for businesses across Egypt and MENA.',
+  title: "Axpense | Fleet & Asset Management Platform for MENA",
+  description: "Axpense is the fleet and asset management platform for businesses in Egypt and MENA: km-based maintenance, inspections, spare parts and costs. Book a demo.",
   path: '/',
   arPath: '/ar',
+  pageType: 'home',
+  absoluteTitle: true,
 });
 
 export default function Page() {

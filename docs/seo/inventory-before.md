@@ -1,0 +1,89 @@
+| Path | Status | Title | H1 | Canonical | hreflang | Indexable | In sitemap | Words | JSON-LD |
+|---|---|---|---|---|---|---|---|---|---|
+| / | 200 | Fleet & Asset Management Software for Growing Businesses \| Axpense | Fleet & asset management software for growing businesses | / | ar, en, x-default | yes | yes | 1032 | Organization, WebSite, FAQPage |
+| /about | 200 | About Axpense \| Axpense | Built for teams that run on assets | /about | ar, en, x-default | yes | yes | 191 | Organization, WebSite |
+| /ar | 200 | برنامج إدارة الأسطول والأصول للشركات النامية \| Axpense | برنامج إدارة الأسطول والأصول للشركات النامية | /ar | en, ar, x-default | yes | yes | 949 | Organization, WebSite, FAQPage |
+| /ar-ae | 200 | برنامج إدارة الأسطول في الإمارات \| Axpense | برنامج إدارة الأسطول في الإمارات للمركبات والأصول والصيانة | /ar-ae | en, ar, x-default | yes | yes | 158 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /ar-eg | 200 | برنامج إدارة الأسطول في مصر \| Axpense | برنامج إدارة الأسطول في مصر للمركبات والصيانة والتكاليف | /ar-eg | en, ar, x-default | yes | yes | 191 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /ar-iq | 200 | برنامج إدارة الأسطول في العراق \| Axpense | برنامج إدارة الأسطول في العراق للمركبات والمعدات والصيانة | /ar-iq | en, ar, x-default | yes | yes | 146 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /ar-jo | 200 | برنامج إدارة الأسطول في الأردن \| Axpense | برنامج إدارة الأسطول في الأردن للمركبات والأصول | /ar-jo | en, ar, x-default | yes | yes | 164 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /ar-mena | 200 | برنامج إدارة الأسطول والأصول في MENA \| Axpense | برنامج إدارة الأسطول والأصول للشركات في منطقة الشرق الأوسط وشمال أفريقيا | /ar-mena | en, ar, x-default | yes | yes | 189 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /ar-qa | 200 | برنامج إدارة الأسطول في قطر \| Axpense | برنامج إدارة الأسطول في قطر للمركبات والمعدات | /ar-qa | en, ar, x-default | yes | yes | 153 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /ar-sa | 200 | برنامج إدارة الأسطول في السعودية \| Axpense | برنامج إدارة الأسطول في السعودية للمركبات والصيانة والتكاليف | /ar-sa | en, ar, x-default | yes | yes | 158 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /ar/about | 200 | من نحن \| Axpense | مصمم للفرق التي تعتمد على الأصول | /ar/about | en, ar, x-default | yes | yes | 174 | Organization, WebSite |
+| /ar/blog | 200 | المدونة \| Axpense | رؤى حول إدارة الأسطول والأصول | /ar/blog | en, ar, x-default | yes | yes | 184 | Organization, WebSite |
+| /ar/contact | 200 | اتصل بنا \| Axpense |  | /ar/contact | en, ar, x-default | yes | yes | 70 | Organization, WebSite |
+| /ar/demo | 200 | احجز عرضًا تجريبيًا \| Axpense |  | /ar/demo | en, ar, x-default | yes | yes | 76 | Organization, WebSite |
+| /ar/features | 200 | المميزات \| Axpense | كل ما تحتاجه من أجل إدارة أصول متميزة | /ar/features | en, ar, x-default | yes | yes | 369 | Organization, WebSite |
+| /ar/features/asset-management | 200 | برنامج إدارة الأصول في مصر \| Axpense | برنامج إدارة الأصول | /ar/features/asset-management | en, ar, x-default | yes | yes | 123 | Organization, WebSite, SoftwareApplication |
+| /ar/features/expense-management | 200 | برنامج إدارة مصروفات الأسطول \| Axpense | برنامج إدارة مصروفات الأسطول | /ar/features/expense-management | en, ar, x-default | yes | yes | 125 | Organization, WebSite, SoftwareApplication |
+| /ar/features/fleet-maintenance | 200 | برنامج إدارة صيانة الأسطول في مصر \| Axpense | برنامج صيانة الأسطول | /ar/features/fleet-maintenance | en, ar, x-default | yes | yes | 132 | Organization, WebSite, SoftwareApplication |
+| /ar/features/fleet-management | 200 | برنامج إدارة الأسطول في مصر \| Axpense | برنامج إدارة الأسطول للشركات في مصر | /ar/features/fleet-management | en, ar, x-default | yes | yes | 130 | Organization, WebSite, SoftwareApplication |
+| /ar/features/fuel-management | 200 | برنامج إدارة الوقود في مصر \| Axpense | برنامج إدارة الوقود لتشغيل الأساطيل | /ar/features/fuel-management | en, ar, x-default | yes | yes | 157 | Organization, WebSite, SoftwareApplication |
+| /ar/features/inspection-management | 200 | برنامج فحص المركبات والالتزام \| Axpense | برنامج فحص المركبات | /ar/features/inspection-management | en, ar, x-default | yes | yes | 119 | Organization, WebSite, SoftwareApplication |
+| /ar/features/preventive-maintenance | 200 | برنامج الصيانة الوقائية في مصر \| Axpense | برنامج الصيانة الوقائية للأساطيل | /ar/features/preventive-maintenance | en, ar, x-default | yes | yes | 152 | Organization, WebSite, SoftwareApplication |
+| /ar/features/reports-analytics | 200 | برنامج تقارير وتحليلات الأسطول \| Axpense | تقارير وتحليلات الأسطول والأصول | /ar/features/reports-analytics | en, ar, x-default | yes | yes | 114 | Organization, WebSite, SoftwareApplication |
+| /ar/features/vehicle-management | 200 | برنامج إدارة المركبات في مصر \| Axpense | برنامج إدارة المركبات للأساطيل النامية | /ar/features/vehicle-management | en, ar, x-default | yes | yes | 155 | Organization, WebSite, SoftwareApplication |
+| /ar/features/work-orders | 200 | برنامج إدارة أوامر الشغل للأساطيل \| Axpense | إدارة أوامر الشغل لصيانة المركبات | /ar/features/work-orders | en, ar, x-default | yes | yes | 150 | Organization, WebSite, SoftwareApplication |
+| /ar/industries | 200 | القطاعات \| Axpense |  | /ar/industries | en, ar, x-default | yes | yes | 75 | Organization, WebSite |
+| /ar/industries/construction | 200 | برنامج إدارة المعدات لشركات المقاولات والإنشاءات \| Axpense | إدارة المعدات لشركات المقاولات | /ar/industries/construction | en, ar, x-default | yes | yes | 82 | Organization, WebSite |
+| /ar/industries/energy-utilities | 200 | برنامج إدارة الأسطول والمعدات لقطاع الطاقة والمرافق \| Axpense | إدارة الأسطول والمعدات لقطاع الطاقة والمرافق | /ar/industries/energy-utilities | en, ar, x-default | yes | yes | 90 | Organization, WebSite |
+| /ar/industries/healthcare | 200 | برنامج إدارة المعدات الطبية \| Axpense | إدارة المعدات الطبية والأسطول للرعاية الصحية | /ar/industries/healthcare | en, ar, x-default | yes | yes | 78 | Organization, WebSite |
+| /ar/industries/logistics | 200 | برنامج إدارة الأسطول لشركات اللوجستيات والنقل \| Axpense | إدارة الأسطول للوجستيات والنقل | /ar/industries/logistics | en, ar, x-default | yes | yes | 86 | Organization, WebSite |
+| /ar/industries/manufacturing | 200 | برنامج إدارة معدات الإنتاج \| Axpense | إدارة المعدات لقطاع التصنيع | /ar/industries/manufacturing | en, ar, x-default | yes | yes | 81 | Organization, WebSite |
+| /ar/industries/real-estate | 200 | إدارة الأسطول وأصول المرافق لشركات العقارات \| Axpense | إدارة الأصول والأسطول لقطاع العقارات | /ar/industries/real-estate | en, ar, x-default | yes | yes | 86 | Organization, WebSite |
+| /ar/industries/transportation | 200 | برنامج إدارة الأسطول لشركات النقل في مصر \| Axpense | برنامج إدارة الأسطول لشركات النقل | /ar/industries/transportation | en, ar, x-default | yes | yes | 89 | Organization, WebSite |
+| /ar/industries/travel-hospitality | 200 | برنامج إدارة الأسطول لقطاع السياحة والضيافة \| Axpense | إدارة الأسطول للسياحة والضيافة | /ar/industries/travel-hospitality | en, ar, x-default | yes | yes | 78 | Organization, WebSite |
+| /ar/pricing | 200 | الأسعار \| Axpense | اختر الخطة المناسبة لك | /ar/pricing | en, ar, x-default | yes | yes | 162 | Organization, WebSite |
+| /ar/resources | 200 | الموارد \| Axpense |  | /ar/resources | en, ar, x-default | yes | yes | 48 | Organization, WebSite |
+| /ar/resources/fleet-cost-calculator | 200 | حاسبة تكلفة الأسطول \| Axpense |  | /ar/resources/fleet-cost-calculator | en, ar, x-default | yes | yes | 98 | Organization, WebSite |
+| /ar/solutions | 200 | الحلول \| Axpense |  | /ar/solutions | en, ar, x-default | yes | yes | 71 | Organization, WebSite |
+| /ar/solutions/asset-lifecycle-management | 200 | برنامج إدارة دورة حياة الأصول \| Axpense | إدارة دورة حياة الأصول | /ar/solutions/asset-lifecycle-management | en, ar, x-default | yes | yes | 49 | Organization, WebSite |
+| /ar/solutions/equipment-cost-management | 200 | برنامج إدارة تكاليف المعدات \| Axpense | إدارة تكاليف المعدات | /ar/solutions/equipment-cost-management | en, ar, x-default | yes | yes | 59 | Organization, WebSite |
+| /ar/solutions/fleet-cost-management | 200 | برنامج إدارة تكاليف الأسطول \| Axpense | إدارة تكاليف الأسطول | /ar/solutions/fleet-cost-management | en, ar, x-default | yes | yes | 66 | Organization, WebSite |
+| /ar/solutions/fleet-maintenance-management | 200 | حل إدارة صيانة الأسطول \| Axpense | إدارة صيانة الأسطول | /ar/solutions/fleet-maintenance-management | en, ar, x-default | yes | yes | 55 | Organization, WebSite |
+| /blog | 200 | Blog \| Axpense | Insights on fleet & asset management | /blog | ar, en, x-default | yes | yes | 201 | Organization, WebSite |
+| /blog/how-to-calculate-fleet-cost | 200 | How to Calculate Fleet Cost \| Axpense | How to Calculate Fleet Cost | /blog/how-to-calculate-fleet-cost |  | yes | yes | 323 | Organization, WebSite, Article |
+| /blog/preventive-vs-reactive-maintenance | 200 | Preventive vs. Reactive Maintenance \| Axpense | Preventive vs. Reactive Maintenance | /blog/preventive-vs-reactive-maintenance |  | yes | yes | 318 | Organization, WebSite, Article |
+| /blog/what-is-asset-management | 200 | What Is Asset Management? \| Axpense | What Is Asset Management? | /blog/what-is-asset-management |  | yes | yes | 289 | Organization, WebSite, Article |
+| /blog/what-is-fleet-management | 200 | What Is Fleet Management? \| Axpense | What Is Fleet Management? | /blog/what-is-fleet-management |  | yes | yes | 350 | Organization, WebSite, Article |
+| /contact | 200 | Contact Sales \| Axpense |  | /contact | ar, en, x-default | yes | yes | 74 | Organization, WebSite |
+| /cookie-policy | 200 | Cookie Policy \| Axpense | Cookie Policy | /cookie-policy |  | no | no | 87 | Organization, WebSite |
+| /demo | 200 | Book a Demo \| Axpense |  | /demo | ar, en, x-default | yes | yes | 80 | Organization, WebSite |
+| /en-ae | 200 | Fleet Management Software in the UAE \| Axpense | Fleet Management Software in the UAE for Vehicles, Assets and Maintenance | /en-ae | en, ar, x-default | yes | yes | 199 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /en-eg | 200 | Fleet Management Software in Egypt \| Axpense | Fleet Management Software in Egypt for Vehicles, Maintenance and Operating Costs | /en-eg | en, ar, x-default | yes | yes | 215 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /en-iq | 200 | Fleet Management Software in Iraq \| Axpense | Fleet Management Software in Iraq for Vehicles, Equipment and Maintenance | /en-iq | en, ar, x-default | yes | yes | 181 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /en-jo | 200 | Fleet Management Software in Jordan \| Axpense | Fleet Management Software in Jordan for Vehicle and Asset Operations | /en-jo | en, ar, x-default | yes | yes | 186 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /en-mena | 200 | Fleet & Asset Management Software for MENA \| Axpense | Fleet & Asset Management Software for MENA Businesses | /en-mena | en, ar, x-default | yes | yes | 208 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /en-qa | 200 | Fleet Management Software in Qatar \| Axpense | Fleet Management Software in Qatar for Vehicles and Equipment | /en-qa | en, ar, x-default | yes | yes | 183 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /en-sa | 200 | Fleet Management Software in Saudi Arabia \| Axpense | Fleet Management Software in Saudi Arabia for Growing Operations | /en-sa | en, ar, x-default | yes | yes | 189 | Organization, WebSite, BreadcrumbList, FAQPage |
+| /features | 200 | Features \| Axpense | Everything You Need for Asset Excellence | /features | ar, en, x-default | yes | yes | 379 | Organization, WebSite |
+| /features/asset-management | 200 | Asset Management Software in Egypt \| Axpense | Asset Management Software | /features/asset-management | ar, en, x-default | yes | yes | 123 | Organization, WebSite, SoftwareApplication |
+| /features/expense-management | 200 | Fleet Expense Management Software \| Axpense | Fleet Expense Management Software | /features/expense-management | ar, en, x-default | yes | yes | 138 | Organization, WebSite, SoftwareApplication |
+| /features/fleet-maintenance | 200 | Fleet Maintenance Software in Egypt \| Axpense | Fleet Maintenance Software | /features/fleet-maintenance | ar, en, x-default | yes | yes | 135 | Organization, WebSite, SoftwareApplication |
+| /features/fleet-management | 200 | Fleet Management Software in Egypt \| Axpense | Fleet Management Software for Egyptian Businesses | /features/fleet-management | ar, en, x-default | yes | yes | 147 | Organization, WebSite, SoftwareApplication |
+| /features/fuel-management | 200 | Fuel Management Software in Egypt \| Axpense | Fuel Management Software for Fleet Operations | /features/fuel-management | ar, en, x-default | yes | yes | 181 | Organization, WebSite, SoftwareApplication |
+| /features/inspection-management | 200 | Vehicle Inspection & Compliance Software \| Axpense | Vehicle Inspection Software | /features/inspection-management | ar, en, x-default | yes | yes | 125 | Organization, WebSite, SoftwareApplication |
+| /features/preventive-maintenance | 200 | Preventive Maintenance Software in Egypt \| Axpense | Preventive Maintenance Software for Fleets | /features/preventive-maintenance | ar, en, x-default | yes | yes | 173 | Organization, WebSite, SoftwareApplication |
+| /features/reports-analytics | 200 | Fleet Reports & Analytics Software \| Axpense | Fleet & Asset Reports and Analytics | /features/reports-analytics | ar, en, x-default | yes | yes | 136 | Organization, WebSite, SoftwareApplication |
+| /features/vehicle-management | 200 | Vehicle Management Software in Egypt \| Axpense | Vehicle Management Software for Growing Fleets | /features/vehicle-management | ar, en, x-default | yes | yes | 173 | Organization, WebSite, SoftwareApplication |
+| /features/work-orders | 200 | Work Order Management Software for Fleets \| Axpense | Work Order Management for Vehicle Maintenance | /features/work-orders | ar, en, x-default | yes | yes | 180 | Organization, WebSite, SoftwareApplication |
+| /industries | 200 | Industries \| Axpense |  | /industries | ar, en, x-default | yes | yes | 84 | Organization, WebSite |
+| /industries/construction | 200 | Equipment Management Software for Construction \| Axpense | Equipment Management for Construction | /industries/construction | ar, en, x-default | yes | yes | 92 | Organization, WebSite |
+| /industries/energy-utilities | 200 | Fleet & Equipment Management Software for Energy & Utilities \| Axpense | Fleet & Equipment Management for Energy & Utilities | /industries/energy-utilities | ar, en, x-default | yes | yes | 100 | Organization, WebSite |
+| /industries/healthcare | 200 | Medical Equipment Management Software \| Axpense | Medical Equipment & Fleet Management for Healthcare | /industries/healthcare | ar, en, x-default | yes | yes | 85 | Organization, WebSite |
+| /industries/logistics | 200 | Fleet Management Software for Logistics & Transportation \| Axpense | Fleet Management for Logistics & Transportation | /industries/logistics | ar, en, x-default | yes | yes | 96 | Organization, WebSite |
+| /industries/manufacturing | 200 | Production Equipment Management Software \| Axpense | Equipment Management for Manufacturing | /industries/manufacturing | ar, en, x-default | yes | yes | 88 | Organization, WebSite |
+| /industries/real-estate | 200 | Fleet & Facility Asset Management for Real Estate \| Axpense | Asset & Fleet Management for Real Estate | /industries/real-estate | ar, en, x-default | yes | yes | 93 | Organization, WebSite |
+| /industries/transportation | 200 | Fleet Management Software for Transportation Companies in Egypt \| Axpense | Fleet Management Software for Transportation Companies | /industries/transportation | ar, en, x-default | yes | yes | 99 | Organization, WebSite |
+| /industries/travel-hospitality | 200 | Fleet Management Software for Travel & Hospitality \| Axpense | Fleet Management for Travel & Hospitality | /industries/travel-hospitality | ar, en, x-default | yes | yes | 86 | Organization, WebSite |
+| /pricing | 200 | Axpense Pricing \| Axpense | Choose Your Perfect Plan | /pricing | ar, en, x-default | yes | yes | 155 | Organization, WebSite |
+| /privacy-policy | 200 | Privacy Policy \| Axpense | Privacy Policy | /privacy-policy |  | no | no | 177 | Organization, WebSite |
+| /resources | 200 | Resources \| Axpense |  | /resources | ar, en, x-default | yes | yes | 50 | Organization, WebSite |
+| /resources/fleet-cost-calculator | 200 | Fleet Cost Calculator \| Axpense |  | /resources/fleet-cost-calculator | ar, en, x-default | yes | yes | 106 | Organization, WebSite |
+| /solutions | 200 | Solutions \| Axpense |  | /solutions | ar, en, x-default | yes | yes | 76 | Organization, WebSite |
+| /solutions/asset-lifecycle-management | 200 | Asset Lifecycle Management Software \| Axpense | Asset Lifecycle Management | /solutions/asset-lifecycle-management | ar, en, x-default | yes | yes | 62 | Organization, WebSite |
+| /solutions/equipment-cost-management | 200 | Equipment Cost Management Software \| Axpense | Equipment Cost Management | /solutions/equipment-cost-management | ar, en, x-default | yes | yes | 67 | Organization, WebSite |
+| /solutions/fleet-cost-management | 200 | Fleet Cost Management Software \| Axpense | Fleet Cost Management | /solutions/fleet-cost-management | ar, en, x-default | yes | yes | 72 | Organization, WebSite |
+| /solutions/fleet-maintenance-management | 200 | Fleet Maintenance Management Solution \| Axpense | Fleet Maintenance Management | /solutions/fleet-maintenance-management | ar, en, x-default | yes | yes | 57 | Organization, WebSite |
+| /terms | 200 | Terms of Service \| Axpense | Terms of Service | /terms |  | no | no | 158 | Organization, WebSite |

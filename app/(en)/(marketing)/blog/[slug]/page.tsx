@@ -1,25 +1,15 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { buildMetadata } from '@/lib/seo';
-import { getPostBySlug, getAllSlugs } from '@/lib/blog';
-import { BlogPostView } from '@/components/BlogPostView';
+import { BlogRoute, blogMetadata, blogParams } from '@/lib/blog-route';
 
+export const dynamicParams = false;
 export function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  return blogParams('en');
+}
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const p = await params;
+  return blogMetadata(p.slug, 'en');
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = getPostBySlug(params.slug);
-  if (!post) return {};
-  return buildMetadata({
-    title: post.title,
-    description: post.description,
-    path: `/blog/${post.slug}`,
-  });
-}
-
-export default function Page({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
-  if (!post) notFound();
-  return <BlogPostView post={post} />;
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const p = await params;
+  return <BlogRoute slug={p.slug} lang="en" />;
 }

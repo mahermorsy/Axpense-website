@@ -104,9 +104,9 @@ docker compose up --build
 
 ### API only (local .NET 8 SDK)
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_SA_PASSWORD='Your_strong_Passw0rd' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+docker run -e ACCEPT_EULA=Y -e MSSQL_SA_PASSWORD='<local-sa-password>' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
 cd backend
-dotnet run --project src/Axpense.Api          # Development settings: admin@axpense.local / Admin12345!
+dotnet run --project src/Axpense.Api          # configure ConnectionStrings__Default, Jwt__Key and optional Seed__* via environment/user secrets
 dotnet test                                   # unit tests
 ```
 
@@ -142,3 +142,5 @@ columns (`IsDeleted`, `DeletedAt`) filled in automatically.
   Azure SQL / SQL Server. Put it behind HTTPS, e.g. `https://api.axpense.net`.
 - **Website/admin on Vercel:** set `NEXT_PUBLIC_API_URL=https://api.axpense.net` in Vercel and add the
   Vercel domain to `Cors__Origins`. Without `NEXT_PUBLIC_API_URL` the admin runs in demo mode.
+
+

@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 import { Section, SectionHead } from '../Section';
 import type { Lang } from '@/lib/i18n';
+import { inline } from '../seo/Md';
 
 export const HOME_FAQS = {
   en: [
@@ -28,14 +29,16 @@ export function FAQSection({ lang = 'en' }: { lang?: Lang }) {
   );
 }
 
-export function FaqItem({ q, a }: { q: string; a: string }) {
+// Visible accordion that opens without JavaScript (<details>/<summary>). The
+// answer accepts markdown-lite links; FAQPage schema uses the plain text.
+export function FaqItem({ q, a, lang = 'en' }: { q: string; a: string; lang?: Lang }) {
   return (
     <details className="card-app group p-5 open:border-primary/30">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-foreground">
         {q}
         <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180 group-open:text-primary" aria-hidden="true" />
       </summary>
-      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a}</p>
+      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{inline(a, lang)}</p>
     </details>
   );
 }

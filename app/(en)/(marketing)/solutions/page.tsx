@@ -5,10 +5,11 @@ import { SolutionsIndexView } from '@/components/pages/ListingViews';
 const LANG = 'en';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Solutions',
-  description: 'Axpense solutions for fleet cost management, maintenance, asset lifecycle, and equipment cost management.',
+  title: "Solutions",
+  description: "Axpense solutions: fleet management software, fleet maintenance software, fleet cost tracking and vehicle inspection software for Egypt and MENA.",
   path: '/solutions',
   arPath: '/ar/solutions',
+  pageType: 'hub',
 });
 
 export default function Page() {

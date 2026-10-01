@@ -16,4 +16,5 @@ public static class Policies
     public const string Leads = nameof(Leads);         // Admin, Sales
     public const string Content = nameof(Content);     // Admin, Editor
     public const string Users = nameof(Users);         // Admin
+    public const string Pricing = nameof(Pricing);     // Admin
 }

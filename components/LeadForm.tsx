@@ -1,9 +1,11 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { trackEvent } from '@/lib/analytics';
 import type { Lang } from '@/lib/i18n';
+import { DEFAULT_PRICING } from '@/content/pricing';
+import { getCurrency, money, quote, type Billing } from '@/lib/pricing';
 
 const T = {
   en: {
@@ -37,6 +39,7 @@ export function LeadForm({ lang = 'en', onDone }: { lang?: Lang; onDone?: () => 
   const t = T[lang];
   const formName = lang === 'ar' ? 'lead_ar' : 'lead';
   const [state, setState] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const plan = usePlanFromUrl(lang);
   const [error, setError] = useState('');
   const started = useRef(false);
   const pathname = usePathname();
@@ -44,7 +47,7 @@ export function LeadForm({ lang = 'en', onDone }: { lang?: Lang; onDone?: () => 
   function handleFirstFocus() {
     if (started.current) return;
     started.current = true;
-    trackEvent('form_start', { form: formName, page: pathname });
+    trackEvent('form_start', { form: formName });
   }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -59,7 +62,9 @@ export function LeadForm({ lang = 'en', onDone }: { lang?: Lang; onDone?: () => 
       const result = await response.json();
       if (!response.ok) throw new Error(t.errors[result.code] || (lang === 'en' ? result.error : '') || t.fallback);
       setState('success');
-      trackEvent('generate_lead', { form: formName, industry: data.industry, page: pathname });
+      const kind = /\/demo$/.test(pathname || '') ? 'demo_request' : /\/contact$/.test(pathname || '') ? 'contact_submit' : null;
+      trackEvent('lead_submit', { form: formName, industry: data.industry });
+      if (kind) trackEvent(kind, { form: formName, industry: data.industry });
       form.reset();
     } catch (err) {
       setState('error');
@@ -82,7 +87,14 @@ export function LeadForm({ lang = 'en', onDone }: { lang?: Lang; onDone?: () => 
   }
 
   return (
-    <form onSubmit={handleSubmit} onFocus={handleFirstFocus} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <form key={plan?.vehicles ?? 0} onSubmit={handleSubmit} onFocus={handleFirstFocus} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {plan && (
+        <div className="sm:col-span-2 rounded-xl border border-primary/25 bg-primary/5 p-4 text-sm">
+          <p className="font-semibold text-foreground">{lang === 'ar' ? 'الخطة التي اخترتها' : 'Your selected plan'}</p>
+          <p className="mt-1 text-foreground" dir="auto">{plan.label}</p>
+          <input type="hidden" name="plan" value={plan.label} />
+        </div>
+      )}
       {/* Honeypot — hidden from people and assistive tech; bots tend to fill it. */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
         <label htmlFor="website">Website</label>
@@ -98,7 +110,7 @@ export function LeadForm({ lang = 'en', onDone }: { lang?: Lang; onDone?: () => 
           <option value="">{t.sizePh}</option>{t.sizes.map((s) => <option key={s}>{s}</option>)}
         </select>
       </div>
-      <Field label={t.assets} name="assetCount" type="number" min="0" />
+      <Field label={t.assets} name="assetCount" type="number" min="0" defaultValue={plan ? String(plan.vehicles) : undefined} />
       <div className="sm:col-span-2">
         <label htmlFor="industry" className="label-app">{t.industry}</label>
         <select id="industry" name="industry" className="input-app" defaultValue="">
@@ -116,6 +128,33 @@ export function LeadForm({ lang = 'en', onDone }: { lang?: Lang; onDone?: () => 
   );
 }
 
-function Field({ label, name, type = 'text', required = false, placeholder, min, autoComplete, ltr = false }: { label: string; name: string; type?: string; required?: boolean; placeholder?: string; min?: string; autoComplete?: string; ltr?: boolean }) {
-  return <div><label htmlFor={name} className="label-app">{label}{required && <span className="text-primary"> *</span>}</label><input id={name} type={type} name={name} required={required} placeholder={placeholder} min={min} autoComplete={autoComplete} maxLength={200} dir={ltr ? 'ltr' : undefined} className="input-app" /></div>;
+function Field({ label, name, type = 'text', required = false, placeholder, min, autoComplete, ltr = false, defaultValue }: { label: string; name: string; type?: string; required?: boolean; placeholder?: string; min?: string; autoComplete?: string; ltr?: boolean; defaultValue?: string }) {
+  return <div><label htmlFor={name} className="label-app">{label}{required && <span className="text-primary"> *</span>}</label><input id={name} type={type} name={name} required={required} placeholder={placeholder} min={min} autoComplete={autoComplete} maxLength={200} dir={ltr ? 'ltr' : undefined} defaultValue={defaultValue} className="input-app" /></div>;
+}
+
+/**
+ * Plan chosen on /pricing (?vehicles=25&currency=EGP&billing=monthly) so the
+ * visitor doesn't re-enter it. Read after mount (window.location) to keep the
+ * page static.
+ */
+function usePlanFromUrl(lang: Lang) {
+  const [plan, setPlan] = useState<{ vehicles: number; label: string } | null>(null);
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search);
+    const vehicles = Number(q.get('vehicles'));
+    if (!vehicles || vehicles < 1) return;
+    const currency = getCurrency(DEFAULT_PRICING, q.get('currency'));
+    const billing: Billing = q.get('billing') === 'annual' ? 'annual' : 'monthly';
+    const r = quote(DEFAULT_PRICING, currency, vehicles);
+    const ar = lang === 'ar';
+    const count = ar ? `${r.vehicles} مركبة` : `${r.vehicles} vehicles`;
+    const price = r.kind === 'custom'
+      ? (ar ? 'تسعير مخصص' : 'custom pricing')
+      : billing === 'annual'
+        ? `${money(r.annualTotal, currency, lang, 0)} ${ar ? '/ سنويًا' : '/ year'}`
+        : `${money(r.monthlyTotal, currency, lang, 0)} ${ar ? '/ شهريًا' : '/ month'}`;
+    const cycle = billing === 'annual' ? (ar ? 'سنوي' : 'Annual') : (ar ? 'شهري' : 'Monthly');
+    setPlan({ vehicles: r.vehicles, label: `${count} · ${currency.code} · ${cycle} — ${price}` });
+  }, [lang]);
+  return plan;
 }

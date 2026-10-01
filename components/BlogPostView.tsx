@@ -1,41 +1,64 @@
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import type { BlogPost } from '@/lib/blog';
-import { BLOG_POSTS } from '@/lib/blog';
-import { SITE_URL, SITE_NAME } from '@/lib/seo';
+import { blogPath, categoryLabel, getPosts, type BlogPost } from '@/lib/blog';
+import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
+import { DEFAULT_OG_IMAGE } from '@/lib/seo';
+import { primaryCta } from '@/lib/cta';
+import { lhref, type Lang } from '@/lib/i18n';
 import { BlogCover } from './blog/BlogCover';
 import { BlogCard, PostMeta } from './blog/BlogCard';
 import { CtaBand } from './ui/AppSections';
-import { PRIMARY_CTA } from '@/lib/cta';
+import { Breadcrumbs } from './seo/Breadcrumbs';
+import { JsonLd } from './seo/JsonLd';
+import { Md, plain } from './seo/Md';
+import { FaqItem } from './home/FAQSection';
+import { links } from '@/content/registry';
+import { gated } from '@/lib/capabilities';
 
-export function articleJsonLd(post: BlogPost) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt,
-    author: { '@type': 'Organization', name: SITE_NAME },
-    publisher: { '@type': 'Organization', name: SITE_NAME },
-    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
-  };
-}
+const T = {
+  en: {
+    home: 'Home', blog: 'Blog', back: 'Back to Blog', toc: 'In this article', faq: 'Frequently asked questions',
+    next: 'Put this into practice', more: 'More', moreAccent: 'articles',
+    cta: { title: 'Ready to take control of your', accent: 'fleet?', subtitle: 'Book a demo and see Axpense with your own vehicles: km-based maintenance, inspections, spare parts and costs in one place.', sales: 'Talk to Sales' },
+  },
+  ar: {
+    home: 'الرئيسية', blog: 'المدونة', back: 'العودة إلى المدونة', toc: 'في هذا المقال', faq: 'الأسئلة الشائعة',
+    next: 'طبّق ذلك عمليًا', more: 'مقالات', moreAccent: 'أخرى',
+    cta: { title: 'هل أنت مستعد للتحكم في', accent: 'أسطولك؟', subtitle: 'احجز عرضًا تجريبيًا وشاهد أكسبنس مع مركباتك: الصيانة حسب الكيلومترات والفحوصات وقطع الغيار والتكاليف في مكان واحد.', sales: 'تحدث مع المبيعات' },
+  },
+};
 
 export function BlogPostView({ post }: { post: BlogPost }) {
-  const more = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const lang: Lang = post.language;
+  const t = T[lang];
+  const path = blogPath(post.slug, lang);
+  const [answer, ...sections] = post.sections;
+  const faqs = gated(post.faqs ?? []);
+  const related = links(post.relatedPages, lang);
+  const more = getPosts(lang).filter((p) => p.slug !== post.slug && p.category === post.category)
+    .concat(getPosts(lang).filter((p) => p.slug !== post.slug && p.category !== post.category)).slice(0, 3);
+  const crumbs = [
+    { name: t.home, path: lhref(lang, '/') },
+    { name: t.blog, path: lhref(lang, '/blog') },
+    { name: post.title, path },
+  ];
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(post)) }} />
+      <JsonLd data={articleSchema({ title: post.title, description: post.seoDescription ?? post.excerpt, path, image: DEFAULT_OG_IMAGE, publishedAt: post.publishedAt, updatedAt: post.updatedAt, lang })} />
+      <JsonLd data={breadcrumbSchema(crumbs)} />
+      {faqs.length > 0 && <JsonLd data={faqSchema(faqs.map((f) => ({ q: f.q, a: plain(f.a) })))} />}
 
-      <header className="bg-gradient-hero pb-10 pt-12">
+      <Breadcrumbs lang={lang} items={[{ label: t.blog, href: lhref(lang, '/blog') }, { label: post.title }]} />
+
+      <header className="bg-gradient-hero pb-10 pt-8">
         <div className="mx-auto max-w-3xl px-5 sm:px-7">
-          <Link href="/blog" className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />Back to Blog
+          <Link href={lhref(lang, '/blog')} className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+            <ArrowLeft className="h-4 w-4 rtl:rotate-180" aria-hidden="true" />{t.back}
           </Link>
-          <PostMeta post={post} />
+          <PostMeta post={post} lang={lang} />
           <h1 className="mt-5 text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl text-balance">{post.title}</h1>
-          <p className="mt-4 text-lg leading-relaxed text-muted-foreground sm:text-xl">{post.description}</p>
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground sm:text-xl">{post.excerpt}</p>
         </div>
       </header>
 
@@ -45,32 +68,50 @@ export function BlogPostView({ post }: { post: BlogPost }) {
 
       <div className="mx-auto grid max-w-5xl gap-10 px-5 py-14 sm:px-7 lg:grid-cols-[1fr_220px]">
         <article className="min-w-0">
-          {post.sections.map((s) => (
-            <section key={s.heading} id={slugify(s.heading)} className="scroll-mt-24 [&:not(:first-child)]:mt-10">
+          {answer && (
+            <section id="quick-answer" className="rounded-2xl border border-primary/25 bg-panel-1 p-6">
+              <h2 className="mb-2 text-lg font-semibold text-foreground">{answer.heading}</h2>
+              <Md text={answer.body} lang={lang} className="!text-[17px] !text-foreground" />
+            </section>
+          )}
+          {sections.map((s, i) => (
+            <section key={s.heading} id={`s${i + 1}`} className="mt-10 scroll-mt-24">
               <h2 className="mb-4 text-2xl font-bold text-foreground">{s.heading}</h2>
-              <div className="flex flex-col gap-4">
-                {s.body.map((p, i) => <p key={i} className="text-[17px] leading-8 text-ink-700">{p}</p>)}
-              </div>
+              <Md text={s.body} lang={lang} className="!text-[17px] !leading-8" />
             </section>
           ))}
 
-          {post.relatedFeature && (
-            <div className="mt-12 flex flex-col items-start justify-between gap-4 rounded-2xl border border-primary/20 bg-panel-1 p-6 sm:flex-row sm:items-center">
-              <p className="font-medium text-foreground">See how Axpense handles this in practice.</p>
-              <Link href={post.relatedFeature.href} className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
-                {post.relatedFeature.label}<ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            </div>
+          {faqs.length > 0 && (
+            <section id="faq" className="mt-12 scroll-mt-24">
+              <h2 className="mb-4 text-2xl font-bold text-foreground">{t.faq}</h2>
+              <div className="flex flex-col gap-3">{faqs.map((f) => <FaqItem key={f.q} q={f.q} a={f.a} lang={lang} />)}</div>
+            </section>
+          )}
+
+          {related.length > 0 && (
+            <nav aria-label={t.next} className="mt-12 rounded-2xl border border-primary/20 bg-panel-1 p-6">
+              <p className="mb-3 font-semibold text-foreground">{t.next}</p>
+              <ul className="flex flex-col gap-2">
+                {related.map((l) => (
+                  <li key={l.path}>
+                    <Link href={lhref(lang, l.path)} className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
+                      {l.label}<ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden="true" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           )}
         </article>
 
         <aside className="hidden lg:block">
-          <nav aria-label="In this article" className="sticky top-24 rounded-2xl border border-border bg-card p-5">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">In this article</p>
+          <nav aria-label={t.toc} className="sticky top-24 rounded-2xl border border-border bg-card p-5">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t.toc}</p>
             <ul className="flex flex-col gap-2">
-              {post.sections.map((s) => (
-                <li key={s.heading}><a href={`#${slugify(s.heading)}`} className="text-sm text-foreground transition-colors hover:text-primary">{s.heading}</a></li>
+              {sections.map((s, i) => (
+                <li key={s.heading}><a href={`#s${i + 1}`} className="text-sm text-foreground transition-colors hover:text-primary">{s.heading}</a></li>
               ))}
+              {faqs.length > 0 && <li><a href="#faq" className="text-sm text-foreground transition-colors hover:text-primary">{t.faq}</a></li>}
             </ul>
           </nav>
         </aside>
@@ -79,19 +120,17 @@ export function BlogPostView({ post }: { post: BlogPost }) {
       {more.length > 0 && (
         <section className="border-t border-border bg-gradient-light py-20">
           <div className="mx-auto max-w-wrap px-5 sm:px-7">
-            <h2 className="mb-8 text-2xl font-bold text-foreground sm:text-3xl">More <span className="text-gradient">articles</span></h2>
+            <h2 className="mb-8 text-2xl font-bold text-foreground sm:text-3xl">{t.more} <span className="text-gradient">{t.moreAccent}</span></h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {more.map((p) => <BlogCard key={p.slug} post={p} />)}
+              {more.map((p) => <BlogCard key={p.slug} post={p} lang={lang} />)}
             </div>
           </div>
         </section>
       )}
 
-      <CtaBand title="Ready to take control of your" accent="fleet & assets?" subtitle="Book a demo and see Axpense with your own vehicles and equipment." primary={PRIMARY_CTA} secondary={{ label: 'Talk to Sales', href: '/contact' }} />
+      <CtaBand title={t.cta.title} accent={t.cta.accent} subtitle={t.cta.subtitle} primary={primaryCta(lang)} secondary={{ label: t.cta.sales, href: lhref(lang, '/contact') }} />
     </>
   );
 }
 
-function slugify(s: string) {
-  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
+export { categoryLabel };

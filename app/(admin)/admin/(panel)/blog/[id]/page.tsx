@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { ArrowDown, ArrowLeft, ArrowUp, Eye, Plus, Save, Trash2 } from 'lucide-react';
 import { useAdmin, uid } from '@/lib/admin/store';
@@ -16,7 +16,8 @@ function blank(authorId: string): AdminPost {
   return { id: uid('P'), slug: '', title: '', excerpt: '', category: CATEGORIES[0], status: 'draft', lang: 'en', publishedAt: '', updatedAt: today, views: 0, authorId, sections: [{ heading: '', body: '' }] };
 }
 
-export default function EditPostPage({ params }: { params: { id: string } }) {
+export default function EditPostPage() {
+  const params = useParams<{ id: string }>();
   const { posts, me, savePost, deletePost, toast, ready } = useAdmin();
   const router = useRouter();
   const isNew = params.id === 'new';

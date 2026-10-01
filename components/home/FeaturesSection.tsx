@@ -4,10 +4,10 @@ import { IconCard } from '../ui/IconCard';
 import { lhref, type Lang } from '@/lib/i18n';
 
 const FEATURES = [
-  { icon: Truck, tone: 'green' as const, href: '/features/fleet-management',
+  { icon: Truck, tone: 'green' as const, href: '/fleet-management-software',
     en: ['Fleet Management', 'Track every vehicle, assign drivers, and keep documents and status in one place.'],
     ar: ['إدارة الأسطول', 'تتبع كل مركبة، وعيّن السائقين، واحتفظ بالمستندات والحالة في مكان واحد.'] },
-  { icon: Wrench, tone: 'amber' as const, href: '/features/fleet-maintenance',
+  { icon: Wrench, tone: 'amber' as const, href: '/fleet-maintenance-software',
     en: ['Maintenance Management', 'Preventive maintenance reminders by kilometres driven or by date, with tasks and work orders.'],
     ar: ['إدارة الصيانة', 'تنبيهات صيانة وقائية حسب الكيلومترات المقطوعة أو التاريخ، مع المهام وأوامر الشغل.'] },
   { icon: DollarSign, tone: 'teal' as const, href: '/features/expense-management',

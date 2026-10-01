@@ -2,6 +2,7 @@ using Axpense.Api.Infrastructure;
 using Axpense.Core.Features.Blog;
 using Axpense.Core.Features.Faqs;
 using Axpense.Core.Features.Leads;
+using Axpense.Core.Features.Pricing;
 using Axpense.Domain.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -34,4 +35,14 @@ public sealed class PublicController : ApiControllerBase
     [HttpGet("faqs"), OutputCache(Duration = 60)]
     public async Task<IActionResult> Faqs([FromQuery] string page = "home", [FromQuery] ContentLanguage language = ContentLanguage.En, CancellationToken ct = default) =>
         (await Sender.Send(new GetPublicFaqsQuery(page, language), ct)).ToActionResult(this);
+
+    /// <summary>Vehicle-based pricing for the website (same shape as its PricingConfig).</summary>
+    [HttpGet("pricing"), OutputCache(Duration = 60)]
+    public async Task<IActionResult> Pricing(CancellationToken ct) =>
+        (await Sender.Send(new GetPublicPricingQuery(), ct)).ToActionResult(this);
+
+    /// <summary>Price for a fleet size, e.g. /api/public/pricing/quote?currency=EGP&amp;vehicles=25&amp;billing=annual.</summary>
+    [HttpGet("pricing/quote")]
+    public async Task<IActionResult> Quote([FromQuery] string currency = "EGP", [FromQuery] int vehicles = 5, [FromQuery] BillingCycle billing = BillingCycle.Monthly, CancellationToken ct = default) =>
+        (await Sender.Send(new GetPricingQuoteQuery(currency, vehicles, billing), ct)).ToActionResult(this);
 }

@@ -69,7 +69,8 @@ builder.Services.AddAuthorizationBuilder()
     .AddPolicy(Policies.Dashboard, p => p.RequireRole(Roles.Admin, Roles.Editor, Roles.Sales))
     .AddPolicy(Policies.Leads, p => p.RequireRole(Roles.Admin, Roles.Sales))
     .AddPolicy(Policies.Content, p => p.RequireRole(Roles.Admin, Roles.Editor))
-    .AddPolicy(Policies.Users, p => p.RequireRole(Roles.Admin));
+    .AddPolicy(Policies.Users, p => p.RequireRole(Roles.Admin))
+    .AddPolicy(Policies.Pricing, p => p.RequireRole(Roles.Admin));
 
 // ---------- CORS (admin + website origins) ----------
 var origins = config.GetSection("Cors:Origins").Get<string[]>() ?? Array.Empty<string>();

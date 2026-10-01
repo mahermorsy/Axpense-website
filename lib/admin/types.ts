@@ -1,5 +1,5 @@
 export type Role = 'admin' | 'editor' | 'sales';
-export type Area = 'dashboard' | 'leads' | 'blog' | 'faqs' | 'users';
+export type Area = 'dashboard' | 'leads' | 'blog' | 'faqs' | 'users' | 'pricing';
 
 export type LeadStatus = 'new' | 'contacted' | 'qualified' | 'demo_booked' | 'won' | 'lost';
 export type Lead = {
@@ -72,13 +72,13 @@ export const LEAD_STATUSES: { id: LeadStatus; label: string }[] = [
 
 export const ROLE_LABEL: Record<Role, string> = { admin: 'Admin', editor: 'Editor', sales: 'Sales' };
 export const ROLE_DESC: Record<Role, string> = {
-  admin: 'Full access, including users',
+  admin: 'Full access, including users and pricing',
   editor: 'Blog articles and FAQs',
   sales: 'Leads and lead analytics',
 };
 
 const ACCESS: Record<Role, Area[]> = {
-  admin: ['dashboard', 'leads', 'blog', 'faqs', 'users'],
+  admin: ['dashboard', 'leads', 'blog', 'faqs', 'users', 'pricing'],
   editor: ['dashboard', 'blog', 'faqs'],
   sales: ['dashboard', 'leads'],
 };

@@ -5,10 +5,11 @@ import { ResourcesView } from '@/components/pages/ListingViews';
 const LANG = 'ar';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'الموارد',
-  description: 'أدلة وأدوات لإدارة الأسطول والأصول، منها دليل إدارة الأسطول وقائمة الصيانة وحاسبة التكاليف.',
+  title: "موارد مجانية للأساطيل",
+  description: "أدوات وأدلة مجانية للأساطيل: حاسبة تكلفة الكيلومتر، وقائمة فحص السيارة، وجدول الصيانة الدورية، ومقالات عملية عن إدارة الأسطول.",
   path: '/ar/resources',
   enPath: '/resources',
+  pageType: 'hub',
 });
 
 export default function Page() {

@@ -1,8 +1,9 @@
 import { BookOpen, CalendarDays, Layers } from 'lucide-react';
-import { BLOG_POSTS, formatPostDate } from '@/lib/blog';
+import { getPosts, hasTwin, formatPostDate } from '@/lib/blog';
 import { CtaBand, PageHero } from '@/components/ui/AppSections';
 import { BlogCard, FeaturedPostCard, categoryLabel } from '@/components/blog/BlogCard';
 import { primaryCta } from '@/lib/cta';
+import { PageBreadcrumbs } from '@/components/seo/PageBreadcrumbs';
 import { lhref, type Lang } from '@/lib/i18n';
 
 const T = {
@@ -20,18 +21,21 @@ const T = {
 
 export function BlogIndexView({ lang }: { lang: Lang }) {
   const t = T[lang];
-  const posts = [...BLOG_POSTS].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  const posts = getPosts(lang);
+  // Arabic readers also see the English-only guides, labelled as English.
+  const englishOnly = lang === 'ar' ? getPosts('en').filter((p) => !hasTwin(p.slug, 'en')) : [];
   const [featured, ...rest] = posts;
-  const categories = Array.from(new Set(posts.map((p) => p.category)));
-  const latestDate = formatPostDate(posts[0].publishedAt, lang, 'long').replace(/,?\s*[\d٠-٩]{4}$/, '');
+  const categories = Array.from(new Set([...posts, ...englishOnly].map((p) => p.category)));
+  const latestDate = formatPostDate(posts[0].updatedAt, lang, 'long').replace(/,?\s*[\d٠-٩]{4}$/, '');
   const stats = [
-    { icon: BookOpen, value: String(posts.length), label: t.articles },
+    { icon: BookOpen, value: String(posts.length + englishOnly.length), label: t.articles },
     { icon: CalendarDays, value: latestDate, label: t.latestPublish },
     { icon: Layers, value: String(categories.length), label: t.categories },
   ];
 
   return (
     <>
+      <PageBreadcrumbs lang={lang} label={lang === 'ar' ? 'المدونة' : 'Blog'} path="/blog" />
       <PageHero {...t.hero} />
 
       <section className="-mt-10 pb-4">
@@ -63,6 +67,17 @@ export function BlogIndexView({ lang }: { lang: Lang }) {
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {rest.map((post) => <BlogCard key={post.slug} post={post} lang={lang} />)}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {englishOnly.length > 0 && (
+        <section className="pb-24">
+          <div className="mx-auto max-w-wrap px-5 sm:px-7">
+            <h2 className="mb-8 text-2xl font-bold text-foreground sm:text-3xl">أدلة <span className="text-gradient">بالإنجليزية</span></h2>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {englishOnly.map((post) => <BlogCard key={post.slug} post={post} lang={lang} />)}
             </div>
           </div>
         </section>

@@ -90,3 +90,32 @@ public sealed class FaqConfiguration : IEntityTypeConfiguration<Faq>
         b.HasIndex(f => new { f.Page, f.Language, f.SortOrder });
     }
 }
+
+public sealed class PricingCurrencyConfiguration : IEntityTypeConfiguration<PricingCurrency>
+{
+    public void Configure(EntityTypeBuilder<PricingCurrency> b)
+    {
+        b.ToTable("PricingCurrencies");
+        AuditColumns.Configure(b);
+        b.Property(c => c.Code).HasMaxLength(3).IsRequired();
+        b.Property(c => c.Symbol).HasMaxLength(8).IsRequired();
+        b.Property(c => c.SymbolAr).HasMaxLength(8).IsRequired();
+        b.Property(c => c.NameEn).HasMaxLength(60).IsRequired();
+        b.Property(c => c.NameAr).HasMaxLength(60).IsRequired();
+        b.Property(c => c.Flag).HasMaxLength(16);
+        b.Property(c => c.AnnualDiscountPercent).HasPrecision(5, 2);
+        b.HasIndex(c => c.Code).IsUnique().HasFilter("[IsDeleted] = 0");
+    }
+}
+
+public sealed class PricingTierConfiguration : IEntityTypeConfiguration<PricingTier>
+{
+    public void Configure(EntityTypeBuilder<PricingTier> b)
+    {
+        b.ToTable("PricingTiers");
+        AuditColumns.Configure(b);
+        b.Property(t => t.CurrencyCode).HasMaxLength(3).IsRequired();
+        b.Property(t => t.MonthlyPricePerVehicle).HasPrecision(18, 3);
+        b.HasIndex(t => new { t.CurrencyCode, t.MinVehicles });
+    }
+}

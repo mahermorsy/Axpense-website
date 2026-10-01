@@ -1,89 +1,679 @@
 [
   {
-    "slug": "what-is-fleet-management",
-    "title": "What Is Fleet Management?",
-    "excerpt": "A plain-language guide to what fleet management covers, and why businesses in Egypt outgrow spreadsheets for it.",
-    "category": "Fleet Management",
+    "slug": "what-is-fleet-management-software",
+    "title": "What Is Fleet Management Software? A Plain Guide for Growing Fleets",
+    "excerpt": "What fleet management software is, what it actually does day to day, who needs it, and how to tell when your spreadsheet has stopped being enough.",
+    "category": "fleet-management",
     "language": "en",
-    "publishedAt": "2026-09-01",
+    "publishedAt": "2026-09-29",
     "sections": [
       {
-        "heading": "The short version",
-        "body": "Fleet management is the set of processes a business uses to keep its vehicles running safely, legally, and cost-effectively — from acquisition through daily operation to eventual disposal.\n\nFor most businesses this means tracking vehicles, drivers, documents, maintenance, fuel, and costs, and making decisions from that data instead of guessing."
+        "heading": "Quick answer",
+        "body": "Fleet management software is a system that keeps every company vehicle's records, maintenance, drivers, inspections and costs in one shared place. It replaces scattered spreadsheets, paper forms and message threads with one record per vehicle, reminders for work that is due, and reports that show what each vehicle costs to run and what it needs next."
       },
       {
-        "heading": "What it actually involves",
-        "body": "Vehicle records: make, model, plate number, registration, and ownership details.\n\nDriver assignment: who is responsible for which vehicle, and whether their license is current.\n\nMaintenance: preventive schedules and the work orders that come out of them.\n\nExpenses: fuel, repairs, insurance, and other operating costs, tracked per vehicle.\n\nCompliance: inspections, licensing, and documentation that stays current."
+        "heading": "A working definition",
+        "body": "A \"fleet\" is any group of vehicles a business owns or leases to do its work: delivery vans, pickups for technicians, trucks, sales cars, buses or a mix of all of them. Fleet management is the work of keeping those vehicles available, safe and affordable. Fleet management software is the tool that holds the information that work depends on.\n\nAt its simplest, the software answers four questions for every vehicle:\n\n1. **What is it?** Plate number, make, model, year, current odometer reading and status.\n2. **Who is using it?** The driver it is assigned to, and who had it before.\n3. **What does it need?** The next service, how many kilometres are left until it is due, and any problems found in the last inspection.\n4. **What has it cost?** Repairs, parts, insurance, registration and other expenses, added up over time.\n\nEverything else a system offers is built on top of those four answers. If a tool cannot answer them quickly for any vehicle in your fleet, it is not doing the core job."
       },
       {
-        "heading": "Why spreadsheets stop working",
-        "body": "A spreadsheet can hold vehicle data. What it can’t do is remind you when a license is about to expire, flag a failed inspection automatically, or show you cost per vehicle without manual work every month.\n\nThat gap is usually where businesses start looking for dedicated fleet management software."
+        "heading": "What fleet management software does day to day",
+        "body": "The value shows up in routine work, not in dashboards alone. Here is what a fleet team typically uses it for in a normal week.\n\n### Keeping the vehicle register current\n\nEvery vehicle has one record with its details, its current km reading and its full history. When a vehicle is sold, written off or moved to another branch, the record shows it. New staff can look up any vehicle without asking the one person who \"knows the fleet\".\n\n### Planning maintenance before it becomes a breakdown\n\nService intervals are set per vehicle, usually in kilometres for road vehicles. The system compares the latest odometer reading with the interval and shows which vehicles are due soon and which are overdue. That is the difference between booking a service on your schedule and waiting for a warning light. If you want the detail, our guide to a [preventive maintenance schedule for fleets](/blog/km-based-preventive-maintenance) explains how to set intervals.\n\n### Running inspections with a checklist\n\nDrivers or supervisors check tyres, lights, brakes, fluids and body condition against a fixed list. Failed items are recorded on the vehicle, so a problem found on Monday is still visible on Thursday when someone books the workshop.\n\n### Recording costs where they belong\n\nEvery repair bill, part, insurance premium and registration fee is recorded against the vehicle it was spent on, with a category. Over months, this builds the cost history you need to decide whether to repair or replace.\n\n### Assigning drivers\n\nKnowing which driver had which vehicle, and when, matters for accountability, for damage questions and for understanding why one vehicle wears faster than another."
+      },
+      {
+        "heading": "The main modules and what each one is for",
+        "body": "Different products group their features differently, but most fleet systems cover some combination of the modules below. The table shows what each module solves, so you can judge which ones your business actually needs.\n\n| Module | What it keeps | The problem it solves |\n|---|---|---|\n| Vehicle register | Details, odometer, status, history | \"Which vehicles do we have and where are they in their life?\" |\n| Preventive maintenance | Service intervals and due dates or km | Missed oil changes and avoidable breakdowns |\n| Service history | Every job done on each vehicle | Rebuilding what happened from paper and memory |\n| Spare parts | Parts bought and where they were fitted | Parts that disappear or get fitted twice |\n| Drivers | Driver-to-vehicle assignment | Unclear responsibility for a vehicle |\n| Inspections | Checklist results, failed items | Defects reported but never fixed |\n| Expenses | Costs by vehicle and category | Not knowing what each vehicle really costs |\n| Depreciation | Book value over time | Replacement decisions made on gut feel |\n| Reports | Summaries across the fleet | Management asking questions nobody can answer quickly |\n\nSome products in the market also focus on live GPS location, telematics hardware or route planning. Those are a different category of tool with different costs and installation work. Many companies start with the records, maintenance and cost side, because that is where most of the avoidable money is lost."
+      },
+      {
+        "heading": "Who needs it, and when",
+        "body": "There is no magic fleet size. The signal is usually that the current method has started to fail. Common signs:\n\n- **You run more than a handful of vehicles** and one person spends hours each week updating a spreadsheet.\n- **A service was missed** and the vehicle broke down, or you found out a vehicle was thousands of kilometres past its interval.\n- **Finance asks what a vehicle costs** and the answer takes days to assemble from invoices.\n- **Inspection forms are filled in but nothing happens** with the defects they report.\n- **You have more than one site or branch** and nobody has a full picture of the fleet.\n\nBusinesses in logistics, distribution, construction, field services, manufacturing and oil and gas tend to hit these signs early because their vehicles drive long distances and downtime stops revenue. But a company with 15 sales cars can feel the same pain when renewals, services and repairs are all tracked by memory."
+      },
+      {
+        "heading": "Spreadsheet or software: an honest comparison",
+        "body": "Excel is where almost every fleet starts, and for a very small fleet it can be enough. The limits appear as the fleet and the team grow:\n\n- A spreadsheet does not remind anyone. Someone has to open it, sort it and notice what is due.\n- It has no single history per vehicle. Services, costs and inspections end up in separate tabs or separate files.\n- Several people editing it leads to overwritten cells and copies named \"final_v3\".\n- It cannot easily connect a failed inspection item to the repair and its cost.\n\nSoftware solves these by design: one record per vehicle, reminders driven by the data, and costs linked to the vehicles and jobs they belong to. We compare the two in detail in [fleet management Excel template vs software](/blog/fleet-management-excel-vs-software), including when staying on Excel is reasonable."
+      },
+      {
+        "heading": "What to look for when you compare systems",
+        "body": "A demo can make every product look similar. These questions separate a tool your team will use from one that gets abandoned after a month.\n\n### Does it match how your vehicles wear?\n\nRoad vehicles wear with distance. A system that schedules maintenance only by calendar date will service a low-use car too often and a high-use van too late. Look for intervals in kilometres, with a clear \"km left until service\" view.\n\n### Can your team use it in their language?\n\nIn Egypt, Saudi Arabia and the rest of the region, supervisors, drivers and workshop staff often prefer Arabic, while management reports may be in English. A system with both interfaces removes a real barrier to adoption.\n\n### Does it tie costs to vehicles?\n\nThe point of recording expenses is to see cost per vehicle and per category. Check that every expense is attached to a vehicle and that reports can group costs the way your finance team thinks.\n\n### How long does setup take?\n\nAsk what you need to prepare, who does the data import and how long before your team is using it. A system that takes three months to configure often never gets finished.\n\n### Is the price clear?\n\nLook for published pricing, a free trial and no long lock-in before you have seen the tool work with your own vehicles."
+      },
+      {
+        "heading": "A simple example of the difference",
+        "body": "For example, imagine a distribution company with 30 vans, each driving about 250 km a day. The service interval is 10,000 km, so each van is due roughly every 40 working days, which means the fleet needs about three services every four working days on average.\n\nOn a spreadsheet, the supervisor has to update 30 odometer readings, calculate the km left for each van and spot the ones close to their interval. If readings are not updated for two weeks, a van can be 3,000 km past due before anyone notices.\n\nWith fleet management software, the latest odometer reading goes into the vehicle record and the system shows which vans are due soon and which are overdue. The supervisor's job changes from calculating to scheduling. The same record then holds the service cost, the parts fitted and the next due point, which feeds straight into [tracking fleet costs per vehicle](/fleet-cost-tracking)."
+      },
+      {
+        "heading": "How Axpense fits in",
+        "body": "Axpense is a fleet and asset management platform for companies in Egypt, Saudi Arabia and the wider Middle East, in Arabic and English. It covers the records, maintenance and cost side of fleet management:\n\n- A vehicle register with plate, make, model, odometer, status and history.\n- Km-based preventive maintenance with reminders, km left until service and overdue flags, plus a full service history.\n- Spare parts tracked from purchase to installation, so you know which part went into which vehicle.\n- Driver assignment, inspections with configurable checklists, and failed items recorded on the vehicle.\n- Expenses per vehicle by category, depreciation and book value, and reports on maintenance status and costs.\n\nOnboarding is free and most teams are live in one day. To see how it works with your own vehicles, read more about our [fleet management software](/fleet-management-software) and book a demo."
+      }
+    ]
+  },
+  {
+    "slug": "km-based-preventive-maintenance",
+    "title": "How to Build a Preventive Maintenance Schedule for Fleets Based on Kilometres",
+    "excerpt": "Why kilometre-based service intervals beat calendar-only schedules, and how to build a preventive maintenance schedule your fleet will actually follow.",
+    "category": "fleet-maintenance",
+    "language": "en",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "Quick answer",
+        "body": "A preventive maintenance schedule for fleets lists each service a vehicle needs and the interval at which it is due, measured mainly in kilometres driven. Start from the manufacturer's schedule, shorten intervals for heavy or dusty duty, record odometer readings regularly, and service each vehicle when its km reading reaches the next interval rather than on a fixed calendar date."
+      },
+      {
+        "heading": "Why kilometres, not just the calendar",
+        "body": "Engines, brakes, tyres and suspension wear with use. A van that drives 400 km a day in city traffic puts more load on its oil and brake pads in a month than a manager's car does in a season. A schedule that says \"service every three months\" treats both the same, so one is serviced too late and the other too early.\n\nKilometre-based intervals fix that. Each vehicle is serviced when it has actually done the work that causes wear. The benefits are practical:\n\n- **Fewer breakdowns on high-use vehicles.** Busy vehicles reach their service point sooner, and the schedule reflects it.\n- **Less money wasted on low-use vehicles.** A pool car that drives 800 km a month does not need an oil change every eight weeks.\n- **A schedule that matches the service book.** Manufacturers write most intervals in kilometres, so your plan speaks the same language as the workshop.\n\nCalendar limits still matter as a backstop. Oil ages, rubber hardens and batteries weaken even when a vehicle sits in the yard. Most manufacturers say \"every X km or Y months, whichever comes first\". Use kilometres as the main trigger and keep the time limit so rarely used vehicles are not forgotten."
+      },
+      {
+        "heading": "Step 1: Group your vehicles",
+        "body": "You do not need a unique schedule for every vehicle, but you do need one for every type. Group vehicles that share the same make, model and engine, and that do similar work. A typical mid-size fleet ends up with a few groups, for example:\n\n- Light passenger cars used by sales and management staff.\n- Small vans and pickups used for deliveries or technician visits.\n- Medium or heavy trucks used for distribution or site work.\n\nFor each group, find the manufacturer's service schedule in the owner's manual or from the dealer. That schedule is your starting point. Everything else in this guide is about adjusting it to your conditions and making sure it is followed."
+      },
+      {
+        "heading": "Step 2: Write the interval table",
+        "body": "List every service task for the group and the kilometre interval at which it is due. The table below is an **example only** for a light commercial van in normal use. Your numbers must come from the manufacturer's schedule for your specific model.\n\n| Service task | Example interval | Notes |\n|---|---|---|\n| Engine oil and oil filter | Every 5,000–10,000 km | Depends on oil grade and conditions |\n| Tyre rotation and pressure check | Every 10,000 km | Check pressure weekly in daily inspections |\n| Air filter | Every 15,000–20,000 km | Shorter in dusty areas |\n| Brake pads and discs inspection | Every 20,000 km | Replace by wear, not by schedule |\n| Cabin filter | Every 20,000 km | Affects AC performance |\n| Coolant check and top-up | Every 20,000 km | Replace per manufacturer |\n| Fuel filter | Every 30,000–40,000 km | Diesel engines often need it sooner |\n| Spark plugs (petrol) | Every 40,000–60,000 km | Model-specific |\n| Transmission fluid | Every 60,000 km | Check the service book |\n| Timing belt (if fitted) | Per manufacturer | Failure can destroy the engine |\n\nKeep the table short enough to act on. If your team has to read ten pages to know what is due, it will not be used. For a printable version to work from, see our [fleet preventive maintenance checklist](/resources/preventive-maintenance-checklist)."
+      },
+      {
+        "heading": "Step 3: Adjust for severe duty",
+        "body": "Most service books have two schedules: normal and severe. Many fleets in the Middle East operate in conditions that count as severe, so read that part of the manual carefully. Typical severe-duty conditions include:\n\n- **Heat.** Long periods above 40 °C stress engine oil, coolant, batteries and tyres.\n- **Dust and sand.** Air filters clog faster, and fine sand accelerates wear on brakes and suspension.\n- **Stop-and-go city traffic.** Short trips and idling mean the engine rarely reaches steady operating conditions.\n- **Heavy loads and towing.** Transmission, brakes and tyres carry more stress on every kilometre.\n- **Rough roads and site access.** Suspension, steering and tyres wear faster on unpaved routes.\n\n### How to adjust\n\nA common approach is to shorten the relevant intervals rather than all of them. For example, if the normal oil interval for your van is 10,000 km, the severe schedule might say 5,000 km. If your vans drive dusty desert roads, you might also halve the air filter interval while keeping the spark plug interval unchanged. Document the change and the reason, so the next fleet manager understands why the numbers differ from the book."
+      },
+      {
+        "heading": "Step 4: Record odometer readings reliably",
+        "body": "A km-based schedule is only as good as the odometer readings behind it. If the last reading on file is six weeks old, the \"km left until service\" figure is a guess.\n\n### How often to record\n\nFor vehicles that drive every day, a weekly reading is a good minimum. High-mileage vehicles, such as long-haul trucks, benefit from readings every few days. Low-use vehicles can be updated monthly, as long as the time-based backstop is also watched.\n\n### Where readings come from\n\nGood sources are the ones that already happen: a daily or weekly inspection, a service visit, or an expense entry such as a repair. Tie the reading to something the driver or supervisor is already doing, and it gets recorded without an extra task.\n\n### Watch for bad data\n\nA reading lower than the previous one, or a jump of 10,000 km in a week for a vehicle that drives 200 km a day, is almost always a typing error. Correct it quickly, because a wrong reading can hide an overdue service."
+      },
+      {
+        "heading": "Step 5: Turn the schedule into reminders",
+        "body": "With intervals and current readings, you can calculate the next due point for every vehicle:\n\n**Next service due = km at last service + interval**\n\n**Km left = next service due − current odometer reading**\n\nFor example, a van was last serviced at 84,000 km with a 10,000 km oil interval. Its next oil service is due at 94,000 km. If today's reading is 91,500 km, it has 2,500 km left. At 250 km a day, that is about 10 working days, which is enough time to book the workshop.\n\nSet a warning threshold, such as 1,000 or 1,500 km before the due point, so services are booked in advance. Vehicles past their due point should be flagged as overdue and handled first. If you want the reasoning behind servicing before failure, our comparison of [preventive vs reactive maintenance](/blog/preventive-vs-reactive-maintenance) covers the cost side."
+      },
+      {
+        "heading": "Common mistakes to avoid",
+        "body": "- **Copying one schedule for every vehicle.** A diesel truck and a petrol sedan do not share service intervals.\n- **Ignoring the time limit.** A vehicle parked for months still needs its oil and battery checked.\n- **Resetting the counter to the wrong point.** Always calculate the next due point from the km at which the service was actually done, not from when it was due.\n- **Not recording what was done.** A service with no record cannot prove the interval was met and leaves the next person guessing.\n- **Letting overdue vehicles keep running.** Overdue services should have a clear owner and a date."
+      },
+      {
+        "heading": "How Axpense helps you run the schedule",
+        "body": "Axpense is built around km-based preventive maintenance. You set service intervals in kilometres for each vehicle, record odometer readings, and the system shows km left until each service, sends reminders as vehicles approach their interval and flags overdue vehicles. Every completed service goes into the vehicle's service history, and parts fitted during the service are linked to the vehicle they went into.\n\nInspections with configurable checklists feed failed items onto the vehicle record, so problems found between services are not lost. The interface is available in Arabic and English, and onboarding is free. See how it fits your fleet on our [fleet maintenance software](/fleet-maintenance-software) page, or book a demo."
+      }
+    ]
+  },
+  {
+    "slug": "vehicle-cost-per-km",
+    "title": "How to Calculate Vehicle Cost per km: Formula and Worked Examples",
+    "excerpt": "The formula for vehicle cost per km, which costs to include, worked examples in EGP and SAR, and the mistakes that make the number misleading.",
+    "category": "fleet-costs",
+    "language": "en",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "Quick answer",
+        "body": "To calculate vehicle cost per km, add up all operating costs for a period, such as maintenance, parts, fuel, insurance and registration, then divide by the kilometres the vehicle drove in the same period. For example, 69,500 EGP of costs over 18,000 km gives about 3.86 EGP per km. Add depreciation if you want the full cost of owning the vehicle."
+      },
+      {
+        "heading": "Why cost per km is the number to watch",
+        "body": "A monthly cost total tells you how much a vehicle consumed. It does not tell you whether that was good value. A van that cost 20,000 EGP last month might be your cheapest vehicle if it drove 6,000 km, or your most expensive if it drove 1,500 km.\n\nCost per km puts every vehicle on the same scale. It lets you:\n\n- **Compare vehicles fairly**, even when they drive very different distances.\n- **Spot a problem vehicle early**, because its cost per km rises before it breaks down completely.\n- **Price your services**, if you charge customers for deliveries, transport or site visits.\n- **Decide when to replace**, by watching the trend over months rather than reacting to one large repair bill.\n\nIf you need a monthly running-cost total for budgeting rather than a per-km figure, our guide on [how to calculate fleet costs](/blog/how-to-calculate-fleet-cost) covers that angle."
+      },
+      {
+        "heading": "The formula",
+        "body": "**Cost per km = total operating costs for the period ÷ km driven in the period**\n\nTwo rules make the result reliable:\n\n1. **Use the same period for both numbers.** If costs are for the quarter, kilometres must be for the quarter too.\n2. **Take kilometres from odometer readings**, not estimates. Km driven = odometer reading at the end of the period − odometer reading at the start.\n\nChoose a period long enough to smooth out lumpy costs. A single month can look expensive because the vehicle happened to get new tyres. A quarter or a year gives a more honest picture, and you can still track the monthly figure as a trend."
+      },
+      {
+        "heading": "Which costs to include",
+        "body": "The most common reason two people get different cost-per-km figures for the same vehicle is that they included different costs. Agree on a list and use it for every vehicle.\n\n### Variable costs (rise with distance)\n\n- **Fuel.** Usually the largest single item for vehicles in daily use.\n- **Maintenance and servicing.** Oil changes, filters, periodic services and labour.\n- **Parts and repairs.** Brake pads, batteries, belts, suspension parts and unplanned repairs.\n- **Tyres.** Either as a parts cost or as their own category.\n\n### Fixed costs (paid regardless of distance)\n\n- **Insurance.** Spread the annual premium across the months it covers.\n- **Registration and licensing.** Spread annual fees the same way.\n- **Periodic inspection fees**, where they apply.\n- **Parking, permits and tolls**, if they are significant for your operation.\n\n### Ownership cost (optional)\n\n- **Depreciation.** The loss of value over time. Including it turns an operating figure into a fuller cost of owning and running the vehicle. Straight-line depreciation per year = (purchase price − expected resale value) ÷ years of use.\n\nDriver salaries are usually kept out of vehicle cost per km and tracked separately, because they depend on staffing decisions rather than on the vehicle. If you include them, do it for every vehicle and label the figure clearly."
+      },
+      {
+        "heading": "Worked example in Egyptian pounds",
+        "body": "For example, a delivery van in Cairo drove from 142,000 km to 160,000 km over one quarter, so it covered 18,000 km. Its costs for the quarter were:\n\n| Cost item | Amount (EGP) |\n|---|---|\n| Fuel | 45,000 |\n| Maintenance and servicing | 9,000 |\n| Parts and repairs | 6,500 |\n| Insurance (quarter share) | 7,500 |\n| Registration and licence (quarter share) | 1,500 |\n| **Total operating costs** | **69,500** |\n\n**Operating cost per km = 69,500 ÷ 18,000 = 3.86 EGP per km**\n\nNow add depreciation. The van cost 1,200,000 EGP and is expected to sell for 600,000 EGP after five years. Straight-line depreciation is (1,200,000 − 600,000) ÷ 5 = 120,000 EGP a year, or 30,000 EGP a quarter.\n\n| | Amount (EGP) |\n|---|---|\n| Operating costs | 69,500 |\n| Depreciation (quarter) | 30,000 |\n| **Total including depreciation** | **99,500** |\n\n**Full cost per km = 99,500 ÷ 18,000 = 5.53 EGP per km**\n\nBoth numbers are useful. The first tells operations what it costs to keep the van running. The second tells finance what the van really costs the business per kilometre."
+      },
+      {
+        "heading": "Worked example in Saudi riyals",
+        "body": "For example, a technician's pickup in Riyadh drove 4,500 km in one month.\n\n| Cost item | Amount (SAR) |\n|---|---|\n| Fuel | 1,350 |\n| Maintenance and servicing | 400 |\n| Parts and repairs | 250 |\n| Insurance (monthly share) | 300 |\n| Registration and periodic inspection (monthly share) | 50 |\n| **Total operating costs** | **2,350** |\n\n**Operating cost per km = 2,350 ÷ 4,500 = 0.52 SAR per km**\n\nThe pickup cost 110,000 SAR and is expected to sell for 50,000 SAR after five years. Depreciation is (110,000 − 50,000) ÷ 5 = 12,000 SAR a year, or 1,000 SAR a month.\n\n**Full cost per km = (2,350 + 1,000) ÷ 4,500 = 0.74 SAR per km**\n\nYou can run your own numbers through the [fleet cost per km calculator](/resources/fleet-cost-calculator) to check the arithmetic."
+      },
+      {
+        "heading": "Comparing vehicles with cost per km",
+        "body": "The real value appears when you line up several vehicles. For example, three identical vans on the same routes over the same quarter:\n\n| Van | Km driven | Operating costs (EGP) | Cost per km (EGP) |\n|---|---|---|---|\n| Van A | 18,000 | 69,500 | 3.86 |\n| Van B | 17,200 | 66,800 | 3.88 |\n| Van C | 12,500 | 71,300 | 5.70 |\n\nVan C drove less but cost more. That is a signal to look at its expense history: repeated repairs, a part replaced twice, or a vehicle that spends days in the workshop and so drives fewer kilometres. One quarter is not proof, but if the gap stays for two or three quarters, Van C is a candidate for a major repair decision or replacement. For the replacement side of that question, see our guide to [fleet total cost of ownership](/blog/fleet-total-cost-of-ownership)."
+      },
+      {
+        "heading": "Common mistakes",
+        "body": "- **Mixing periods.** Annual insurance against one month of kilometres makes the month look terrible and the rest of the year look cheap.\n- **Estimating kilometres.** A guess of \"about 5,000 km a month\" can be off by 20 % or more. Use real odometer readings.\n- **Leaving out small costs.** Individually small items such as wipers, bulbs and batteries add up over a year.\n- **Counting a cost twice.** A service invoice that includes parts should not also appear as a separate parts cost.\n- **Recording costs without the vehicle.** An expense filed only as \"fleet maintenance\" cannot be used for cost per km. Every cost needs to be tied to a vehicle.\n- **Judging on one month.** A single large repair can distort a month. Watch the trend over several periods."
+      },
+      {
+        "heading": "How Axpense helps",
+        "body": "The hardest part of cost per km is not the division. It is having complete costs and reliable kilometres for each vehicle. Axpense keeps both in the vehicle record: odometer readings in the vehicle register, and expenses such as repairs, parts, insurance, registration and other costs recorded per vehicle by category. Depreciation and book value are tracked over the vehicle's life, and reports show costs by vehicle and by category, so you can see which vehicles are costing more than the rest.\n\nRead how it works on our [fleet cost tracking](/fleet-cost-tracking) page, or book a demo to see it with your own vehicles."
+      }
+    ]
+  },
+  {
+    "slug": "fleet-total-cost-of-ownership",
+    "title": "Fleet Total Cost of Ownership: How to Calculate TCO and Compare Vehicles",
+    "excerpt": "How to calculate fleet total cost of ownership, compare two vehicles on TCO, and use the numbers to decide when a vehicle should be replaced.",
+    "category": "fleet-costs",
+    "language": "en",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "Quick answer",
+        "body": "Fleet total cost of ownership (TCO) is everything a vehicle costs your business from purchase to sale. TCO = purchase price + total operating costs over the ownership period + financing costs − resale value. Dividing TCO by the kilometres driven gives a cost per km you can use to compare models, plan budgets and decide when to replace a vehicle."
+      },
+      {
+        "heading": "Why the purchase price is the wrong place to stop",
+        "body": "When a company buys vehicles, the quotation on the table is the purchase price. It is the easiest number to compare and the one most often used to decide. But over five years of daily work, a van's fuel, maintenance, parts, insurance and registration can cost as much as the van itself, sometimes more. The resale value at the end can also differ by hundreds of thousands of pounds between two models.\n\nTCO puts all of that in one number. It answers the question the purchase price cannot: **which vehicle will cost us less over the time we own it?** A cheaper vehicle with higher running costs and weak resale value often loses to a more expensive one that is efficient, reliable and holds its value."
+      },
+      {
+        "heading": "The TCO formula and its parts",
+        "body": "**TCO = purchase price + total operating costs over ownership + financing costs − resale value**\n\n### Purchase price\n\nThe price paid for the vehicle, including any registration on delivery, body work, shelving or fit-out needed before it can work. If you buy a van and spend 60,000 EGP on shelving, the real purchase cost includes the shelving.\n\n### Total operating costs over ownership\n\nEverything spent to keep the vehicle working for the whole period: fuel, periodic maintenance, repairs, parts, tyres, insurance, registration and licensing, and periodic inspections. This is the same set of costs you use for [vehicle cost per km](/blog/vehicle-cost-per-km), added up over the years you keep the vehicle.\n\n### Financing costs\n\nIf the vehicle is bought with a loan or instalments, the interest and fees are part of its cost. A cash purchase has no financing cost in this formula, although some finance teams add the opportunity cost of the cash.\n\n### Resale value\n\nWhat you expect to receive when you sell or trade in the vehicle. It is subtracted because it returns money to the business. Resale value depends on model, age, kilometres and how well the vehicle was maintained, which is one reason a complete service history matters."
+      },
+      {
+        "heading": "Worked example: two vans over five years (EGP)",
+        "body": "For example, a distribution company is choosing between two vans for the same routes. Each will drive about 60,000 km a year and be kept for five years, so each will cover 300,000 km. All figures are illustrative.\n\n| Item | Van A | Van B |\n|---|---|---|\n| Purchase price | 1,200,000 | 950,000 |\n| Fuel per year | 150,000 | 165,000 |\n| Maintenance, repairs and parts per year | 35,000 | 55,000 |\n| Insurance per year | 30,000 | 24,000 |\n| Registration and licence per year | 6,000 | 6,000 |\n| **Operating costs per year** | **221,000** | **250,000** |\n| Operating costs over 5 years | 1,105,000 | 1,250,000 |\n| Financing costs (interest and fees) | 180,000 | 140,000 |\n| Expected resale value after 5 years | 600,000 | 380,000 |\n\n### Calculating TCO\n\n**Van A: 1,200,000 + 1,105,000 + 180,000 − 600,000 = 1,885,000 EGP**\n\n**Van B: 950,000 + 1,250,000 + 140,000 − 380,000 = 1,960,000 EGP**\n\n### TCO per km\n\n- Van A: 1,885,000 ÷ 300,000 = **6.28 EGP per km**\n- Van B: 1,960,000 ÷ 300,000 = **6.53 EGP per km**\n\nVan B is 250,000 EGP cheaper to buy, but it costs 75,000 EGP more over five years because it uses more fuel, needs more repairs and sells for less. Across a fleet of 20 vans, that difference is 1.5 million EGP. You can test your own assumptions with the [fleet cost calculator for cost per km and TCO](/resources/fleet-cost-calculator)."
+      },
+      {
+        "heading": "Depreciation: the largest cost you never pay in cash",
+        "body": "Depreciation is the loss in a vehicle's value over time. You do not write a cheque for it, but it is real: it is the difference between what you paid and what you get back. In the TCO formula it appears as purchase price minus resale value.\n\n### Straight-line depreciation\n\nThe simplest method spreads the loss evenly:\n\n**Depreciation per year = (purchase price − expected resale value) ÷ years of use**\n\nFor Van A: (1,200,000 − 600,000) ÷ 5 = 120,000 EGP per year. The book value falls from 1,200,000 to 1,080,000 after year one, 960,000 after year two, and so on down to 600,000.\n\n### Why real depreciation is uneven\n\nIn practice, vehicles lose more value in their first years and less later. That matters for replacement timing: keeping a vehicle an extra year costs little in depreciation, but may cost a lot in repairs. Tracking book value over time lets you see both sides. Our page on [vehicle depreciation and lifecycle management](/features/asset-management) explains how book value is kept for each vehicle."
+      },
+      {
+        "heading": "Using TCO to decide when to replace a vehicle",
+        "body": "As a vehicle ages, its yearly depreciation falls but its maintenance and repair costs rise. The best time to replace it is usually around the point where those two curves together are cheapest per year on average.\n\nFor example, here is a van's yearly ownership cost, combining depreciation and maintenance and repairs (EGP, illustrative):\n\n| Year | Depreciation | Maintenance and repairs | Yearly total | Average per year so far |\n|---|---|---|---|---|\n| 1 | 200,000 | 20,000 | 220,000 | 220,000 |\n| 2 | 160,000 | 28,000 | 188,000 | 204,000 |\n| 3 | 130,000 | 40,000 | 170,000 | 192,667 |\n| 4 | 100,000 | 60,000 | 160,000 | 184,500 |\n| 5 | 80,000 | 90,000 | 170,000 | 181,600 |\n| 6 | 60,000 | 125,000 | 185,000 | 182,167 |\n\nThe average cost per year is lowest after year 5. In year 6 the yearly total (185,000) is higher than the running average (181,600), so keeping the van longer starts to raise its average cost. A simple rule follows: **when a vehicle's yearly cost rises above its average so far, start planning its replacement.**\n\nOther signals point the same way: repeated breakdowns, growing time in the workshop, and a cost per km that keeps climbing compared with similar vehicles."
+      },
+      {
+        "heading": "Where TCO calculations go wrong",
+        "body": "- **Using estimates for operating costs.** Brochure fuel figures and dealer service quotes are rarely what you spend. Use your own history for similar vehicles where you have it.\n- **Ignoring fit-out costs.** Shelving, refrigeration units or signage are part of the purchase.\n- **Forgetting financing.** Interest over five years can be a meaningful share of the total.\n- **Optimistic resale values.** A vehicle with high kilometres and gaps in its service history sells for less. Be conservative.\n- **Comparing different periods or distances.** Compare vehicles over the same years and similar kilometres, or use TCO per km.\n- **Never checking the forecast.** Compare actual costs with your TCO estimate each year. The gap is useful for your next purchase decision."
+      },
+      {
+        "heading": "The data you need to keep",
+        "body": "A TCO calculation is only as good as the records behind it. For each vehicle, you need:\n\n1. Purchase price and date, plus any fit-out cost.\n2. Every operating cost, tied to the vehicle and grouped by category.\n3. Regular odometer readings, so costs can be expressed per km.\n4. Service history, which supports both reliability decisions and resale value.\n5. Depreciation method, expected resale value and current book value.\n\nMost companies have some of this in invoices and spreadsheets. The difficulty is having all of it per vehicle, over several years, without gaps."
+      },
+      {
+        "heading": "How Axpense helps",
+        "body": "Axpense keeps the records a TCO calculation depends on in one place for each vehicle. The vehicle register holds odometer readings and history; expenses such as repairs, parts, insurance, registration and other costs are recorded per vehicle by category; service history is kept for every vehicle; and depreciation tracks book value over the vehicle's lifecycle. Reports show costs by vehicle and category, so you can see which vehicles are becoming expensive to keep.\n\nLearn more about [fleet cost tracking](/fleet-cost-tracking) with Axpense, or book a demo to walk through it with your own fleet."
+      }
+    ]
+  },
+  {
+    "slug": "daily-vehicle-inspection-checklist",
+    "title": "Daily Vehicle Inspection Checklist: What Drivers Should Check Before Every Trip",
+    "excerpt": "A practical daily vehicle inspection checklist for company fleets: what to check, how to finish in five minutes, and what to do when an item fails.",
+    "category": "fleet-inspections",
+    "language": "en",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "Quick answer",
+        "body": "A daily vehicle inspection checklist is a short walk-around a driver completes before the first trip of the day. It covers the exterior, tyres and wheels, lights, fluid levels, brakes, safety equipment and the documents in the cab. Done in a fixed order it takes about five minutes, and any failed item is reported and fixed before the vehicle leaves."
+      },
+      {
+        "heading": "Why a daily check is worth five minutes",
+        "body": "Most breakdowns give a warning first. A tyre that is a little soft on Monday is flat on the highway on Wednesday. A small coolant drip under a van becomes an overheated engine in the afternoon heat. A daily check exists to catch these small signs while the vehicle is still in the yard, where fixing them is cheap and nobody is waiting for a delivery.\n\nA daily check also gives the fleet manager something that is otherwise hard to get: a dated record of the condition of each vehicle, signed off by the person who drove it. When a dent, a cracked mirror or a warning light appears, you can see which day it was first reported and who had the vehicle.\n\nFinally, a routine check changes driver behaviour. Drivers who walk around their vehicle every morning notice more, report more and tend to treat the vehicle as their responsibility rather than a pool car nobody owns."
+      },
+      {
+        "heading": "The daily vehicle inspection checklist",
+        "body": "Use the list below as a starting point and adapt it to your vehicles. A pickup used on construction sites needs different checks from a sedan used by a sales team. Keep each item short enough that it can be answered with **pass** or **fail**.\n\n### Exterior and body\n- Body panels: no new dents, scrapes or sharp edges\n- Windscreen and windows: no new cracks or chips in the driver's line of sight\n- Mirrors: present, clean, not cracked, correctly adjusted\n- Wipers: blades intact, washer jets working\n- Doors, tailgate and load area: open, close and lock properly\n- Load secured (for pickups and trucks): straps, covers and tailboard\n\n### Tyres and wheels\n- Tyre pressure looks correct (use a gauge at least weekly)\n- No cuts, bulges or exposed cords on the sidewalls\n- Tread depth acceptable across the full width\n- Wheel nuts present and not visibly loose\n- Spare tyre present and inflated; jack and wheel brace in the vehicle\n\n### Lights and signals\n- Headlights (dipped and main beam)\n- Brake lights, indicators and hazard lights\n- Reversing lights and reversing alarm, where fitted\n- Number plate light and plate clean and readable\n- No warning lights on the dashboard after the engine starts\n\n### Fluids and engine bay\n- Engine oil level between the marks on the dipstick\n- Coolant level in the expansion tank\n- Brake fluid and power steering fluid levels\n- Windscreen washer fluid\n- No fresh leaks under the vehicle where it was parked\n\n### Brakes and steering\n- Brake pedal firm, not spongy or sinking\n- Parking brake holds the vehicle on a slope\n- Steering has no unusual play, noise or pulling to one side\n- A short, slow test in the yard before joining traffic\n\n### Interior and safety equipment\n- Seat belts latch and retract on every seat\n- Horn works\n- Fire extinguisher present, pressure gauge in the green, within its date\n- First aid kit and warning triangle present\n- Air conditioning working (relevant for driver safety in summer heat across the region)\n- Cab clean, no loose objects that can roll under the pedals\n\n### Documents\n- Vehicle registration (licence) in the vehicle and valid\n- Insurance document present and valid\n- Driver's licence carried and valid for this vehicle class\n- Any site passes or permits your operation requires\n\nIf you want a ready-made version to print or copy, see our [free vehicle inspection checklist template](/resources/vehicle-inspection-checklist)."
+      },
+      {
+        "heading": "How to run the check in five minutes",
+        "body": "A long checklist that takes twenty minutes will be skipped or ticked without looking. The trick is to walk the same route around the vehicle every day so the order becomes automatic.\n\n1. **Before starting the engine (1 minute):** look under the vehicle for leaks, then open the bonnet and check oil, coolant and washer fluid.\n2. **Walk around clockwise (2 minutes):** start at the driver's door and move around the vehicle, checking body, glass, mirrors and each tyre as you pass it.\n3. **Start the engine and check the lights (1 minute):** switch on headlights and hazards, then walk around once more. For brake and reversing lights, ask a colleague or use a reflection in a wall or window.\n4. **Inside the cab (1 minute):** warning lights, horn, seat belt, wipers, safety equipment and documents.\n5. **Record the result:** mark every item pass or fail and add a short note for each failure.\n\n### Keep the list short enough to be honest\nAround 25 to 35 items is a practical ceiling for a daily check. If your list is much longer, move the slower items (tread depth measurement, battery terminals, extinguisher date) to a weekly or monthly check instead of dropping them."
+      },
+      {
+        "heading": "What to do with failed items",
+        "body": "A checklist is only useful if a failure leads to action. Agree in advance what happens for each type of failure, so the driver does not have to decide alone at 6 a.m.\n\n| Severity | Examples | Action |\n|---|---|---|\n| Stop | Brake problem, tyre with exposed cords, steering fault, fluid leak, brake light out | Vehicle does not leave. Report to the fleet supervisor and arrange repair or a replacement vehicle. |\n| Fix today | Low washer fluid, one indicator bulb out, missing warning triangle | Fix before the first trip if possible, otherwise by the end of the shift. |\n| Monitor | Small chip in the windscreen outside the driver's view, minor scratch | Record and check again at the next periodic inspection. |\n\n### Close the loop\nEvery failed item should end with one of three outcomes: fixed (with a date and cost), scheduled (with a date), or accepted (with a reason). If failed items simply sit in a notebook, drivers learn that reporting is pointless and stop doing it.\n\n### Look for patterns\nOne failed brake light is a bulb. The same vehicle failing the tyre check three weeks in a row is a question about alignment, loads or the driver. Reviewing failures per vehicle every month shows you where repairs are repeating and where a vehicle may need a proper workshop visit. Catching those issues early is one of the most direct ways to [reduce vehicle downtime](/blog/reduce-vehicle-downtime)."
+      },
+      {
+        "heading": "Pre-trip checks vs periodic inspections",
+        "body": "The daily check does not replace deeper inspections. They answer different questions.\n\n| | Daily pre-trip check | Periodic inspection |\n|---|---|---|\n| Who | The driver | Supervisor, mechanic or workshop |\n| When | Before the first trip of each day | Weekly, monthly or at a km interval |\n| Time | About 5 minutes | 30 minutes to a few hours |\n| Depth | Visual and functional checks | Measurements, under-vehicle checks, road test |\n| Purpose | Is it safe to drive today? | What will need work in the coming weeks? |\n\nA periodic inspection measures what the daily check only looks at: tread depth with a gauge, brake pad thickness, battery condition, suspension, belts and hoses. Many fleets line up their periodic inspection with the km-based service schedule, so the vehicle is checked in depth whenever it comes in for an oil change. Our guide to [km-based preventive maintenance schedules](/blog/km-based-preventive-maintenance) explains how to set those intervals.\n\nIn Saudi Arabia, vehicles also need the official periodic technical inspection (الفحص الدوري). Treat that as a separate, legally required event and keep its date on the vehicle record; your own daily and periodic checks sit alongside it."
+      },
+      {
+        "heading": "Paper, spreadsheet or app?",
+        "body": "Many fleets start with a printed sheet in each vehicle. It works for a handful of vehicles, but paper has three weaknesses: sheets get lost, nobody reviews them, and there is no easy way to see all failures for one vehicle over six months.\n\nA shared spreadsheet solves the review problem but not the data entry problem, because drivers rarely have access to it. It also becomes slow to search once you have hundreds of rows per month.\n\nA digital checklist tied to each vehicle keeps every inspection, with its date and results, on that vehicle's record. The failures become a list the supervisor can act on, and the history is there when you need to decide whether a vehicle should be repaired again or replaced."
+      },
+      {
+        "heading": "How Axpense helps with daily inspections",
+        "body": "Axpense includes [inspection management with configurable checklists](/features/inspection-management). You build your own checklist items, such as the list in this article, and record each inspection against a vehicle with a pass or fail result for every item. Failed items are recorded on the vehicle, so they stay visible until they are dealt with.\n\nBecause inspections live in the same system as the vehicle registry, km-based maintenance, service history and expenses, you can see a vehicle's inspection results next to its next service due and what it has cost to run. The interface is available in Arabic and English, onboarding is free, and most teams are live in one day.\n\nSee how it works on the [vehicle inspection software](/vehicle-inspection-software) page, or book a demo to walk through your own checklist."
+      }
+    ]
+  },
+  {
+    "slug": "reduce-vehicle-downtime",
+    "title": "How to Reduce Vehicle Downtime in a Company Fleet",
+    "excerpt": "How to reduce vehicle downtime: measure days off the road, work out what they cost, and cut them with maintenance, inspections, parts and workshop turnaround.",
+    "category": "fleet-maintenance",
+    "language": "en",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "Quick answer",
+        "body": "To reduce vehicle downtime, first measure it: count the days each vehicle is off the road and why. Then turn unplanned stops into planned ones with km-based preventive maintenance, catch problems early with daily inspections, keep the parts you replace most often available, and shorten the time each vehicle spends waiting at the workshop."
+      },
+      {
+        "heading": "Planned vs unplanned downtime",
+        "body": "Not all downtime is a problem. A vehicle in for a scheduled oil change is off the road, but you chose the day, the job is short and the work was needed anyway. That is **planned downtime**.\n\n**Unplanned downtime** is different. The vehicle stops on a delivery route, a driver reports a warning light at 7 a.m., or a failed part takes a week to arrive. You did not choose the day, the job is usually bigger, and there are knock-on costs: missed deliveries, a replacement vehicle, overtime, or a customer who waits.\n\nThe goal is not zero downtime. It is to move as much downtime as possible from unplanned to planned, and to make both kinds shorter.\n\n### Typical causes of unplanned downtime\n- Missed or late services that lead to bigger mechanical failures\n- Tyre damage, battery failure and cooling system problems, especially in hot months\n- Small faults that drivers noticed but did not report, or reported with no follow-up\n- Parts that are not in stock when the vehicle arrives at the workshop\n- Vehicles waiting in a queue at the workshop, or waiting for approval of the repair"
+      },
+      {
+        "heading": "How to measure days off the road",
+        "body": "You cannot reduce what you do not count. For every vehicle, record each time it goes out of service and each time it returns, with a reason. A simple rule: a vehicle is \"down\" when it cannot be assigned to work for a normal shift.\n\nFrom those records you can calculate three numbers each month:\n\n- **Days off the road per vehicle** = total days the vehicle was out of service in the period.\n- **Availability** = (days in period − days off the road) ÷ days in period × 100.\n- **Share of unplanned downtime** = unplanned days ÷ total days off the road × 100.\n\n### A worked example\nFor example, a distribution company runs 20 vans on 26 working days in a month, so there are 520 van-days available. During the month the vans spent 34 days off the road: 12 days in planned services and 22 days in breakdowns and waiting for parts.\n\n- Availability = (520 − 34) ÷ 520 × 100 = **93.5 %**\n- Share of unplanned downtime = 22 ÷ 34 × 100 = **65 %**\n\nTwo thirds of the lost days were unplanned. That tells the fleet manager where to focus: not on shortening services, but on preventing the breakdowns and the waiting."
+      },
+      {
+        "heading": "What a day of downtime costs",
+        "body": "Downtime rarely shows up as one line in the accounts, which is why it is easy to ignore. Put a price on it and the case for prevention becomes clear.\n\nHere is an illustrative calculation for one van in Egypt. The numbers are an example only; use your own.\n\n| Cost item | Per day off the road |\n|---|---|\n| Rental of a replacement van | 1,500 EGP |\n| Driver paid while the van is idle (if no replacement) | 600 EGP |\n| Lost or delayed deliveries (margin on orders not delivered) | 1,200 EGP |\n| Extra towing or call-out cost, averaged over the breakdown days | 300 EGP |\n\nIf the company rents a replacement, the direct cost is about 1,500 EGP plus towing, around 1,800 EGP per day. If it does not, the cost is the idle driver plus lost margin plus towing, around 2,100 EGP per day.\n\nUsing the 22 unplanned days from the example above at roughly 2,000 EGP per day, unplanned downtime cost the company about **44,000 EGP in one month**, before counting the repair bills themselves. Halving the unplanned days would be worth about 22,000 EGP a month, which puts a figure on what better maintenance, faster parts and quicker workshop decisions are worth.\n\nTo see how downtime fits into total running costs, compare it with your [vehicle cost per km](/blog/vehicle-cost-per-km)."
+      },
+      {
+        "heading": "Preventive maintenance: turn breakdowns into appointments",
+        "body": "The single biggest lever is servicing vehicles on time. A service booked in advance takes a few hours on a day you choose; a failure caused by a skipped service can take a vehicle away for a week.\n\nFor fleets, the most reliable trigger is distance. Set a service interval in kilometres for each vehicle based on the manufacturer's schedule, for example an oil service every 5,000 to 10,000 km depending on the oil and the conditions, and track the km left until each service is due. Vehicles that run long daily routes reach their service far sooner than the calendar suggests.\n\nThree habits make the difference:\n- **Update odometer readings regularly**, at least weekly, so the km left is accurate.\n- **Book vehicles in before they are due**, not when they are already overdue.\n- **Group jobs**: when a vehicle is in for an oil service, handle brake pads, filters and small repairs in the same visit.\n\nOur guide on [km-based preventive maintenance](/blog/km-based-preventive-maintenance) covers how to set intervals for different vehicle types."
+      },
+      {
+        "heading": "Inspections: catch problems while they are small",
+        "body": "Many breakdowns start as something a driver could have seen: a bulging tyre, a coolant leak, a warning light, a soft brake pedal. A short daily walk-around, with every item marked pass or fail, gives you those early warnings.\n\nWhat matters most is what happens next. A failed item should be reviewed the same day and end up either fixed, scheduled into the next service, or consciously accepted. If failed items are not followed up, drivers stop reporting them and you lose the early warning.\n\nA [daily vehicle inspection checklist](/blog/daily-vehicle-inspection-checklist) is the practical starting point; it takes about five minutes per vehicle."
+      },
+      {
+        "heading": "Spare parts: stop waiting for the part",
+        "body": "A two-hour repair becomes a four-day stop when the part is not available. Look at your repair history and list the parts you replace most often on each vehicle model: filters, brake pads, bulbs, wiper blades, batteries, belts and common tyre sizes.\n\nFor these fast-moving parts, keep a small minimum stock, or agree with a supplier to hold them for you. For slower, expensive parts, know in advance where you would source them and how long they take.\n\nIt also helps to record which part went into which vehicle and when. That shows you which parts fail early, which suppliers are reliable, and which vehicles keep consuming the same part. Our article on [fleet spare parts management](/blog/fleet-spare-parts-management) covers stock levels and parts lifecycle in detail."
+      },
+      {
+        "heading": "Workshop turnaround: shorten the time in the bay",
+        "body": "Once a vehicle is at the workshop, most lost time is waiting rather than working: waiting for a diagnosis, for a quote to be approved, for a part, or for someone to collect the vehicle.\n\n- **Set an approval limit.** Let the workshop proceed without calling you for repairs under an agreed amount.\n- **Send the history with the vehicle.** A mechanic who knows the last service date, recent failed inspection items and parts already replaced diagnoses faster.\n- **Track the time in and time out** for every workshop visit. Compare turnaround across workshops or between your own workshop and outside garages.\n- **Plan collection.** A repaired vehicle sitting in the workshop yard for an extra day is still downtime."
+      },
+      {
+        "heading": "How Axpense helps reduce downtime",
+        "body": "Axpense brings the records you need to manage downtime into one place. Each vehicle has its registry entry with odometer, status and history. **Km-based preventive maintenance** shows km left until the next service and flags vehicles that are overdue, so services are booked before they become breakdowns. **Inspections with configurable checklists** record pass or fail per item, with failed items recorded on the vehicle. **Spare parts** are tracked from purchase to installation, so you know which part went into which vehicle. **Expenses** for repairs and parts are recorded per vehicle, and reports show maintenance status and costs by vehicle.\n\nSee how these fit together on the [fleet maintenance software](/fleet-maintenance-software) page, or book a demo."
+      }
+    ]
+  },
+  {
+    "slug": "fleet-spare-parts-management",
+    "title": "Fleet Spare Parts Management: A Practical Guide for Fleet Managers",
+    "excerpt": "Fleet spare parts management in practice: which parts to stock, how much, how to record which part went into which vehicle, and how to track cost.",
+    "category": "fleet-maintenance",
+    "language": "en",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "Quick answer",
+        "body": "Fleet spare parts management means knowing which parts your vehicles use most, keeping a sensible minimum stock of them, and recording every part from purchase to installation in a specific vehicle. Done well, it shortens repairs, stops parts from disappearing, lets you claim warranties, and shows the real parts cost of each vehicle."
+      },
+      {
+        "heading": "Why spare parts need their own process",
+        "body": "In many fleets, parts are bought when a vehicle breaks and paid for from a petty cash box or a supplier account. That works until one of three things happens: a vehicle waits days for a part nobody stocked, a box of brake pads disappears from the store, or the finance team asks why parts spending doubled and nobody can say which vehicles consumed them.\n\nA parts process answers three questions at any time:\n- **What do we have?** Parts in stock, by type and vehicle model.\n- **Where did it go?** Which part was installed in which vehicle, on what date and at what odometer reading.\n- **What did it cost?** Parts spending per vehicle, per category and per supplier.\n\nParts availability also has a direct effect on how long vehicles stay off the road. If you are working on [how to reduce vehicle downtime](/blog/reduce-vehicle-downtime), parts are usually one of the first bottlenecks to fix."
+      },
+      {
+        "heading": "Common parts by vehicle type",
+        "body": "Start with your own repair history, but the list below covers the parts most fleets replace regularly.\n\n| Vehicle type | Fast-moving parts | Slower, higher-value parts |\n|---|---|---|\n| Sedans and pool cars | Oil, oil and air filters, cabin filter, wiper blades, bulbs, brake pads | Batteries, tyres, brake discs, shock absorbers |\n| Vans and light commercial | Oil and filters, brake pads, bulbs, fan belt, wiper blades | Tyres, batteries, clutch kit, suspension parts |\n| Pickups (site and field use) | Oil and filters, air filter (dusty conditions), brake pads, bulbs | Tyres, batteries, leaf springs, clutch kit |\n| Light and medium trucks | Oil and fuel filters, air filter, brake linings, bulbs, belts | Tyres, batteries, brake drums, starter and alternator |\n\nTwo patterns matter in hot and dusty conditions common across Egypt and the Gulf: air filters and batteries usually need replacing sooner than a temperate-climate schedule suggests, and tyres suffer from heat and poor road surfaces. Follow the manufacturer's schedule, then adjust based on what your own records show.\n\n### Group parts by model\nStock parts by vehicle model, not just by part name. A fleet with three van models may need three different brake pad part numbers. Standardising on fewer vehicle models over time is one of the easiest ways to simplify parts management."
+      },
+      {
+        "heading": "Minimum stock thinking",
+        "body": "You do not need a warehouse. You need enough of the right parts that a routine job never waits. A simple way to set a minimum level for each fast-moving part:\n\n**Minimum stock = average monthly use × supplier lead time in months + a safety buffer**\n\nFor example, a fleet of 30 vans uses on average 6 sets of front brake pads a month. The supplier needs about two weeks (0.5 months) to deliver. With a buffer of 2 sets:\n\n- Minimum stock = 6 × 0.5 + 2 = **5 sets**\n- When stock falls to 5, reorder enough to cover roughly a month, around 6 sets.\n\n### What not to stock\n- **Slow, expensive parts** such as gearboxes or turbochargers. Know where you would buy them and the lead time instead.\n- **Parts for vehicles you plan to sell soon.**\n- **Tyres in large numbers** unless you have proper storage away from heat and sunlight; many fleets agree a call-off arrangement with a tyre supplier instead.\n\nReview minimum levels every quarter. As services are completed and your records grow, average use becomes more accurate and you can lower buffers on parts that turn out to be predictable."
+      },
+      {
+        "heading": "Record which part went into which vehicle",
+        "body": "This is the step most fleets skip, and it is the one that pays back most. Every time a part is installed, record:\n\n1. The vehicle (plate number)\n2. The part and part number, and the supplier\n3. The date and the odometer reading at installation\n4. The cost\n5. Who installed it (your workshop or an outside garage)\n\nWith this record you can answer questions that are impossible otherwise. Did this battery really fail after eight months? Which vehicle has had four sets of brake pads this year? Are parts from supplier A lasting as long as parts from supplier B?\n\nIt also discourages leakage. When every part leaving the store must be linked to a vehicle, parts cannot quietly disappear without it showing up in the records."
+      },
+      {
+        "heading": "Warranty and parts lifecycle",
+        "body": "Many parts carry a warranty measured in time, kilometres or both. A battery might be covered for a set number of months; some tyres and components carry a km limit. Without a record of the installation date and odometer reading, you cannot prove the part failed within the warranty, and the replacement is paid in full.\n\nTracking the lifecycle of a part, from purchase to installation to removal, also shows you the actual life you get from each part type:\n\n- **Expected life**: what the supplier or manufacturer says.\n- **Actual life**: km or months between installation and replacement in your fleet.\n\nIf brake pads on one model last 25,000 km on average but on one vehicle only 12,000 km, that is worth a conversation with the driver or a check of the brakes. Parts life also feeds your service planning: if a part reliably lasts a certain distance, replace it during the scheduled service before that point instead of waiting for it to fail on the road."
+      },
+      {
+        "heading": "Genuine vs aftermarket parts",
+        "body": "There is no single right answer. Each option has trade-offs, and most fleets use a mix.\n\n| | Genuine (OEM) parts | Aftermarket parts |\n|---|---|---|\n| Price | Usually higher | Usually lower, with a wide range |\n| Fit and quality | Consistent, matches the original | Varies by brand and supplier |\n| Availability | Through dealers; lead times can be long for some models | Often easier to find locally |\n| Warranty | May be required to keep the vehicle warranty intact during the warranty period | Supplier warranty varies |\n\nA practical policy:\n- Use genuine parts on vehicles still under manufacturer warranty, and for safety-critical items where you have had problems with alternatives.\n- Allow approved aftermarket brands for routine consumables such as filters, bulbs and wiper blades.\n- Compare actual life, not just price. A cheaper part that lasts half as long costs more per kilometre.\n\nYour installation records are what make this comparison possible."
+      },
+      {
+        "heading": "Parts cost per vehicle",
+        "body": "Once every part is linked to a vehicle, you can see the parts cost of each vehicle over any period. For example:\n\n| Vehicle | Parts cost (12 months) | Km driven | Parts cost per km |\n|---|---|---|---|\n| Van A | 18,000 EGP | 45,000 km | 0.40 EGP |\n| Van B | 31,500 EGP | 42,000 km | 0.75 EGP |\n\nVan B drives slightly less but costs almost twice as much in parts per km. That is a signal to look at its repair history, its driver and its age, and possibly a reason to replace it.\n\nParts are one line in a vehicle's running costs, alongside fuel, insurance, registration and labour. To bring them together, see [fleet cost tracking](/fleet-cost-tracking) or use the [fleet cost per km calculator](/resources/fleet-cost-calculator)."
+      },
+      {
+        "heading": "How Axpense helps with spare parts",
+        "body": "Axpense tracks [spare parts management for fleets](/features/spare-parts) from purchase to installation. Each part is recorded, and when it is installed you link it to the vehicle it went into, building a parts lifecycle history per vehicle. Parts and repair costs are recorded as expenses per vehicle and by category, and reports show costs by vehicle and category so the expensive vehicles stand out.\n\nBecause parts sit next to km-based maintenance, service history and inspections, the full picture of each vehicle is in one place, in Arabic or English. See how it works on the [fleet maintenance software](/fleet-maintenance-software) page, or book a demo."
+      }
+    ]
+  },
+  {
+    "slug": "fleet-management-excel-vs-software",
+    "title": "Fleet Management Excel Template vs Software: When to Switch",
+    "excerpt": "An honest comparison of a fleet management Excel template vs software: what a good sheet includes, where it breaks, and the signs it is time to switch.",
+    "category": "fleet-management",
+    "language": "en",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "Quick answer",
+        "body": "A well-built Excel template is enough for a small fleet with one person keeping it up to date. It starts to break when the fleet grows past a few dozen vehicles, several people edit the file, services must be triggered by kilometres, or you need cost and history per vehicle. At that point dedicated software is usually cheaper than the time and mistakes the spreadsheet costs."
+      },
+      {
+        "heading": "Excel is a reasonable place to start",
+        "body": "Almost every fleet starts in a spreadsheet, and there is nothing wrong with that. Excel is already installed, everyone knows the basics, and it costs nothing extra. For five or ten vehicles managed by one careful person, a good template can work for years.\n\nThe question is not whether Excel is \"bad\". It is whether your fleet has outgrown it. That depends on the number of vehicles, how many people need the information, and what decisions you are trying to make from it.\n\nBefore comparing, it helps to know what a good template looks like, because many fleets are comparing software against a sheet that was never set up properly."
+      },
+      {
+        "heading": "What a good fleet Excel template includes",
+        "body": "A useful template has several tabs linked by the plate number, rather than one giant sheet.\n\n### Vehicles tab (one row per vehicle)\n- Plate number (the unique key used on every other tab)\n- Make, model and year\n- Vehicle type (sedan, van, pickup, truck)\n- Chassis number\n- Purchase date and purchase price\n- Current odometer (km) and the date it was read\n- Assigned driver\n- Status (active, in workshop, out of service, sold)\n- Registration and insurance expiry dates\n\n### Maintenance tab (one row per service)\n- Plate number, date, odometer at service\n- Service type (oil service, brakes, tyres, repair)\n- Workshop or garage, cost, invoice number\n- Next service due at (km)\n- Km left until due = next service km − current odometer (formula)\n\n### Expenses tab (one row per cost)\n- Plate number, date, category (repair, parts, insurance, registration, fuel, other), amount, supplier, note\n\n### Inspections tab\n- Plate number, date, inspector or driver, result (pass/fail), failed items, action taken\n\nWith these tabs and a few formulas you can see which vehicles are close to a service and total costs per vehicle using a pivot table."
+      },
+      {
+        "heading": "Where the spreadsheet breaks",
+        "body": "### Fleet size\nAt 10 vehicles, scanning the km-left column takes a minute. At 60 vehicles with several years of service rows, the file becomes slow, filters get left on, and it is easy to miss one vehicle that is 2,000 km overdue.\n\n### Multiple editors\nWhen the fleet supervisor, the workshop and finance all edit the same file, you get copies emailed around (\"fleet_v3_final_NEW.xlsx\"), overwritten rows and conflicting numbers. Even with a shared online file, nobody is sure which entry is correct or who changed it.\n\n### Km-based reminders\nThe km-left formula only works if the odometer column is updated and someone looks at it. A spreadsheet does not remind anyone. In practice, services are missed not because the formula is wrong but because nobody opened the file that week.\n\n### History\nA spreadsheet can store history, but it is hard to read. Seeing everything that happened to one vehicle means filtering four tabs by plate number and piecing the story together. When a vehicle is sold or its plate changes, links between tabs often break.\n\n### Cost per vehicle\nCosts per vehicle require every expense row to have the right plate number, spelled the same way every time. One row entered as \"ABC 123\" and another as \"ABC123\" splits the cost across two vehicles. Most spreadsheet cost reports are slightly wrong, and nobody knows by how much."
+      },
+      {
+        "heading": "Excel vs software: side-by-side",
+        "body": "| | Excel template | Fleet software |\n|---|---|---|\n| Upfront cost | None | Monthly subscription |\n| Setup | Build and maintain the template yourself | Ready-made structure; setup support from the vendor |\n| Vehicle records | One row per vehicle; easy to break | Structured record with history per vehicle |\n| Km-based service reminders | Formula; someone must check it | Km left and overdue services shown automatically |\n| Several people editing | Version conflicts, overwritten rows | One shared system |\n| Service and inspection history | Spread across tabs | On the vehicle record |\n| Cost per vehicle and category | Pivot tables, depends on clean data | Built-in reports |\n| Parts tracking | Rarely kept up to date | Parts linked to the vehicle they went into |\n| Time spent each week | Grows with fleet size | Mostly data entry at the source |\n\nThe real cost of a spreadsheet is not the licence, it is the hours spent maintaining it and the cost of mistakes: a missed service that becomes an engine repair, or a budget built on wrong numbers.\n\nTo put a figure on what your fleet costs to run today, try the [fleet cost per km calculator](/resources/fleet-cost-calculator)."
+      },
+      {
+        "heading": "Signs it is time to switch",
+        "body": "You probably need software when two or more of these are true:\n\n- You have more than about 20 to 30 vehicles, or plan to grow past that soon.\n- More than one person needs to enter or view fleet data.\n- A vehicle has missed a service in the last six months because nobody noticed.\n- You cannot answer \"what did this vehicle cost us last year?\" within five minutes.\n- Management asks for fleet reports and it takes a day to prepare them.\n- The person who built the spreadsheet is the only one who understands it.\n- You keep inspection sheets or parts receipts on paper that never reach the file.\n\nIf none of these apply, keep your template and spend the effort on keeping it clean. If several apply, read our overview of [what fleet management software is](/blog/what-is-fleet-management-software) to see what a system would change day to day."
+      },
+      {
+        "heading": "How to migrate from Excel",
+        "body": "Moving to software is less work than most teams expect, especially if your spreadsheet is reasonably tidy.\n\n1. **Clean the vehicles tab.** One row per vehicle, one spelling per plate number, current odometer readings.\n2. **Decide how much history to bring.** Last service per vehicle and the service interval is often enough. Older history can stay in the archived sheet.\n3. **Export your sheet.** Save the vehicles, services and expenses tabs so they can be loaded or re-entered in the new system.\n4. **Set service intervals in km** for each vehicle or vehicle type, and your inspection checklist items.\n5. **Agree who enters what.** For example, drivers report inspections, the workshop supervisor records services and parts, and finance records expenses.\n6. **Run a short overlap.** Keep the spreadsheet read-only for a few weeks so people can check old data, but enter everything new only in the system.\n\nWith Axpense, onboarding is free, so you do not have to work out the setup alone, and most teams are live in one day."
+      },
+      {
+        "heading": "How Axpense replaces the fleet spreadsheet",
+        "body": "Axpense covers the tabs of a good fleet template in one system. The vehicle registry holds plate, make, model, odometer, status and history. **Km-based preventive maintenance** tracks service intervals in kilometres and shows km left until each service and which vehicles are overdue. Drivers are assigned to vehicles. **Inspections** use your own checklist items with pass or fail per item. **Spare parts** are tracked from purchase to installation in a vehicle, and **expenses** are recorded per vehicle by category. Reports and dashboards show maintenance status, costs by vehicle and category, and a fleet overview. The interface works in Arabic and English.\n\nAxpense is priced per vehicle per month with every feature included: 350 EGP, 38 SAR or $10 per vehicle for 5–10 vehicles, and less per vehicle as the fleet grows. You can start free with no credit card; see [Axpense pricing](/pricing) for every tier. To see the full product, visit the [fleet management software](/fleet-management-software) page or book a demo."
       }
     ]
   },
   {
     "slug": "preventive-vs-reactive-maintenance",
-    "title": "Preventive vs. Reactive Maintenance",
-    "excerpt": "The practical difference between fixing vehicles after they break and maintaining them on a schedule — and what each actually costs.",
-    "category": "Fleet Maintenance",
+    "title": "Preventive vs Reactive Maintenance: Costs, Trade-offs and How to Switch",
+    "excerpt": "Preventive vs reactive maintenance for vehicle fleets: what each costs, when fixing on failure is acceptable, and how to move to planned servicing in stages.",
+    "category": "fleet-maintenance",
     "language": "en",
     "publishedAt": "2026-09-01",
     "sections": [
       {
-        "heading": "Reactive maintenance",
-        "body": "Reactive maintenance means fixing something after it fails. It’s simple to understand but expensive in practice: a breakdown mid-route costs more than a scheduled service would have, and it happens at the worst possible time."
+        "heading": "Quick answer",
+        "body": "Reactive maintenance means repairing a vehicle only after something fails. Preventive maintenance means servicing it at planned intervals, usually by kilometres driven, before parts wear out. Reactive looks cheaper month to month, but breakdowns bring towing, rush parts, lost trips and secondary damage. For most working fleets, preventive maintenance costs less overall and makes downtime predictable."
       },
       {
-        "heading": "Preventive maintenance",
-        "body": "Preventive maintenance means servicing a vehicle on a schedule — by mileage or by time — before something fails. It costs money on a predictable schedule instead of an unpredictable one.\n\nThe tradeoff is upfront planning: schedules have to be set up and tracked, which is where most spreadsheet-based systems fall behind."
+        "heading": "What reactive and preventive maintenance actually mean",
+        "body": "The difference between the two is not whether you spend money on maintenance. Every fleet does. The difference is **when** you decide to spend it, and who decides: you, or the vehicle.\n\n### Reactive maintenance (run to failure)\n\nUnder a reactive approach, a vehicle keeps working until a driver reports a problem or it stops on the road. Then it goes to the workshop, gets diagnosed and gets repaired. There is no schedule, no service calendar and very little record-keeping beyond the invoice.\n\nReactive maintenance is common in growing companies because it needs no planning. A manager with ten vehicles and a trusted mechanic can run this way for years without noticing the cost, because the cost is spread across random breakdowns rather than sitting in one line.\n\n### Preventive maintenance (planned servicing)\n\nUnder a preventive approach, each vehicle has service intervals: change the engine oil every set number of kilometres, inspect brakes at another interval, replace filters, belts and tyres before they reach the end of their useful life. The work happens at a time you choose, usually when the vehicle is least needed.\n\nFor vehicles, the most practical trigger is **distance**. Wear on oil, brakes, tyres and suspension tracks kilometres driven far more closely than calendar time. A van doing 6,000 km a month and a pool car doing 800 km a month should not share one calendar schedule. We explain how to set these intervals in our guide to a [preventive maintenance schedule for fleets](/blog/km-based-preventive-maintenance)."
       },
       {
-        "heading": "Which one makes sense",
-        "body": "Most fleets end up using both: preventive maintenance for the predictable wear items, reactive repairs for the things that genuinely can’t be predicted. The goal isn’t to eliminate reactive maintenance entirely — it’s to shrink it to the cases that actually need it."
+        "heading": "Side-by-side comparison",
+        "body": "The table below summarises how the two approaches behave in a typical commercial fleet.\n\n| Factor | Reactive maintenance | Preventive maintenance |\n|---|---|---|\n| When work happens | After a failure | At planned km intervals |\n| Downtime | Unplanned, often mid-route | Planned, usually off-peak |\n| Cost per job | Higher (towing, urgent parts, overtime) | Lower (routine parts, scheduled labour) |\n| Spending pattern | Unpredictable spikes | Steady and easy to forecast |\n| Secondary damage | Common (one failure damages other parts) | Rare |\n| Admin effort | Low up front | Needs intervals, odometer readings and records |\n| Vehicle lifespan | Usually shorter | Usually longer |\n| Safety risk | Higher (brakes, tyres fail in use) | Lower |\n\nThe one column where reactive wins is **admin effort**. That is the real reason many fleets stay reactive: not because it is cheaper, but because preventive maintenance requires someone to know each vehicle's odometer reading and what is due next."
+      },
+      {
+        "heading": "The real cost of a breakdown: a worked example in EGP",
+        "body": "The numbers below are **hypothetical** and meant only to show the structure of the comparison. Use your own workshop invoices and trip values when you run it.\n\nImagine a delivery van whose oil and filter change is skipped. Weeks later, the engine overheats on a delivery route and needs a repair.\n\n### Scenario A: planned service\n\n| Item | Cost (EGP) |\n|---|---|\n| Oil, oil filter and air filter | 2,200 |\n| Labour at the regular workshop | 500 |\n| Half a day off the road, scheduled on a quiet afternoon | 0 lost revenue |\n| **Total** | **2,700** |\n\n### Scenario B: breakdown on the route\n\n| Item | Cost (EGP) |\n|---|---|\n| Towing to the workshop | 1,500 |\n| Engine repair (parts and labour) | 18,000 |\n| Three days off the road: lost or subcontracted deliveries at 2,500 per day | 7,500 |\n| Overtime for another driver to cover urgent orders | 1,200 |\n| **Total** | **28,200** |\n\nIn this example, one avoided breakdown pays for roughly ten planned services. The exact ratio will differ in your fleet, but the pattern holds: the invoice for the repair is usually only part of the cost. Lost trips, customer penalties and the knock-on effect on other vehicles are what make reactive maintenance expensive.\n\n> Tip: when you compare the two approaches, count days off the road, not just workshop invoices. Our guide on [how to reduce vehicle downtime](/blog/reduce-vehicle-downtime) covers how to measure that."
+      },
+      {
+        "heading": "When reactive maintenance is acceptable",
+        "body": "Preventive maintenance is not the right answer for every item on every vehicle. A deliberate \"run to failure\" policy is reasonable when:\n\n- **The asset is low value.** An old pool car worth less than a major repair may not justify a full service programme. Keep it safe and roadworthy, then replace it when it fails.\n- **You have redundancy.** If you have spare vehicles that can cover a breakdown immediately, the cost of downtime drops sharply.\n- **The component fails without warning or damage.** Bulbs, wiper blades and some electrical parts can simply be replaced when they fail, as long as a failure is not a safety risk.\n- **The vehicle is close to disposal.** Spending heavily on preventive work in the last few months before sale can be wasteful.\n\nReactive should never apply to safety-critical items. Brakes, tyres, steering and lights need regular checks regardless of vehicle value. A short pre-trip inspection routine, like our [daily vehicle inspection checklist](/blog/daily-vehicle-inspection-checklist), catches many of these issues before they become failures.\n\nThe practical goal is not zero reactive repairs. It is to make reactive work a conscious choice for specific vehicles and parts, rather than the default for the whole fleet."
+      },
+      {
+        "heading": "Predictive maintenance: the third option",
+        "body": "You will also see **predictive maintenance** discussed alongside the other two. The idea is to service a part based on its measured condition rather than a fixed interval: for example, analysing engine data, oil samples or vibration readings to estimate when a component is likely to fail.\n\nIn principle, predictive maintenance avoids both extremes: you do not replace parts too early, and you do not wait for them to fail. In practice, it needs reliable sensor or diagnostic data, enough history to spot patterns, and people who can interpret the results. That makes it more common in large fleets and heavy industry than in typical commercial vehicle fleets.\n\nFor most companies in the region, the sensible order is: first get clean records and a working km-based preventive programme, then consider condition-based methods for your most expensive vehicles. Predictive methods built on messy or missing service history will not be reliable."
+      },
+      {
+        "heading": "How to move from reactive to preventive in stages",
+        "body": "You do not need to change the whole fleet overnight. A staged approach keeps the workload manageable.\n\n### Stage 1: build the vehicle list and current odometer readings\n\nList every vehicle with plate, make, model, current odometer reading and status. Record when and at what km each vehicle was last serviced, even if you have to estimate from old invoices.\n\n### Stage 2: start with the most critical vehicles\n\nPick the vehicles whose breakdowns hurt most: those on customer routes, those with no backup, or the heaviest units. Set km-based intervals for engine oil, filters, brakes and tyres using the manufacturer's schedule as the baseline.\n\n### Stage 3: record every job, planned or not\n\nLog each service and each repair against the vehicle, with date, km reading, work done and cost. Without this history you cannot tell whether the programme is working.\n\n### Stage 4: extend to the rest of the fleet\n\nOnce the first group runs smoothly, add the remaining vehicles. Decide consciously which low-value units stay on a run-to-failure policy.\n\n### Stage 5: review every quarter\n\nCompare breakdowns, days off the road and maintenance spend before and after. If a vehicle keeps breaking down between services, shorten its intervals or look at replacement. A ready-made [fleet preventive maintenance checklist](/resources/preventive-maintenance-checklist) helps keep each service consistent."
+      },
+      {
+        "heading": "Common mistakes when switching",
+        "body": "- **Using calendar-only intervals.** Monthly schedules over-service low-use vehicles and under-service busy ones. Base intervals on km.\n- **Not updating odometer readings.** A km-based schedule is only as accurate as the latest reading. Make updating the odometer part of the routine.\n- **Skipping records for \"small\" repairs.** Small repeated repairs are often the first sign that a vehicle is becoming expensive to keep.\n- **Treating the schedule as fixed.** Heat, dust, heavy loads and city stop-start driving are hard on vehicles. Many fleets in hot, dusty conditions shorten intervals compared with the standard schedule, always within the manufacturer's guidance.\n- **Measuring success by workshop spend alone.** Preventive programmes can raise routine spend slightly while reducing breakdowns and downtime. Look at the total."
+      },
+      {
+        "heading": "How Axpense helps you run preventive maintenance",
+        "body": "Axpense is built around km-based preventive maintenance. You add each vehicle with its plate, make, model and odometer reading, set service intervals in kilometres, and Axpense shows how many km are left until each service and which vehicles are overdue, with reminders so nothing is missed.\n\nEvery service and repair is recorded in the vehicle's service history, and the costs are recorded as expenses per vehicle by category, so you can see how much each vehicle's maintenance really costs. Spare parts are tracked from purchase to installation, and inspection checklists record failed items on the vehicle.\n\nTo see how this fits a whole maintenance operation, read about our [fleet maintenance software](/fleet-maintenance-software), or book a demo to walk through your own fleet."
       }
     ]
   },
   {
     "slug": "how-to-calculate-fleet-cost",
-    "title": "How to Calculate Fleet Cost",
-    "excerpt": "What actually goes into the cost of running a fleet, and how to get a per-vehicle number instead of one fleet-wide guess.",
-    "category": "Fleet Expenses",
+    "title": "How to Calculate Fleet Costs and Build a Fleet Budget",
+    "excerpt": "How to calculate fleet costs for the whole fleet: fixed vs variable costs, cost categories, a 20-vehicle monthly budget in EGP and a variance review routine.",
+    "category": "fleet-costs",
     "language": "en",
     "publishedAt": "2026-09-01",
     "sections": [
       {
-        "heading": "What counts as fleet cost",
-        "body": "Fuel, maintenance and repairs, insurance, registration and licensing, and depreciation are the core categories. Some businesses also include driver wages and parking or toll fees."
+        "heading": "Quick answer",
+        "body": "To calculate fleet costs, list every cost category, split them into fixed costs (depreciation, insurance, registration, financing) and variable costs (fuel, maintenance, repairs, tyres, tolls), then total them per vehicle and across the fleet for a month and a year. That total becomes your fleet budget, which you compare against actual spending every month."
       },
       {
-        "heading": "Fleet-wide vs. per-vehicle",
-        "body": "A single fleet-wide total tells you what you spent. It doesn’t tell you which vehicle is costing more than it should. Breaking cost down per vehicle is what actually lets you act — replace the vehicle that’s become expensive to maintain, or investigate why one route burns more fuel than another."
+        "heading": "Why a fleet-wide cost total matters",
+        "body": "Most companies know roughly what individual vehicles cost. Far fewer can answer a simple question from finance: **how much will the fleet cost us next year, and are we on track this month?**\n\nA fleet cost total and budget answers that. It turns scattered invoices, insurance renewals and fuel receipts into one plan you can defend, and it gives you a baseline for spotting problems early: a repair bill that keeps growing, a category that is always over plan, or a vehicle group that costs more than expected.\n\nThis article focuses on the **whole-fleet running cost** over a month or a year. Two related calculations answer different questions:\n\n- **Cost per km** divides operating costs by distance driven to compare vehicles and price work. See our guide on [how to calculate vehicle cost per km](/blog/vehicle-cost-per-km).\n- **Total cost of ownership (TCO)** covers one vehicle from purchase to resale to support buy, lease or replace decisions. See our guide to [fleet total cost of ownership](/blog/fleet-total-cost-of-ownership).\n\nA fleet budget uses the same raw cost data as both, so getting the categories right here makes the other two calculations easier."
       },
       {
-        "heading": "Getting there without a spreadsheet",
-        "body": "The manual version of this is logging every receipt against a vehicle and reconciling monthly. Most businesses that try this by hand find it slips after a few months — which is usually the point they look for software that logs cost per vehicle automatically as expenses happen."
+        "heading": "Fixed vs variable fleet costs",
+        "body": "Every fleet cost falls into one of two groups. Separating them is the most useful step in building a budget, because they behave differently and you control them differently.\n\n### Fixed costs\n\nFixed costs stay roughly the same each month whether a vehicle drives 500 km or 5,000 km:\n\n- **Depreciation**: the loss in the vehicle's value over time, spread across its years of use\n- **Insurance** premiums\n- **Registration and licensing** fees\n- **Financing or lease payments**\n- **Parking, garaging or depot costs**\n\nFixed costs are mostly decided when you buy or lease a vehicle. You reduce them by right-sizing the fleet, not by driving less.\n\n### Variable costs\n\nVariable costs rise and fall with how much the vehicles are used:\n\n- **Fuel**\n- **Preventive maintenance** (services at km intervals)\n- **Repairs** (unplanned work)\n- **Tyres**\n- **Tolls, parking fees and road charges**\n\nVariable costs are where monthly surprises come from, and where good maintenance and driving habits make the biggest difference.\n\n> Driver wages are a real cost of operating vehicles. Some companies include them in the fleet budget, others keep them in the payroll budget. Either is fine, as long as you are consistent every month."
+      },
+      {
+        "heading": "Step by step: how to calculate fleet costs",
+        "body": "1. **List every vehicle** with its plate, model, age, typical monthly km and how it is financed.\n2. **Collect twelve months of invoices** by category: fuel, services, repairs, parts, tyres, insurance, registration, tolls. If you do not have twelve months, use what you have and annualise carefully.\n3. **Calculate depreciation** for each vehicle: (purchase price − expected resale value) ÷ years of use, then divide by 12 for a monthly figure.\n4. **Convert annual fixed costs to monthly**: an insurance premium or registration fee paid once a year is divided by 12.\n5. **Estimate variable costs from usage**: for fuel, monthly km × consumption per km × fuel price. For maintenance, use your service intervals and last year's repair history.\n6. **Add a repair reserve**: unplanned repairs will happen. Base the reserve on past repair spend, not on hope.\n7. **Total by category, then by fleet**: this gives a monthly and annual figure, plus a per-vehicle average.\n\nWhere a single vehicle's figures look very different from the others, check its history before averaging it in. One old vehicle with frequent breakdowns can distort the whole budget."
+      },
+      {
+        "heading": "Worked example: a monthly budget for a 20-vehicle fleet",
+        "body": "The figures below are **hypothetical**, for illustration only. Assume 20 light commercial vans, each driving about 4,000 km a month, with an assumed fuel consumption of 12 litres per 100 km and an assumed fuel price of 18 EGP per litre.\n\n| Category | Type | Basis | Monthly (EGP) |\n|---|---|---|---|\n| Depreciation | Fixed | 9,000 per van | 180,000 |\n| Insurance | Fixed | 2,500 per van | 50,000 |\n| Registration and licensing | Fixed | 6,000 per van per year ÷ 12 | 10,000 |\n| Financing payments | Fixed | Interest on financed vans | 40,000 |\n| Parking and depot | Fixed | Shared depot rent | 15,000 |\n| Fuel | Variable | 480 litres × 18 EGP × 20 vans | 172,800 |\n| Preventive maintenance | Variable | 1,500 per van | 30,000 |\n| Repair reserve | Variable | Based on last year's repairs | 25,000 |\n| Tyres | Variable | 800 per van (monthly accrual) | 16,000 |\n| Tolls and parking fees | Variable | Route based | 8,000 |\n| **Total** | | | **546,800** |\n\nFrom this table:\n\n- **Fixed costs**: 295,000 EGP a month (about 54 % of the total)\n- **Variable costs**: 251,800 EGP a month (about 46 %)\n- **Annual fleet budget**: 546,800 × 12 = **6,561,600 EGP**\n- **Average per vehicle**: 546,800 ÷ 20 = **27,340 EGP a month**\n\nIf you want to break this down further into a cost per km figure for each van, the [fleet cost per km calculator](/resources/fleet-cost-calculator) does that from the same inputs."
+      },
+      {
+        "heading": "Tracking actual costs against the budget",
+        "body": "A budget is only useful if you compare it with what actually happened. Budget vs actual is a practice, not a single report, and a spreadsheet is enough to start.\n\n### Set up the comparison\n\nCreate one sheet with the budget categories as rows and months as columns. Next to each budget figure, record the actual spend for that month, and add two columns: the difference in EGP and the difference as a percentage.\n\n### Record actuals per vehicle, not just per category\n\nTotals by category tell you **that** repairs went over plan. Costs recorded per vehicle tell you **which** vehicle caused it. Record every invoice against a specific plate and a specific category when it happens, not at month end from memory.\n\n### Example variance review\n\nContinuing the hypothetical fleet, here is one month's comparison for four categories:\n\n| Category | Budget (EGP) | Actual (EGP) | Variance | % |\n|---|---|---|---|---|\n| Fuel | 172,800 | 189,500 | +16,700 | +9.7 % |\n| Preventive maintenance | 30,000 | 27,400 | −2,600 | −8.7 % |\n| Repair reserve | 25,000 | 41,000 | +16,000 | +64 % |\n| Tyres | 16,000 | 15,200 | −800 | −5 % |\n\nThe fuel overrun might come from longer routes or a price change. The repair overrun is bigger in percentage terms and deserves a closer look: in this example, suppose two vans accounted for most of it, both several thousand km past their oil service. That points to a maintenance scheduling problem, not a budgeting one."
+      },
+      {
+        "heading": "How to review variances and adjust the plan",
+        "body": "Not every variance needs action. A simple routine keeps the review focused:\n\n- **Set a threshold.** For example, investigate any category more than 10 % over plan, or any single vehicle whose monthly cost is well above the fleet average.\n- **Separate price from usage.** A fuel overrun could be more km, worse consumption or a higher price. Each has a different fix.\n- **Look for repeat offenders.** A vehicle that is over plan three months in a row may be approaching the point where replacement is cheaper than repair.\n- **Check maintenance status.** Overdue services often show up later as repair overruns.\n- **Re-forecast quarterly.** If fuel prices or fleet size change, update the remaining months rather than letting the whole year look wrong.\n\nKeep a short note for each significant variance explaining the cause. Over a year, those notes become the best input for next year's budget."
+      },
+      {
+        "heading": "Common mistakes when budgeting fleet costs",
+        "body": "- **Leaving out depreciation.** It does not appear as a monthly invoice, but it is often one of the largest costs in the fleet.\n- **Budgeting repairs at zero.** Every fleet has unplanned repairs. Use last year's history as the starting point.\n- **Mixing vehicles with very different usage.** A heavy truck and a pool car should not share one average. Group similar vehicles.\n- **Recording costs weeks later.** Late entries lose details such as which vehicle, what km and what the work was.\n- **Ignoring annual payments.** Insurance and registration paid once a year make individual months look distorted unless you spread them over twelve months."
+      },
+      {
+        "heading": "How Axpense helps you calculate fleet costs",
+        "body": "Axpense gives you the per-vehicle cost data a fleet budget depends on. You record repairs, parts, insurance, registration and other costs as expenses against each vehicle, by category. Depreciation is tracked per vehicle so book value over time is part of the picture, and reports show costs by vehicle and by category across the fleet.\n\nKm-based preventive maintenance with reminders and overdue alerts helps keep services on time, which is one of the most practical ways to keep the repair line close to plan. You can then use these recorded totals as the actuals in your budget spreadsheet each month.\n\nSee how it works on our [fleet cost tracking software](/fleet-cost-tracking) page and in [fleet expense management](/features/expense-management), or book a demo to walk through your own fleet's costs."
       }
     ]
   },
   {
     "slug": "what-is-asset-management",
-    "title": "What Is Asset Management?",
-    "excerpt": "Asset management beyond vehicles — what it covers for equipment and tools, and how it differs from fleet management.",
-    "category": "Asset Management",
+    "title": "What Is Asset Management? Lifecycle, Depreciation and Replacement",
+    "excerpt": "What is asset management for vehicles and equipment: lifecycle stages, the asset register, a depreciation example in EGP and how to decide when to replace.",
+    "category": "asset-management",
     "language": "en",
     "publishedAt": "2026-09-01",
     "sections": [
       {
-        "heading": "Assets beyond vehicles",
-        "body": "Asset management covers any physical item a business owns and needs to track: equipment, tools, machinery, IT hardware, and more — not just vehicles."
+        "heading": "Quick answer",
+        "body": "Asset management is the practice of tracking and managing the physical assets a business owns, such as vehicles and equipment, across their whole lifecycle: acquisition, use, maintenance, depreciation and disposal. The aim is to get the most useful work from each asset at the lowest total cost, and to know when repairing it stops making sense and replacing it does."
       },
       {
-        "heading": "The lifecycle view",
-        "body": "An asset has a lifecycle: acquisition, assignment, maintenance, depreciation, and eventual disposal. Managing an asset well means tracking it through all of that, not just knowing it exists."
+        "heading": "What asset management means (and what it does not)",
+        "body": "The term \"asset management\" is used in two very different ways. In finance, it means managing investment portfolios: shares, bonds and funds on behalf of clients. **That is not what this article is about.**\n\nHere, asset management means **physical, operational asset management**: the vehicles, machines and equipment a company relies on to deliver its work. It answers practical questions:\n\n- What do we own, where is it, and who is responsible for it?\n- What condition is it in, and when is its next service due?\n- How much has it cost us so far, and what is it worth now?\n- When should we replace it, and what should we do with the old one?\n\nFor companies that run delivery vans, service pickups, trucks or site equipment, these assets are often among the largest items on the balance sheet. Managing them well has a direct effect on costs, reliability and safety."
       },
       {
-        "heading": "Where it overlaps with fleet management",
-        "body": "Vehicles are technically assets too — which is why fleet and asset management are often handled in the same system rather than two separate ones. The vehicle-specific parts (fuel, driver assignment) sit alongside the general asset parts (depreciation, lifecycle tracking)."
+        "heading": "The asset lifecycle, stage by stage",
+        "body": "Every physical asset moves through the same broad stages. Good asset management means keeping a record at each stage, not just when something is bought or breaks.\n\n### 1. Planning and acquisition\n\nDecide what you need, whether to buy or lease, and what the asset will cost over its life, not just its purchase price. Record the purchase date, price, supplier and financing terms from day one.\n\n### 2. Commissioning and assignment\n\nThe asset is registered, prepared for work and assigned to a team, site or person. For a vehicle, that means plates, insurance and a responsible driver.\n\n### 3. Operation and use\n\nThe asset does its job. Usage is measured: kilometres for vehicles, running time or output for machines. Usage drives both wear and maintenance timing.\n\n### 4. Maintenance and inspection\n\nPlanned servicing, regular inspections and repairs keep the asset safe and productive. The service history recorded here is what later tells you whether an asset is reliable or becoming a burden.\n\n### 5. Depreciation and valuation\n\nThroughout its life, the asset loses value. Tracking book value lets finance report it correctly and helps operations judge whether further repairs are worth it.\n\n### 6. Disposal and replacement\n\nAt the end of its useful life, the asset is sold, traded in or scrapped, and a replacement is planned. The resale value achieved closes the lifecycle and feeds into the next purchase decision."
+      },
+      {
+        "heading": "What to record in an asset register",
+        "body": "The asset register is the core of asset management: one record per asset holding everything you need to manage it. For vehicles, a practical register includes:\n\n| Field | Why it matters |\n|---|---|\n| Asset ID / plate number | Unique reference for every cost and job |\n| Make, model and year | Service schedules and parts depend on it |\n| Purchase date and price | Starting point for depreciation and TCO |\n| Expected useful life and resale value | Needed to calculate depreciation |\n| Current odometer reading | Drives km-based maintenance timing |\n| Status (active, in maintenance, retired) | Shows what is available for work |\n| Assigned driver or team | Clear responsibility for the asset |\n| Service history | Evidence of reliability and condition |\n| Costs by category | Shows the true cost of keeping the asset |\n| Current book value | What the asset is worth on paper today |\n\nFor non-vehicle equipment, the same structure applies, with usage measured differently. The key is consistency: every asset recorded the same way, and every cost linked to a specific asset."
+      },
+      {
+        "heading": "Depreciation explained with a worked example",
+        "body": "Depreciation spreads the cost of an asset over the years it is used. The simplest and most common method is **straight-line depreciation**:\n\n**Annual depreciation = (purchase price − expected resale value) ÷ years of use**\n\nThe figures below are **hypothetical**, for illustration. A company buys a pickup truck for **1,200,000 EGP**, expects to use it for **5 years** and expects to sell it for **400,000 EGP** at the end.\n\nAnnual depreciation = (1,200,000 − 400,000) ÷ 5 = **160,000 EGP per year**, or about **13,333 EGP per month**.\n\n| End of year | Depreciation for the year (EGP) | Book value (EGP) |\n|---|---|---|\n| Purchase | – | 1,200,000 |\n| Year 1 | 160,000 | 1,040,000 |\n| Year 2 | 160,000 | 880,000 |\n| Year 3 | 160,000 | 720,000 |\n| Year 4 | 160,000 | 560,000 |\n| Year 5 | 160,000 | 400,000 |\n\nTwo practical points follow from this:\n\n- **Depreciation is a real cost even without an invoice.** In many fleets it is one of the largest monthly costs per vehicle, so leave it out and your cost figures will look far better than reality.\n- **Book value is a guide, not a price.** The actual resale value depends on condition, km and the market. A well-maintained vehicle with a complete service history usually sells for more.\n\nYour accountant may use other methods, such as declining balance, for tax or reporting purposes. For operational decisions, straight-line is usually clear enough."
+      },
+      {
+        "heading": "When to replace an asset",
+        "body": "Replacement is the decision where asset management pays off most. Replacing too early wastes value still left in the asset; replacing too late means rising repairs, more downtime and a lower resale price.\n\n### Signals that an asset is near the end of its useful life\n\n- **Repair costs keep rising.** Annual repairs are approaching a large share of the asset's current book value.\n- **Downtime is increasing.** The asset spends more days in the workshop and fewer doing work.\n- **Breakdowns repeat.** The same vehicle keeps appearing in the service history for unplanned repairs.\n- **Safety or reliability concerns.** Repeated inspection failures on important items.\n- **It no longer fits the job.** Routes, loads or regulations have changed.\n\n### A simple comparison\n\nContinuing the hypothetical pickup: in year 5 its repairs cost 95,000 EGP and it was off the road for 18 days. A replacement would add depreciation of about 160,000 EGP a year but would likely cut repairs and downtime sharply in its first years. Put both options side by side over the next two or three years, including depreciation, repairs, downtime and expected resale value. That comparison is essentially a total cost of ownership calculation, which we cover in detail in our guide to [fleet total cost of ownership](/blog/fleet-total-cost-of-ownership)."
+      },
+      {
+        "heading": "How fleet management relates to asset management",
+        "body": "Vehicles are assets, so fleet management is a specialised form of asset management. Both follow the same lifecycle and both care about cost, condition and replacement timing.\n\nWhat makes vehicles different is how much day-to-day activity surrounds them:\n\n- **Distance-based maintenance**: services due every set number of kilometres\n- **Drivers**: a person assigned to each vehicle, responsible for its use\n- **Inspections**: frequent checks of brakes, tyres, lights and fluids\n- **Operating costs**: repairs, parts, insurance, registration and fuel recorded against each vehicle\n\nAsset management sets the long-term frame: purchase, depreciation, replacement. Fleet management handles the daily operation inside that frame. The two work best from the same records: the service history and cost data collected every day are exactly what the replacement decision needs. For a fuller picture of the operational side, see our overview of [fleet management software](/fleet-management-software).\n\nSpare parts follow a lifecycle of their own, from purchase to installation in a specific vehicle. Our guide to [fleet spare parts management](/blog/fleet-spare-parts-management) covers that part of the picture."
+      },
+      {
+        "heading": "Getting started with asset management",
+        "body": "1. **Build the register.** List every asset with the fields above. Start with vehicles, since they usually carry the most cost and risk.\n2. **Set depreciation terms.** Agree purchase price, expected useful life and resale value for each asset with finance.\n3. **Record every cost against an asset.** Repairs, parts, insurance and registration linked to a specific plate.\n4. **Keep service history complete.** Planned and unplanned work, with date, km and cost.\n5. **Review once a year.** Compare repair costs, downtime and book value for each asset and plan replacements for the next budget."
+      },
+      {
+        "heading": "How Axpense helps with vehicle asset management",
+        "body": "Axpense covers asset management for vehicles. Each vehicle has a record with plate, make, model, odometer reading, status and history. Depreciation is tracked per vehicle, so you can see book value over time and where each vehicle is in its lifecycle.\n\nAround that record, Axpense handles the day-to-day side: km-based preventive maintenance with reminders, service history, spare parts tracked from purchase to installation, driver assignment, inspections with checklists, and expenses recorded per vehicle by category. Reports show costs by vehicle and category, which gives you the data you need for replacement decisions.\n\nLearn more about [vehicle depreciation and lifecycle management](/features/asset-management) in Axpense, or book a demo to see it with your own fleet."
+      }
+    ]
+  },
+  {
+    "slug": "what-is-fleet-management-software",
+    "title": "ما هو برنامج إدارة الأسطول؟ دليل مبسّط للشركات التي يكبر أسطولها",
+    "excerpt": "ما هو برنامج إدارة الأسطول، وماذا يفعل في العمل اليومي، ومن يحتاجه، ومتى يصبح ملف الإكسل غير كافٍ لإدارة سيارات الشركة.",
+    "category": "fleet-management",
+    "language": "ar",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "الإجابة المختصرة",
+        "body": "برنامج إدارة الأسطول هو نظام يجمع بيانات كل سيارات الشركة في مكان واحد: بيانات السيارة وصيانتها والسائقين والفحوصات والمصروفات. بدلًا من ملفات إكسل متفرقة وأوراق ورسائل واتساب، يصبح لكل سيارة سجل واحد، مع تنبيهات بالصيانة المستحقة وتقارير توضح تكلفة تشغيل كل سيارة وما تحتاجه في الخطوة التالية."
+      },
+      {
+        "heading": "تعريف عملي",
+        "body": "الأسطول هو أي مجموعة من المركبات تملكها الشركة أو تستأجرها لتؤدي عملها: سيارات توزيع، أو بيك أب للفنيين، أو شاحنات، أو سيارات للمبيعات، أو مزيج من كل ذلك. وإدارة الأسطول هي العمل اليومي للحفاظ على هذه السيارات جاهزة وآمنة وبتكلفة معقولة. أما البرنامج فهو الأداة التي تحفظ المعلومات التي يعتمد عليها هذا العمل.\n\nفي أبسط صوره، يجيب البرنامج عن أربعة أسئلة لكل سيارة:\n\n1. **ما هي السيارة؟** رقم اللوحة والماركة والموديل وقراءة العداد الحالية وحالتها.\n2. **مع من هي؟** السائق المخصص لها ومن استخدمها قبله.\n3. **ماذا تحتاج؟** الصيانة القادمة، وكم كيلومترًا متبقيًا عليها، وأي أعطال ظهرت في آخر فحص.\n4. **كم كلّفت؟** الإصلاحات وقطع الغيار والتأمين والترخيص وغيرها من المصروفات.\n\nإذا لم تستطع الأداة الإجابة عن هذه الأسئلة بسرعة لأي سيارة في أسطولك، فهي لا تؤدي وظيفتها الأساسية."
+      },
+      {
+        "heading": "ماذا يفعل البرنامج في العمل اليومي؟",
+        "body": "### سجل محدَّث للسيارات\n\nلكل سيارة سجل واحد يضم بياناتها وقراءة العداد وتاريخها الكامل. عند بيع سيارة أو نقلها إلى فرع آخر يظهر ذلك في سجلها، ويستطيع أي موظف جديد الرجوع إليه دون الاعتماد على شخص واحد \"يحفظ\" الأسطول.\n\n### صيانة مخططة قبل أن تتحول إلى عطل\n\nتُضبط فترات الصيانة لكل سيارة بالكيلومترات، ويقارن النظام آخر قراءة للعداد بالفترة المحددة ليُظهر السيارات التي اقترب موعد صيانتها والسيارات المتأخرة. للتفاصيل، راجع دليلنا عن [جدول الصيانة الوقائية للسيارات حسب الكيلومترات](/blog/km-based-preventive-maintenance).\n\n### فحوصات بقائمة ثابتة\n\nيفحص السائق أو المشرف الإطارات والأنوار والفرامل والسوائل والهيكل وفق قائمة محددة، وتُسجَّل البنود غير المطابقة على السيارة نفسها، فلا تضيع الملاحظة بين الفحص وحجز الورشة.\n\n### مصروفات مرتبطة بالسيارة\n\nكل فاتورة إصلاح وقطعة غيار وقسط تأمين ورسوم ترخيص تُسجَّل على السيارة التي صُرفت عليها مع تصنيفها، فيتكوّن مع الوقت تاريخ تكلفة واضح يساعدك على قرار الإصلاح أو الاستبدال.\n\n### تخصيص السائقين\n\nمعرفة أي سائق استلم أي سيارة ومتى أمر مهم للمسؤولية، ولفهم سبب تآكل سيارة أسرع من غيرها."
+      },
+      {
+        "heading": "أهم الوحدات وما تحله كل منها",
+        "body": "| الوحدة | ما تحفظه | المشكلة التي تحلها |\n|---|---|---|\n| سجل السيارات | البيانات والعداد والحالة | عدم وضوح عدد السيارات وحالتها |\n| الصيانة الوقائية | فترات الصيانة بالكيلومتر | نسيان تغيير الزيت والأعطال المفاجئة |\n| سجل الصيانة | كل عمل تم على السيارة | ضياع التاريخ في أوراق الورشة |\n| قطع الغيار | القطع المشتراة وأين رُكّبت | قطع تختفي أو تُركّب مرتين |\n| السائقون | تخصيص السائق للسيارة | غياب المسؤولية عن السيارة |\n| الفحوصات | نتائج قائمة الفحص | أعطال تُكتشف ولا تُصلح |\n| المصروفات | التكاليف لكل سيارة وتصنيف | عدم معرفة التكلفة الحقيقية |\n| الإهلاك | القيمة الدفترية مع الوقت | قرارات استبدال بلا أرقام |\n| التقارير | ملخصات للأسطول كله | أسئلة الإدارة التي لا يجيب عنها أحد |\n\nبعض المنتجات في السوق تركّز على تحديد الموقع اللحظي أو أجهزة التتبع أو تخطيط المسارات، وهي فئة مختلفة بتكاليف وتركيبات مختلفة. كثير من الشركات تبدأ بجانب السجلات والصيانة والتكاليف لأنه المكان الذي يضيع فيه أغلب المال الممكن توفيره."
+      },
+      {
+        "heading": "متى تحتاج شركتك إلى البرنامج؟",
+        "body": "لا يوجد عدد سيارات محدد، لكن هناك علامات واضحة على أن الطريقة الحالية لم تعد تكفي:\n\n- موظف يقضي ساعات كل أسبوع في تحديث ملف إكسل.\n- صيانة فاتت وتعطلت السيارة، أو اكتشفت أن سيارة تجاوزت موعدها بآلاف الكيلومترات.\n- الإدارة المالية تسأل عن تكلفة سيارة معينة والإجابة تحتاج أيامًا من جمع الفواتير.\n- نماذج فحص تُملأ ولا يحدث بعدها شيء.\n- أكثر من فرع أو موقع ولا أحد يرى الصورة الكاملة.\n\nشركات النقل والتوزيع والمقاولات والخدمات الميدانية تصل إلى هذه النقطة مبكرًا لأن سياراتها تقطع مسافات طويلة، لكن شركة لديها 15 سيارة مبيعات قد تشعر بالمشكلة نفسها. وإذا كنت تفكر في الاستمرار على الإكسل، فمقالنا عن [الفرق بين ملف إكسل لإدارة الأسطول والبرنامج](/blog/fleet-management-excel-vs-software) يساعدك على القرار."
+      },
+      {
+        "heading": "ماذا تسأل عند مقارنة الأنظمة؟",
+        "body": "- **هل تُحسب الصيانة بالكيلومتر؟** السيارات تتآكل مع المسافة، والجدولة بالتاريخ فقط تخدم سيارة قليلة الاستخدام على حساب سيارة توزيع تعمل طوال اليوم.\n- **هل الواجهة بالعربية؟** المشرفون والسائقون وفريق الورشة يفضّلون العربية غالبًا، بينما قد تحتاج الإدارة تقارير بالإنجليزية.\n- **هل ترتبط كل تكلفة بسيارة؟** الهدف من تسجيل المصروفات هو معرفة تكلفة كل سيارة وكل بند.\n- **كم يستغرق التشغيل؟** النظام الذي يحتاج شهورًا من الإعداد قد لا يكتمل أبدًا.\n- **هل السعر واضح؟** ابحث عن أسعار معلنة وفترة تجربة مجانية."
+      },
+      {
+        "heading": "مثال بسيط على الفرق",
+        "body": "مثلًا، شركة توزيع لديها 30 سيارة، تقطع كل منها نحو 250 كم يوميًا، وفترة الصيانة 10,000 كم. أي أن كل سيارة تستحق الصيانة كل 40 يوم عمل تقريبًا.\n\nعلى الإكسل، يجب على المشرف تحديث 30 قراءة عداد وحساب المتبقي لكل سيارة. وإذا تأخر التحديث أسبوعين، قد تتجاوز سيارة موعدها بـ 3,000 كم دون أن يلاحظ أحد. مع البرنامج، تُسجَّل القراءة في سجل السيارة ويظهر فورًا ما اقترب موعده وما تأخر، فيتحول دور المشرف من الحساب إلى الجدولة، وتنتقل تكلفة الصيانة مباشرة إلى [إدارة تكاليف الأسطول](/fleet-cost-tracking)."
+      },
+      {
+        "heading": "كيف يساعدك أكسبنس؟",
+        "body": "أكسبنس منصة لإدارة الأسطول والأصول للشركات في مصر والسعودية والشرق الأوسط، بواجهة عربية وإنجليزية. يوفر سجلًا للسيارات بالبيانات والعداد والحالة والتاريخ، وصيانة وقائية حسب الكيلومترات مع تنبيهات وعرض للكيلومترات المتبقية والسيارات المتأخرة، وسجل صيانة كاملًا، وتتبعًا لقطع الغيار من الشراء حتى التركيب، وتخصيص السائقين، وفحوصات بقوائم قابلة للتعديل، ومصروفات لكل سيارة حسب التصنيف، والإهلاك والقيمة الدفترية، وتقارير عن الصيانة والتكاليف.\n\nالإعداد مجاني وأغلب الفرق تبدأ العمل في يوم واحد. تعرّف أكثر على [برنامج إدارة الأسطول من أكسبنس](/fleet-management-software) واحجز عرضًا تجريبيًا."
+      }
+    ]
+  },
+  {
+    "slug": "km-based-preventive-maintenance",
+    "title": "جدول الصيانة الوقائية للسيارات حسب الكيلومترات: دليل عملي للأساطيل",
+    "excerpt": "لماذا تتفوق فترات الصيانة بالكيلومتر على الجدولة بالتاريخ فقط، وكيف تبني جدول صيانة وقائية يلتزم به فريقك فعلًا.",
+    "category": "fleet-maintenance",
+    "language": "ar",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "الإجابة المختصرة",
+        "body": "جدول الصيانة الوقائية للسيارات هو قائمة بأعمال الصيانة التي تحتاجها كل سيارة والفترة التي تستحق فيها، وتُقاس أساسًا بالكيلومترات المقطوعة. ابدأ بجدول الشركة المصنّعة، وقصّر الفترات في ظروف الحرارة والغبار والأحمال الثقيلة، وسجّل قراءات العداد بانتظام، ونفّذ الصيانة عندما تصل السيارة إلى الكيلومتر المحدد لا عند تاريخ ثابت."
+      },
+      {
+        "heading": "لماذا الكيلومتر وليس التقويم فقط؟",
+        "body": "المحرك والفرامل والإطارات والعفشة تتآكل مع الاستخدام. سيارة توزيع تقطع 400 كم يوميًا في زحام المدينة تستهلك زيتها وتيل فراملها في شهر أكثر مما تستهلكه سيارة مدير في موسم كامل. جدول يقول \"صيانة كل ثلاثة أشهر\" يعامل السيارتين بالطريقة نفسها، فتتأخر صيانة الأولى وتُصرف أموال بلا داعٍ على الثانية.\n\nالجدولة بالكيلومتر تحل ذلك: كل سيارة تُصان عندما تؤدي فعلًا العمل الذي يسبب التآكل. والنتيجة أعطال أقل في السيارات كثيرة الاستخدام، وتوفير في السيارات قليلة الاستخدام، وجدول يتحدث بلغة كتيّب الصيانة نفسها.\n\nمع ذلك يبقى للتاريخ دور احتياطي؛ فالزيت يتقادم والبطارية تضعف حتى لو كانت السيارة واقفة. أغلب المصنّعين يكتبون \"كل X كم أو Y شهر، أيهما أسبق\". اجعل الكيلومتر هو المحرّك الأساسي واحتفظ بالحد الزمني حتى لا تُنسى السيارات قليلة الاستخدام."
+      },
+      {
+        "heading": "الخطوة 1: قسّم سياراتك إلى مجموعات",
+        "body": "لا تحتاج جدولًا لكل سيارة، لكنك تحتاج جدولًا لكل نوع. اجمع السيارات المتشابهة في الماركة والموديل والمحرك وطبيعة العمل، مثل: سيارات الركوب للمبيعات والإدارة، وسيارات الفان والبيك أب للتوزيع والفنيين، والشاحنات المتوسطة والثقيلة. ثم احصل على جدول الصيانة من كتيّب المالك أو من الوكيل لكل مجموعة، فهو نقطة البداية دائمًا."
+      },
+      {
+        "heading": "الخطوة 2: اكتب جدول الفترات",
+        "body": "الجدول التالي **مثال توضيحي فقط** لسيارة فان تجارية خفيفة في ظروف عادية، والأرقام الفعلية يجب أن تأتي من جدول الشركة المصنّعة لموديلك.\n\n| عمل الصيانة | فترة على سبيل المثال | ملاحظات |\n|---|---|---|\n| زيت المحرك والفلتر | كل 5,000–10,000 كم | حسب نوع الزيت والظروف |\n| تدوير الإطارات وفحص الضغط | كل 10,000 كم | يُفحص الضغط أسبوعيًا |\n| فلتر الهواء | كل 15,000–20,000 كم | أقصر في المناطق المتربة |\n| فحص تيل وطنابير الفرامل | كل 20,000 كم | يُغيَّر حسب التآكل |\n| فلتر التكييف | كل 20,000 كم | يؤثر على أداء التكييف |\n| فلتر الوقود | كل 30,000–40,000 كم | محركات الديزل قد تحتاجه أبكر |\n| زيت ناقل الحركة | كل 60,000 كم | راجع كتيّب الصيانة |\n| سير الكاتينة (إن وُجد) | حسب المصنّع | انقطاعه قد يدمّر المحرك |\n\nاجعل الجدول قصيرًا وقابلًا للتنفيذ. وللحصول على نسخة جاهزة للعمل، راجع [جدول الصيانة الدورية للسيارات](/resources/preventive-maintenance-checklist)."
+      },
+      {
+        "heading": "الخطوة 3: عدّل الجدول لظروف التشغيل الشاقة",
+        "body": "أغلب كتيّبات الصيانة تتضمن جدولين: عادي وشاق. وكثير من الأساطيل في المنطقة تعمل في ظروف تُعد شاقة:\n\n- **الحرارة العالية** لفترات طويلة تُجهد الزيت وسائل التبريد والبطارية والإطارات.\n- **الغبار والرمال** تسد فلتر الهواء بسرعة وتسرّع تآكل الفرامل والعفشة.\n- **الزحام والتوقف المتكرر** يمنعان المحرك من العمل في ظروف مستقرة.\n- **الأحمال الثقيلة** تضغط على ناقل الحركة والفرامل والإطارات.\n- **الطرق غير الممهدة** ومداخل المواقع تستهلك العفشة والتوجيه.\n\nالأفضل أن تقصّر الفترات المتأثرة فقط وليس كلها. مثلًا، إذا كانت فترة الزيت العادية 10,000 كم فقد يقول الجدول الشاق 5,000 كم، ويمكنك أيضًا تقصير فترة فلتر الهواء للسيارات التي تسير على طرق صحراوية. دوّن التعديل وسببه ليفهمه من يأتي بعدك."
+      },
+      {
+        "heading": "الخطوة 4: سجّل قراءات العداد بانتظام",
+        "body": "الجدولة بالكيلومتر لا تكون دقيقة إلا بقدر دقة قراءات العداد. إذا كانت آخر قراءة مسجلة عمرها ستة أسابيع فالكيلومترات المتبقية مجرد تخمين.\n\n- **كم مرة؟** أسبوعيًا كحد أدنى للسيارات التي تعمل يوميًا، وكل بضعة أيام للسيارات كثيرة المسافات.\n- **من أين؟** اربط القراءة بنشاط يحدث أصلًا، مثل الفحص الدوري أو زيارة الورشة أو تسجيل مصروف.\n- **انتبه للأخطاء.** قراءة أقل من السابقة، أو قفزة 10,000 كم في أسبوع لسيارة تقطع 200 كم يوميًا، غالبًا خطأ كتابة يجب تصحيحه فورًا."
+      },
+      {
+        "heading": "الخطوة 5: حوّل الجدول إلى تنبيهات",
+        "body": "**موعد الصيانة القادمة = قراءة العداد عند آخر صيانة + الفترة**\n\n**الكيلومترات المتبقية = موعد الصيانة القادمة − قراءة العداد الحالية**\n\nمثلًا، سيارة صيانتها الأخيرة عند 84,000 كم وفترة الزيت 10,000 كم، فالصيانة القادمة عند 94,000 كم. إذا كانت القراءة اليوم 91,500 كم فالمتبقي 2,500 كم، أي نحو 10 أيام عمل بمعدل 250 كم يوميًا.\n\nحدّد حدًا للتنبيه قبل الموعد بـ 1,000 أو 1,500 كم لتحجز الورشة مبكرًا، وتعامل أولًا مع السيارات المتأخرة. ولفهم أثر ذلك على التكاليف، اقرأ مقارنتنا بين [الصيانة الوقائية والصيانة بعد العطل](/blog/preventive-vs-reactive-maintenance)."
+      },
+      {
+        "heading": "أخطاء شائعة يجب تجنبها",
+        "body": "- **نسخ جدول واحد لكل السيارات.** شاحنة الديزل وسيارة البنزين الصغيرة لا تتشاركان فترات الصيانة.\n- **إهمال الحد الزمني.** السيارة المتوقفة شهورًا تحتاج أيضًا إلى فحص الزيت والبطارية.\n- **حساب الموعد القادم من النقطة الخطأ.** احسبه دائمًا من قراءة العداد التي نُفذت عندها الصيانة فعلًا، لا من الموعد الذي كانت مستحقة فيه.\n- **عدم تسجيل ما تم.** صيانة بلا سجل لا تثبت الالتزام بالجدول وتترك من بعدك يخمّن.\n- **ترك السيارات المتأخرة تعمل دون خطة.** كل صيانة متأخرة تحتاج مسؤولًا وموعدًا واضحًا."
+      },
+      {
+        "heading": "كيف يساعدك أكسبنس؟",
+        "body": "أكسبنس مبني على الصيانة الوقائية حسب الكيلومترات. تحدد فترات الصيانة بالكيلومتر لكل سيارة وتسجّل قراءات العداد، فيعرض النظام الكيلومترات المتبقية على كل صيانة، وينبّهك عند اقتراب الموعد، ويميّز السيارات المتأخرة. كل صيانة منفَّذة تُضاف إلى سجل صيانة السيارة، وتُربط قطع الغيار المركّبة بالسيارة التي رُكّبت فيها، كما تُسجَّل البنود غير المطابقة في الفحوصات على السيارة نفسها.\n\nالواجهة بالعربية والإنجليزية والإعداد مجاني. تعرّف على [برنامج صيانة الأسطول](/fleet-maintenance-software) واحجز عرضًا تجريبيًا."
+      }
+    ]
+  },
+  {
+    "slug": "vehicle-cost-per-km",
+    "title": "كيفية حساب تكلفة الكيلومتر للسيارة: المعادلة وأمثلة محلولة",
+    "excerpt": "معادلة حساب تكلفة الكيلومتر للسيارة، والتكاليف التي يجب إدخالها، وأمثلة بالجنيه المصري والريال السعودي، والأخطاء التي تجعل الرقم مضللًا.",
+    "category": "fleet-costs",
+    "language": "ar",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "الإجابة المختصرة",
+        "body": "لحساب تكلفة الكيلومتر للسيارة، اجمع كل تكاليف التشغيل خلال فترة محددة، مثل الصيانة وقطع الغيار والوقود والتأمين والترخيص، ثم اقسم المجموع على الكيلومترات التي قطعتها السيارة في الفترة نفسها. مثلًا، تكاليف 69,500 جنيه على 18,000 كم تعني نحو 3.86 جنيه للكيلومتر. أضف الإهلاك إذا أردت التكلفة الكاملة لامتلاك السيارة."
+      },
+      {
+        "heading": "لماذا تكلفة الكيلومتر أهم من إجمالي الشهر؟",
+        "body": "إجمالي التكلفة الشهرية يخبرك كم استهلكت السيارة، لكنه لا يخبرك هل كان ذلك مجديًا. سيارة كلّفت 20,000 جنيه الشهر الماضي قد تكون الأرخص إذا قطعت 6,000 كم، والأغلى إذا قطعت 1,500 كم فقط.\n\nتكلفة الكيلومتر تضع كل السيارات على مقياس واحد، فتستطيع مقارنتها بعدل، واكتشاف السيارة المشكلة مبكرًا، وتسعير خدمات التوصيل أو النقل، وتحديد وقت الاستبدال بناءً على اتجاه الأرقام لا على فاتورة إصلاح واحدة. وإذا كنت تحتاج إجمالي التكاليف الشهرية لإعداد الميزانية، فراجع دليلنا عن [حساب تكاليف الأسطول](/blog/how-to-calculate-fleet-cost)."
+      },
+      {
+        "heading": "المعادلة",
+        "body": "**تكلفة الكيلومتر = إجمالي تكاليف التشغيل خلال الفترة ÷ الكيلومترات المقطوعة خلال الفترة**\n\nقاعدتان تجعلان النتيجة موثوقة:\n\n1. **الفترة نفسها للرقمين.** إذا كانت التكاليف لربع سنة، فالكيلومترات لربع السنة نفسه.\n2. **الكيلومترات من العداد لا من التقدير.** الكيلومترات المقطوعة = قراءة نهاية الفترة − قراءة بدايتها.\n\nاختر فترة طويلة بما يكفي لتخفيف أثر التكاليف المتقطعة؛ فشهر واحد قد يبدو مكلفًا لأن السيارة غيّرت إطاراتها فيه."
+      },
+      {
+        "heading": "ما التكاليف التي تدخل في الحساب؟",
+        "body": "### تكاليف متغيرة (تزيد مع المسافة)\n\n- **الوقود**، وهو غالبًا أكبر بند للسيارات التي تعمل يوميًا.\n- **الصيانة الدورية** من زيوت وفلاتر وأجور.\n- **قطع الغيار والإصلاحات** مثل التيل والبطاريات والسيور والعفشة.\n- **الإطارات**، كقطع غيار أو كبند مستقل.\n\n### تكاليف ثابتة (تُدفع مهما كانت المسافة)\n\n- **التأمين**: وزّع القسط السنوي على أشهره.\n- **الترخيص ورسوم الفحص الدوري**: توزَّع بالطريقة نفسها.\n- **المواقف والتصاريح والرسوم** إذا كانت مؤثرة في عملك.\n\n### تكلفة الملكية (اختيارية)\n\n- **الإهلاك**: الإهلاك السنوي بطريقة القسط الثابت = (سعر الشراء − قيمة البيع المتوقعة) ÷ سنوات الاستخدام.\n\nأما رواتب السائقين فتُحسب عادة بشكل منفصل لأنها ترتبط بقرارات التوظيف لا بالسيارة."
+      },
+      {
+        "heading": "مثال بالجنيه المصري",
+        "body": "مثلًا، سيارة توزيع في القاهرة انتقل عدادها من 142,000 إلى 160,000 كم خلال ربع سنة، أي قطعت 18,000 كم:\n\n| البند | المبلغ (جنيه) |\n|---|---|\n| الوقود | 45,000 |\n| الصيانة الدورية | 9,000 |\n| قطع الغيار والإصلاحات | 6,500 |\n| التأمين (حصة الربع) | 7,500 |\n| الترخيص (حصة الربع) | 1,500 |\n| **إجمالي التشغيل** | **69,500** |\n\n**تكلفة التشغيل للكيلومتر = 69,500 ÷ 18,000 = 3.86 جنيه**\n\nاشترت الشركة السيارة بـ 1,200,000 جنيه وتتوقع بيعها بـ 600,000 جنيه بعد خمس سنوات، فالإهلاك 120,000 جنيه سنويًا أو 30,000 جنيه للربع.\n\n**التكلفة الكاملة للكيلومتر = (69,500 + 30,000) ÷ 18,000 = 5.53 جنيه**\n\nالرقم الأول يهم فريق التشغيل، والثاني يهم الإدارة المالية."
+      },
+      {
+        "heading": "مثال بالريال السعودي",
+        "body": "مثلًا، بيك أب لفني صيانة في الرياض قطع 4,500 كم في شهر:\n\n| البند | المبلغ (ريال) |\n|---|---|\n| الوقود | 1,350 |\n| الصيانة الدورية | 400 |\n| قطع الغيار والإصلاحات | 250 |\n| التأمين (حصة الشهر) | 300 |\n| الاستمارة والفحص الدوري (حصة الشهر) | 50 |\n| **إجمالي التشغيل** | **2,350** |\n\n**تكلفة التشغيل للكيلومتر = 2,350 ÷ 4,500 = 0.52 ريال**\n\nسعر الشراء 110,000 ريال وقيمة البيع المتوقعة 50,000 ريال بعد خمس سنوات، فالإهلاك 1,000 ريال شهريًا، والتكلفة الكاملة = 3,350 ÷ 4,500 = **0.74 ريال للكيلومتر**. يمكنك تجربة أرقامك في [حاسبة تكلفة الكيلومتر للسيارة](/resources/fleet-cost-calculator)."
+      },
+      {
+        "heading": "مقارنة السيارات والأخطاء الشائعة",
+        "body": "عندما تضع ثلاث سيارات متماثلة على الخطوط نفسها جنبًا إلى جنب، مثلًا 3.86 و3.88 و5.70 جنيه للكيلومتر، تظهر السيارة الثالثة فورًا كحالة تستحق المراجعة: إصلاحات متكررة، أو قطعة غُيّرت مرتين، أو أيام طويلة في الورشة. وإذا استمر الفرق لربعين أو ثلاثة، فقد حان وقت التفكير في الاستبدال، وهنا يفيدك دليل [التكلفة الإجمالية لملكية السيارة](/blog/fleet-total-cost-of-ownership).\n\nأخطاء تجعل الرقم مضللًا:\n\n- خلط الفترات، مثل قسط تأمين سنوي مقابل كيلومترات شهر واحد.\n- تقدير الكيلومترات بدل قراءتها من العداد.\n- إهمال التكاليف الصغيرة كالمسّاحات واللمبات والبطاريات.\n- احتساب القطع مرتين، مرة داخل فاتورة الصيانة ومرة كبند مستقل.\n- تسجيل المصروف دون ربطه بسيارة محددة.\n- الحكم على السيارة من شهر واحد."
+      },
+      {
+        "heading": "خطوات عملية لحساب التكلفة كل شهر",
+        "body": "لتصبح تكلفة الكيلومتر رقمًا تتابعه بانتظام لا حسابًا تجريه مرة في السنة، اتبع روتينًا بسيطًا:\n\n1. **سجّل قراءة العداد في أول يوم وآخر يوم من الفترة** لكل سيارة، أو اعتمد على أقرب قراءة مسجلة أثناء فحص أو زيارة ورشة.\n2. **اربط كل فاتورة بسيارة وبند.** فاتورة صيانة دون رقم لوحة لا يمكن استخدامها في الحساب.\n3. **وزّع التكاليف السنوية** مثل التأمين والترخيص على الأشهر بالتساوي، حتى لا يبدو شهر التجديد مكلفًا بشكل غير حقيقي.\n4. **احسب الرقمين معًا:** تكلفة التشغيل للكيلومتر، والتكلفة الكاملة بعد إضافة الإهلاك.\n5. **قارن كل سيارة بمثيلاتها** في النوع والخط، لا بمتوسط الأسطول كله؛ فالشاحنة الثقيلة ستكون دائمًا أغلى من سيارة المبيعات.\n6. **راقب الاتجاه على ثلاثة أشهر على الأقل** قبل اتخاذ قرار، وابحث عن سبب أي ارتفاع مفاجئ في سجل مصروفات السيارة.\n\nبعد شهرين أو ثلاثة من هذا الروتين ستعرف متوسط التكلفة الطبيعي لكل نوع من سياراتك، وتصبح أي سيارة تخرج عنه واضحة من النظرة الأولى."
+      },
+      {
+        "heading": "كيف يساعدك أكسبنس؟",
+        "body": "الجزء الصعب ليس القسمة، بل امتلاك تكاليف كاملة وكيلومترات دقيقة لكل سيارة. يحفظ أكسبنس الاثنين في سجل السيارة: قراءات العداد، والمصروفات مثل الإصلاحات وقطع الغيار والتأمين والترخيص وغيرها مسجلة لكل سيارة حسب التصنيف. كما يتابع الإهلاك والقيمة الدفترية، وتعرض التقارير التكاليف حسب السيارة والبند لتعرف أي السيارات تكلّف أكثر من غيرها.\n\nتعرّف على [إدارة تكاليف الأسطول مع أكسبنس](/fleet-cost-tracking) واحجز عرضًا تجريبيًا."
+      }
+    ]
+  },
+  {
+    "slug": "fleet-total-cost-of-ownership",
+    "title": "التكلفة الإجمالية لملكية السيارة: كيف تحسبها وتقارن بين السيارات",
+    "excerpt": "كيف تحسب التكلفة الإجمالية لملكية السيارة، وتقارن بين موديلين على أساسها، وتستخدم الأرقام لتحديد الوقت المناسب لاستبدال السيارة.",
+    "category": "fleet-costs",
+    "language": "ar",
+    "publishedAt": "2026-09-29",
+    "sections": [
+      {
+        "heading": "الإجابة المختصرة",
+        "body": "التكلفة الإجمالية لملكية السيارة هي كل ما تكلّفه السيارة لشركتك من الشراء حتى البيع. المعادلة: سعر الشراء + إجمالي تكاليف التشغيل طوال فترة الملكية + تكاليف التمويل − قيمة إعادة البيع. وبقسمة الناتج على الكيلومترات المقطوعة تحصل على تكلفة للكيلومتر تساعدك على المقارنة بين الموديلات وتحديد وقت الاستبدال."
+      },
+      {
+        "heading": "لماذا لا يكفي سعر الشراء؟",
+        "body": "عند شراء سيارات للشركة، يكون عرض السعر هو الرقم الأوضح والأسهل في المقارنة. لكن خلال خمس سنوات من العمل اليومي قد تساوي تكاليف الوقود والصيانة وقطع الغيار والتأمين والترخيص ثمن السيارة نفسها أو تزيد، وقد تختلف قيمة إعادة البيع بين موديلين بمئات الآلاف من الجنيهات.\n\nالتكلفة الإجمالية للملكية تجمع كل ذلك في رقم واحد يجيب عن السؤال الحقيقي: **أي سيارة ستكلّفنا أقل طوال فترة امتلاكها؟** السيارة الأرخص سعرًا والأعلى استهلاكًا والأضعف في إعادة البيع كثيرًا ما تخسر أمام سيارة أغلى لكنها أوفر وأكثر اعتمادية."
+      },
+      {
+        "heading": "مكونات المعادلة",
+        "body": "**التكلفة الإجمالية = سعر الشراء + تكاليف التشغيل طوال الملكية + تكاليف التمويل − قيمة إعادة البيع**\n\n- **سعر الشراء:** يشمل التجهيزات اللازمة قبل التشغيل، مثل الأرفف أو صندوق التبريد.\n- **تكاليف التشغيل:** الوقود والصيانة والإصلاحات والقطع والإطارات والتأمين والترخيص والفحص الدوري، وهي البنود نفسها المستخدمة في [حساب تكلفة الكيلومتر للسيارة](/blog/vehicle-cost-per-km) لكن مجمّعة على سنوات الملكية.\n- **تكاليف التمويل:** فوائد ورسوم القرض أو التقسيط إن وُجدت.\n- **قيمة إعادة البيع:** ما تتوقع استرداده عند البيع أو الاستبدال، وتتأثر بالعمر والكيلومترات وسجل الصيانة."
+      },
+      {
+        "heading": "مثال: مقارنة سيارتين على خمس سنوات",
+        "body": "مثلًا، شركة توزيع تختار بين سيارتين للخطوط نفسها، تقطع كل منهما 60,000 كم سنويًا لمدة خمس سنوات، أي 300,000 كم. الأرقام توضيحية بالجنيه:\n\n| البند | السيارة أ | السيارة ب |\n|---|---|---|\n| سعر الشراء | 1,200,000 | 950,000 |\n| تكاليف التشغيل السنوية | 221,000 | 250,000 |\n| تكاليف التشغيل لخمس سنوات | 1,105,000 | 1,250,000 |\n| تكاليف التمويل | 180,000 | 140,000 |\n| قيمة إعادة البيع المتوقعة | 600,000 | 380,000 |\n\n**السيارة أ: 1,200,000 + 1,105,000 + 180,000 − 600,000 = 1,885,000 جنيه**\n\n**السيارة ب: 950,000 + 1,250,000 + 140,000 − 380,000 = 1,960,000 جنيه**\n\nوبالقسمة على 300,000 كم: السيارة أ **6.28 جنيه للكيلومتر**، والسيارة ب **6.53 جنيه**. السيارة ب أرخص بـ 250,000 جنيه عند الشراء، لكنها تكلّف 75,000 جنيه أكثر خلال خمس سنوات بسبب استهلاك أعلى وإصلاحات أكثر وقيمة بيع أقل. وفي أسطول من 20 سيارة يصل الفرق إلى 1.5 مليون جنيه. جرّب أرقامك في [حاسبة تكلفة الكيلومتر والتكلفة الإجمالية](/resources/fleet-cost-calculator)."
+      },
+      {
+        "heading": "الإهلاك: أكبر تكلفة لا تدفعها نقدًا",
+        "body": "الإهلاك هو انخفاض قيمة السيارة مع الوقت. لا تدفعه بشيك، لكنه حقيقي: الفرق بين ما دفعته وما ستسترده.\n\n**الإهلاك السنوي بطريقة القسط الثابت = (سعر الشراء − قيمة البيع المتوقعة) ÷ سنوات الاستخدام**\n\nللسيارة أ: (1,200,000 − 600,000) ÷ 5 = 120,000 جنيه سنويًا، فتنخفض القيمة الدفترية إلى 1,080,000 بعد السنة الأولى، ثم 960,000، وهكذا حتى 600,000.\n\nفي الواقع تفقد السيارة قيمتها بسرعة أكبر في سنواتها الأولى، ولذلك فإن الاحتفاظ بها سنة إضافية قد لا يكلّف كثيرًا في الإهلاك لكنه قد يكلّف كثيرًا في الإصلاحات. تعرّف أكثر على [إهلاك المركبات ودورة حياتها](/features/asset-management)."
+      },
+      {
+        "heading": "متى تستبدل السيارة؟",
+        "body": "مع تقدم عمر السيارة ينخفض إهلاكها السنوي وترتفع تكاليف صيانتها. أفضل وقت للاستبدال غالبًا هو عندما يكون متوسط التكلفة السنوية في أدنى مستوياته. مثال توضيحي بالجنيه:\n\n| السنة | الإهلاك | الصيانة والإصلاح | إجمالي السنة | المتوسط حتى الآن |\n|---|---|---|---|---|\n| 1 | 200,000 | 20,000 | 220,000 | 220,000 |\n| 2 | 160,000 | 28,000 | 188,000 | 204,000 |\n| 3 | 130,000 | 40,000 | 170,000 | 192,667 |\n| 4 | 100,000 | 60,000 | 160,000 | 184,500 |\n| 5 | 80,000 | 90,000 | 170,000 | 181,600 |\n| 6 | 60,000 | 125,000 | 185,000 | 182,167 |\n\nالمتوسط يصل إلى أدناه بعد السنة الخامسة، وفي السنة السادسة يتجاوز إجمالي السنة المتوسطَ فيبدأ في الارتفاع. القاعدة البسيطة: **عندما تتجاوز تكلفة السيارة في سنة ما متوسط تكلفتها حتى الآن، ابدأ التخطيط لاستبدالها.**"
+      },
+      {
+        "heading": "أخطاء شائعة في الحساب",
+        "body": "- الاعتماد على أرقام الكتالوج بدل تكاليفك الفعلية لسيارات مماثلة.\n- نسيان تكاليف التجهيز والتمويل.\n- المبالغة في قيمة إعادة البيع، خاصة لسيارة بسجل صيانة ناقص.\n- المقارنة بين فترات أو مسافات مختلفة بدل استخدام التكلفة للكيلومتر.\n- عدم مراجعة التقدير سنويًا بالأرقام الفعلية."
+      },
+      {
+        "heading": "البيانات التي تحتاج إلى حفظها",
+        "body": "حساب التكلفة الإجمالية لا يكون أدق من السجلات التي يعتمد عليها. لكل سيارة تحتاج إلى:\n\n1. سعر الشراء وتاريخه، مع تكلفة أي تجهيزات إضافية.\n2. كل تكلفة تشغيل مرتبطة بالسيارة ومصنّفة حسب البند.\n3. قراءات عداد منتظمة لتحويل التكاليف إلى تكلفة للكيلومتر.\n4. سجل صيانة كامل، يدعم قرارات الاعتمادية ويرفع قيمة إعادة البيع.\n5. طريقة الإهلاك وقيمة البيع المتوقعة والقيمة الدفترية الحالية.\n\nأغلب الشركات لديها جزء من هذه البيانات في فواتير وملفات إكسل متفرقة، والصعوبة الحقيقية هي امتلاكها كاملة لكل سيارة على مدى سنوات دون فجوات. ابدأ من اليوم بتسجيل كل تكلفة على سيارتها، وبعد سنة واحدة ستملك أساسًا واقعيًا لمقارنة الموديلات في قرار الشراء القادم بدل الاعتماد على عروض الأسعار وحدها."
+      },
+      {
+        "heading": "كيف يساعدك أكسبنس؟",
+        "body": "يحفظ أكسبنس البيانات التي يعتمد عليها الحساب في سجل واحد لكل سيارة: قراءات العداد والتاريخ في سجل السيارات، والمصروفات مثل الإصلاحات وقطع الغيار والتأمين والترخيص وغيرها لكل سيارة حسب التصنيف، وسجل الصيانة الكامل، والإهلاك والقيمة الدفترية طوال دورة حياة السيارة. وتعرض التقارير التكاليف حسب السيارة والبند لتعرف أي السيارات أصبحت مكلفة.\n\nتعرّف على [إدارة تكاليف الأسطول](/fleet-cost-tracking) مع أكسبنس واحجز عرضًا تجريبيًا."
       }
     ]
   }

@@ -1,16 +1,8 @@
-import type { Metadata } from 'next';
-import { buildMetadata } from '@/lib/seo';
-import { CalculatorView } from '@/components/pages/FormViews';
+import { ToolRoute, toolMetadata } from '@/lib/tool-route';
 
-const LANG = 'ar';
-
-export const metadata: Metadata = buildMetadata({
-  title: 'حاسبة تكلفة الأسطول',
-  description: 'قدّر تكلفة تشغيل أسطولك شهريًا من الوقود والصيانة والتأمين والمصروفات الأخرى.',
-  path: '/ar/resources/fleet-cost-calculator',
-  enPath: '/resources/fleet-cost-calculator',
-});
+const PATH = '/resources/fleet-cost-calculator';
+export const metadata = toolMetadata(PATH, 'ar');
 
 export default function Page() {
-  return <CalculatorView lang={LANG} />;
+  return <ToolRoute enPath={PATH} lang="ar" />;
 }

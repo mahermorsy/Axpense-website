@@ -5,10 +5,11 @@ import { IndustriesIndexView } from '@/components/pages/ListingViews';
 const LANG = 'en';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Industries',
-  description: 'How Axpense adapts to fleet, equipment, and maintenance needs across industries in Egypt.',
+  title: "Industries",
+  description: "How Axpense supports fleets in logistics, distribution, construction, oil and gas, manufacturing and field services across Egypt and MENA. Book a demo.",
   path: '/industries',
   arPath: '/ar/industries',
+  pageType: 'hub',
 });
 
 export default function Page() {

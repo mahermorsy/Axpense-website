@@ -1,10 +1,11 @@
-import { BookOpen, DollarSign, Package, Truck, Wrench, type LucideIcon } from 'lucide-react';
+import { BookOpen, ClipboardCheck, DollarSign, Package, Truck, Wrench, type LucideIcon } from 'lucide-react';
 
 const COVERS: Record<string, { icon: LucideIcon; from: string; to: string }> = {
-  'Fleet Management': { icon: Truck, from: 'from-primary', to: 'to-panel-4' },
-  'Fleet Maintenance': { icon: Wrench, from: 'from-panel-3', to: 'to-primary' },
-  'Fleet Expenses': { icon: DollarSign, from: 'from-primary', to: 'to-[hsl(180_45%_30%)]' },
-  'Asset Management': { icon: Package, from: 'from-panel-4', to: 'to-primary' },
+  'fleet-management': { icon: Truck, from: 'from-primary', to: 'to-panel-4' },
+  'fleet-maintenance': { icon: Wrench, from: 'from-panel-3', to: 'to-primary' },
+  'fleet-costs': { icon: DollarSign, from: 'from-primary', to: 'to-[hsl(180_45%_30%)]' },
+  'fleet-inspections': { icon: ClipboardCheck, from: 'from-panel-2', to: 'to-primary' },
+  'asset-management': { icon: Package, from: 'from-panel-4', to: 'to-primary' },
 };
 
 // Branded cover art (no stock photos): brand gradient, dot grid and a large

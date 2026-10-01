@@ -5,10 +5,11 @@ import { SolutionsIndexView } from '@/components/pages/ListingViews';
 const LANG = 'ar';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'الحلول',
-  description: 'حلول أكسبنس لإدارة تكاليف الأسطول والصيانة ودورة حياة الأصول وتكاليف المعدات.',
+  title: "الحلول",
+  description: "حلول أكسبنس: برنامج إدارة الأسطول وبرنامج صيانة الأسطول وإدارة تكاليف الأسطول وبرنامج فحص المركبات للشركات في مصر والشرق الأوسط.",
   path: '/ar/solutions',
   enPath: '/solutions',
+  pageType: 'hub',
 });
 
 export default function Page() {

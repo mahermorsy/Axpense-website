@@ -1,9 +1,7 @@
 import { LeadForm } from '@/components/LeadForm';
 import { Section, SectionHead } from '@/components/Section';
-import { FleetCostCalculator } from '@/components/FleetCostCalculator';
-import { PricingPlans } from '@/components/PricingPlans';
-import { FinalCTA } from '@/components/home/FinalCTA';
 import type { Lang } from '@/lib/i18n';
+import { PageBreadcrumbs } from '@/components/seo/PageBreadcrumbs';
 
 const COPY = {
   contact: {
@@ -19,34 +17,15 @@ const COPY = {
 export function LeadFormView({ kind, lang }: { kind: 'contact' | 'demo'; lang: Lang }) {
   const c = COPY[kind][lang];
   return (
+    <>
+    <PageBreadcrumbs lang={lang} label={c.title} path={`/${kind}`} />
     <Section>
-      <SectionHead eyebrow={c.eyebrow} title={c.title} description={c.desc} center />
+      <SectionHead as="h1" eyebrow={c.eyebrow} title={c.title} description={c.desc} center />
       <div className="card-app mx-auto max-w-2xl p-6 shadow-card sm:p-8">
         <LeadForm lang={lang} />
       </div>
     </Section>
+    </>
   );
 }
 
-export function CalculatorView({ lang }: { lang: Lang }) {
-  const ar = lang === 'ar';
-  return (
-    <Section>
-      <SectionHead
-        eyebrow={ar ? 'الموارد' : 'Resources'}
-        title={ar ? 'حاسبة تكلفة الأسطول' : 'Fleet Cost Calculator'}
-        description={ar ? 'أدخل حجم أسطولك وتكاليف كل مركبة لتقدير إجمالي الإنفاق الشهري.' : 'Enter your fleet size and per-vehicle costs to estimate total monthly spend.'}
-      />
-      <FleetCostCalculator lang={lang} />
-    </Section>
-  );
-}
-
-export function PricingView({ lang }: { lang: Lang }) {
-  return (
-    <div className="bg-gradient-hero">
-      <PricingPlans lang={lang} headingLevel="h1" />
-      <FinalCTA lang={lang} />
-    </div>
-  );
-}

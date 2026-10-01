@@ -33,7 +33,6 @@ services:
       Seed__WebsiteContent: "true"
 
       Cors__Origins__0: "https://axpense.net"
-      Cors__Origins__1: "https://www.axpense.net"
 
       Swagger__Enabled: "false"
 

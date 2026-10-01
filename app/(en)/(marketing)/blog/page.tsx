@@ -5,10 +5,11 @@ import { BlogIndexView } from '@/components/pages/BlogIndexView';
 const LANG = 'en';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Blog',
-  description: 'Guides on fleet management, maintenance, expenses, and asset management for businesses in Egypt and MENA.',
+  title: "Fleet Management Blog",
+  description: "Practical guides on fleet maintenance, cost per km, total cost of ownership, inspections and spare parts for fleet teams in Egypt and MENA.",
   path: '/blog',
   arPath: '/ar/blog',
+  pageType: 'hub',
 });
 
 export default function Page() {

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { BarChart3, ChevronDown, ExternalLink, FileText, HelpCircle, LogOut, Menu, Users, UserSearch, X } from 'lucide-react';
+import { BarChart3, ChevronDown, ExternalLink, FileText, HelpCircle, LogOut, Menu, Users, UserSearch, X, Tag } from 'lucide-react';
 import { useAdmin } from '@/lib/admin/store';
 import { can, ROLE_LABEL, type Area } from '@/lib/admin/types';
 import { Avatar, Toasts, cx } from './ui';
@@ -15,6 +15,7 @@ const NAV: { area: Area; label: string; href: string; icon: typeof BarChart3 }[]
   { area: 'blog', label: 'Blog articles', href: '/admin/blog', icon: FileText },
   { area: 'faqs', label: 'FAQs', href: '/admin/faqs', icon: HelpCircle },
   { area: 'users', label: 'Users', href: '/admin/users', icon: Users },
+  { area: 'pricing', label: 'Pricing', href: '/admin/pricing', icon: Tag },
 ];
 
 function areaFor(path: string): Area {
@@ -22,6 +23,7 @@ function areaFor(path: string): Area {
   if (path.startsWith('/admin/blog')) return 'blog';
   if (path.startsWith('/admin/faqs')) return 'faqs';
   if (path.startsWith('/admin/users')) return 'users';
+  if (path.startsWith('/admin/pricing')) return 'pricing';
   return 'dashboard';
 }
 

@@ -5,10 +5,11 @@ import { FeaturesIndexView } from '@/components/pages/FeaturesIndexView';
 const LANG = 'en';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Features',
-  description: 'Everything Axpense includes for asset, fleet, maintenance, expense, inspection, depreciation and AI-powered management.',
+  title: "Features",
+  description: "Every Axpense feature in one place: vehicles, drivers, km-based preventive maintenance, spare parts, inspections, expenses, depreciation and reports.",
   path: '/features',
   arPath: '/ar/features',
+  pageType: 'hub',
 });
 
 export default function Page() {

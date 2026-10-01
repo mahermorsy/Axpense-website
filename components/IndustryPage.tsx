@@ -1,5 +1,5 @@
 import { Button } from './Button';
-import { PillLinks } from './FeaturePage';
+import { RelatedLinks } from './seo/Related';
 import { ProductScreenshot } from './ProductScreenshot';
 import { Section, SectionHead } from './Section';
 import { Breadcrumbs } from './seo/Breadcrumbs';
@@ -48,8 +48,7 @@ export function IndustryPage({ data, lang = 'en' }: { data: IndustryPageData; la
         </ul>
       </Section>
       <Section alt>
-        <SectionHead title={t.relevant} />
-        <PillLinks links={data.relevantFeatures} lang={lang} />
+        <RelatedLinks title={t.relevant} paths={data.relevantFeatures.map((f) => f.href)} lang={lang} />
       </Section>
     </>
   );

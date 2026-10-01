@@ -4,7 +4,7 @@ import { IconCard } from '../ui/IconCard';
 import { lhref, type Lang } from '@/lib/i18n';
 
 const USE_CASES = [
-  { icon: Truck, tone: 'green' as const, href: '/features/fleet-management',
+  { icon: Truck, tone: 'green' as const, href: '/fleet-management-software',
     en: ['Daily fleet operations', 'Track vehicles, drivers, assignments and status from one operational view.'],
     ar: ['تشغيل الأسطول اليومي', 'تابع المركبات والسائقين والتعيينات والحالة من شاشة تشغيل واحدة.'] },
   { icon: Wrench, tone: 'amber' as const, href: '/features/preventive-maintenance',

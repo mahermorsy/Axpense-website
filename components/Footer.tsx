@@ -2,47 +2,45 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SocialLinks } from './SocialLinks';
 import { lhref, type Lang } from '@/lib/i18n';
+import { isLinkable, linkLabel } from '@/content/registry';
 
 type Col = { title: { en: string; ar: string }; links: { label: { en: string; ar: string }; href: string }[] };
 
+const L = (path: string): { label: { en: string; ar: string }; href: string } | null => {
+  if (!isLinkable(path)) return null;
+  return { label: { en: linkLabel(path, 'en') as string, ar: linkLabel(path, 'ar') as string }, href: path };
+};
+const live = (paths: string[]) => paths.map(L).filter(Boolean) as Col['links'];
+
+// Columns are generated from content data, so gated pages never appear and
+// anchors match each page's navLabel. "Software" and "Locations" are the main
+// entry points to the commercial and location pages (SEO brief §8).
 const COLUMNS: Col[] = [
+  {
+    title: { en: 'Software', ar: 'البرامج' },
+    links: live(['/fleet-management-software', '/fleet-maintenance-software', '/fleet-cost-tracking', '/vehicle-inspection-software']),
+  },
   {
     title: { en: 'Product', ar: 'المنتج' },
     links: [
-      { label: { en: 'Fleet Management', ar: 'إدارة الأسطول' }, href: '/features/fleet-management' },
-      { label: { en: 'Maintenance', ar: 'الصيانة' }, href: '/features/fleet-maintenance' },
-      { label: { en: 'Expense Management', ar: 'إدارة المصروفات' }, href: '/features/expense-management' },
-      { label: { en: 'Asset Management', ar: 'إدارة الأصول' }, href: '/features/asset-management' },
+      ...live(['/features/vehicle-management', '/features/preventive-maintenance', '/features/work-orders', '/features/fuel-management', '/features/spare-parts', '/features/expense-management']),
       { label: { en: 'Pricing', ar: 'الأسعار' }, href: '/pricing' },
     ],
   },
   {
     title: { en: 'Industries', ar: 'القطاعات' },
-    links: [
-      { label: { en: 'Logistics & Transportation', ar: 'اللوجستيات والنقل' }, href: '/industries/logistics' },
-      { label: { en: 'Construction', ar: 'المقاولات والإنشاءات' }, href: '/industries/construction' },
-      { label: { en: 'Manufacturing', ar: 'التصنيع' }, href: '/industries/manufacturing' },
-      { label: { en: 'Real Estate', ar: 'العقارات' }, href: '/industries/real-estate' },
-      { label: { en: 'Healthcare', ar: 'الرعاية الصحية' }, href: '/industries/healthcare' },
-    ],
+    links: live(['/industries/logistics', '/industries/distribution', '/industries/construction', '/industries/oil-and-gas', '/industries/manufacturing', '/industries/field-services']),
   },
   {
-    title: { en: 'Markets', ar: 'الأسواق' },
-    links: [
-      { label: { en: 'Egypt', ar: 'مصر' }, href: '/en-eg' },
-      { label: { en: 'Saudi Arabia', ar: 'السعودية' }, href: '/en-sa' },
-      { label: { en: 'UAE', ar: 'الإمارات' }, href: '/en-ae' },
-      { label: { en: 'Qatar', ar: 'قطر' }, href: '/en-qa' },
-      { label: { en: 'Jordan', ar: 'الأردن' }, href: '/en-jo' },
-      { label: { en: 'Iraq', ar: 'العراق' }, href: '/en-iq' },
-      { label: { en: 'MENA', ar: 'الشرق الأوسط وشمال أفريقيا' }, href: '/en-mena' },
-    ],
+    title: { en: 'Locations', ar: 'الأسواق' },
+    links: live(['/locations/egypt', '/locations/saudi-arabia', '/locations/mena']),
   },
   {
     title: { en: 'Company', ar: 'الشركة' },
     links: [
       { label: { en: 'About', ar: 'من نحن' }, href: '/about' },
       { label: { en: 'Blog', ar: 'المدونة' }, href: '/blog' },
+      { label: { en: 'Free resources', ar: 'موارد مجانية' }, href: '/resources' },
       { label: { en: 'Contact', ar: 'اتصل بنا' }, href: '/contact' },
     ],
   },
@@ -66,8 +64,8 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
   return (
     <footer className="border-t border-border bg-card py-14">
       <div className="mx-auto max-w-wrap px-5 sm:px-7">
-        <div className="grid grid-cols-2 gap-10 pb-12 md:grid-cols-6">
-          <div className="col-span-2 md:col-span-1">
+        <div className="grid grid-cols-2 gap-10 pb-12 md:grid-cols-4 lg:grid-cols-7">
+          <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Image src="/logo.png" alt={lang === 'ar' ? 'أكسبنس' : 'Axpense'} width={120} height={26} />
             <p className="mt-4 max-w-[220px] text-sm leading-relaxed text-muted-foreground">{t.blurb}</p>
             <div className="mt-4"><SocialLinks /></div>

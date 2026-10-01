@@ -2,15 +2,16 @@ import { Eye, Globe, Shield, Target, Users, Zap } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { AppFeatureCard, CenteredHead, PageHero } from '@/components/ui/AppSections';
 import { primaryCta } from '@/lib/cta';
+import { PageBreadcrumbs } from '@/components/seo/PageBreadcrumbs';
 import type { Lang } from '@/lib/i18n';
 
 const VALUES = [
   { icon: Target, en: ['Mission-Driven', "We're building the tools that help businesses eliminate waste, extend asset life, and operate smarter."], ar: ['مدفوعون برسالة', 'نبني الأدوات التي تساعد الشركات على تقليل الهدر وإطالة عمر الأصول والعمل بذكاء أكبر.'] },
   { icon: Eye, en: ['Transparency', 'Clear pricing, open communication, and honest product roadmaps. No surprises.'], ar: ['الشفافية', 'أسعار واضحة، وتواصل مفتوح، وخطط تطوير صادقة. بلا مفاجآت.'] },
-  { icon: Zap, en: ['Innovation', 'We leverage AI and modern technology to solve real-world asset management challenges.'], ar: ['الابتكار', 'نستخدم الذكاء الاصطناعي والتقنيات الحديثة لحل تحديات إدارة الأصول الواقعية.'] },
-  { icon: Shield, en: ['Reliability', "Enterprise-grade security and 99.9% uptime because your operations can't afford downtime."], ar: ['الموثوقية', 'أمان بمستوى المؤسسات وتشغيل بنسبة 99.9% لأن عملياتك لا تحتمل التوقف.'] },
+  { icon: Zap, en: ['Practical Innovation', 'We use modern, simple technology to solve the real problems fleet teams face every day.'], ar: ['ابتكار عملي', 'نستخدم تقنيات حديثة وبسيطة لحل المشكلات الحقيقية التي تواجهها فرق الأسطول يوميًا.'] },
+  { icon: Shield, en: ['Reliability', 'Your fleet records have to be there when your team needs them, so we treat reliability and data safety as part of the product.'], ar: ['الموثوقية', 'يجب أن تكون سجلات أسطولك متاحة عندما يحتاجها فريقك، لذلك نعتبر الموثوقية وأمان البيانات جزءًا من المنتج.'] },
   { icon: Users, en: ['Customer-First', 'Every feature we build starts with a real customer need. Your feedback shapes our product.'], ar: ['العميل أولًا', 'كل ميزة نبنيها تبدأ من احتياج حقيقي لعميل. ملاحظاتك تشكّل منتجنا.'] },
-  { icon: Globe, en: ['Regional Focus', 'Built for the MENA region with multi-currency, bilingual support, and local compliance.'], ar: ['تركيز إقليمي', 'مصمم لمنطقة الشرق الأوسط وشمال أفريقيا مع دعم العملات المتعددة واللغتين والمتطلبات المحلية.'] },
+  { icon: Globe, en: ['Regional Focus', 'Built for the MENA region: Arabic and English, pricing in EGP, SAR and USD, and examples from how fleets here actually work.'], ar: ['تركيز إقليمي', 'مصمم لمنطقة الشرق الأوسط وشمال أفريقيا: العربية والإنجليزية، وأسعار بالجنيه والريال والدولار، وأمثلة من واقع الأساطيل هنا.'] },
 ];
 
 const T = {
@@ -35,6 +36,7 @@ export function AboutView({ lang }: { lang: Lang }) {
   const cta = primaryCta(lang);
   return (
     <>
+      <PageBreadcrumbs lang={lang} label={lang === 'ar' ? 'من نحن' : 'About'} path="/about" />
       <PageHero {...t.hero} />
 
       <section className="py-24">

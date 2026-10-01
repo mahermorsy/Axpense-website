@@ -15,6 +15,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
     public DbSet<LeadNote> LeadNotes => Set<LeadNote>();
     public DbSet<BlogPost> BlogPosts => Set<BlogPost>();
     public DbSet<Faq> Faqs => Set<Faq>();
+    public DbSet<PricingCurrency> PricingCurrencies => Set<PricingCurrency>();
+    public DbSet<PricingTier> PricingTiers => Set<PricingTier>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

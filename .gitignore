@@ -2,6 +2,8 @@ node_modules/
 .next/
 out/
 .env
+.env.*
+!.env.example
 .env.local
 *.log
 tsconfig.tsbuildinfo
@@ -13,3 +15,5 @@ backend/**/TestResults/
 *.user
 .vs/
 .env.production
+
+*.tsbuildinfo

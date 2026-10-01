@@ -2,9 +2,9 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 // Only these fields are forwarded to the webhook; anything else is dropped.
-const FIELDS = ['name', 'company', 'email', 'phone', 'companySize', 'assetCount', 'industry', 'message', 'page', 'lang', 'utmSource', 'referrer'] as const;
+const FIELDS = ['name', 'company', 'email', 'phone', 'companySize', 'assetCount', 'industry', 'message', 'page', 'lang', 'utmSource', 'referrer', 'plan'] as const;
 const REQUIRED = ['name', 'company', 'email'] as const;
-const MAX_LEN: Record<string, number> = { message: 2000, referrer: 1000 };
+const MAX_LEN: Record<string, number> = { message: 2000, referrer: 1000, plan: 300 };
 const DEFAULT_MAX = 200;
 
 // Best-effort per-instance rate limit (5 submissions / 10 min / IP).
@@ -85,6 +85,9 @@ export async function POST(request: Request) {
       if (trimmed.length > (MAX_LEN[field] ?? DEFAULT_MAX)) return err('too_long', `The ${field} field is too long.`, 400);
       body[field] = trimmed;
     }
+
+    // The plan picked on /pricing travels with the lead as the first line of the message.
+    if (body.plan) body.message = `[Plan] ${body.plan}${body.message ? `\n\n${body.message}` : ''}`.slice(0, 2000);
 
     const missing = REQUIRED.filter((field) => !body[field]);
     if (missing.length) return err('missing', `Missing required fields: ${missing.join(', ')}`, 400);

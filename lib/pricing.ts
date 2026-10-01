@@ -1,70 +1,110 @@
-// Plans, prices and features — same as the Axpense app's pricing page.
-export type Currency = 'USD' | 'EGP' | 'SAR';
-export const CURRENCIES: Currency[] = ['USD', 'EGP', 'SAR'];
+/**
+ * Vehicle-based pricing. One price per vehicle per month, by fleet-size tier,
+ * set separately per market currency (no live FX conversion). Annual billing
+ * = monthly × 12 − the currency's annual discount (20 % by default).
+ *
+ * Shape matches GET /api/public/pricing (backend PricingCurrency + PricingTier).
+ * Pure helpers only — safe to import from client and server components.
+ */
+import type { Lang } from './i18n';
 
-export type Plan = {
-  id: 'starter' | 'professional' | 'enterprise';
+export type Billing = 'monthly' | 'annual';
+
+export type PricingTier = { min: number; max: number | null; monthly: number | null; /** Fleet size used in the pricing table example. */ example?: number };
+
+export type PricingCurrency = {
+  code: string;
+  flag: string;
+  symbol: string;
+  symbolAr: string;
   name: { en: string; ar: string };
-  price: Record<Currency, number> | null; // null = custom
-  note: { en: string; ar: string };
-  features: { en: string; ar: string }[];
-  popular?: boolean;
+  /** Decimal places shown for per-vehicle prices. Totals are rounded to whole units when decimals = 0. */
+  decimals: number;
+  annualDiscountPercent: number;
+  tiers: PricingTier[];
 };
 
-export const PLANS: Plan[] = [
-  {
-    id: 'starter',
-    name: { en: 'Starter', ar: 'أساسي' },
-    price: { USD: 40, EGP: 2000, SAR: 150 },
-    note: { en: 'Perfect for small businesses getting started with asset management.', ar: 'مثالي للشركات الصغيرة التي تبدأ في إدارة أصولها.' },
-    features: [
-      { en: 'Up to 100 assets', ar: 'حتى 100 أصل' },
-      { en: '5 team members', ar: '5 أعضاء فريق' },
-      { en: 'Basic maintenance tracking', ar: 'متابعة الصيانة الأساسية' },
-      { en: 'Email support', ar: 'دعم عبر البريد الإلكتروني' },
-      { en: 'Standard reports', ar: 'تقارير قياسية' },
-      { en: 'Mobile app access', ar: 'الوصول عبر تطبيق الجوال' },
-    ],
-  },
-  {
-    id: 'professional',
-    name: { en: 'Professional', ar: 'احترافي' },
-    price: { USD: 100, EGP: 5000, SAR: 375 },
-    note: { en: 'For growing companies with advanced fleet management needs.', ar: 'للشركات النامية ذات احتياجات إدارة أسطول متقدمة.' },
-    popular: true,
-    features: [
-      { en: 'Up to 500 assets', ar: 'حتى 500 أصل' },
-      { en: '25 team members', ar: '25 عضو فريق' },
-      { en: 'Advanced maintenance scheduling', ar: 'جدولة صيانة متقدمة' },
-      { en: 'Priority support', ar: 'دعم ذو أولوية' },
-      { en: 'Custom reports', ar: 'تقارير مخصصة' },
-      { en: 'API access', ar: 'الوصول إلى API' },
-      { en: 'GPS integration', ar: 'تكامل GPS' },
-      { en: 'Depreciation tracking', ar: 'تتبع الإهلاك' },
-    ],
-  },
-  {
-    id: 'enterprise',
-    name: { en: 'Enterprise', ar: 'مؤسسي' },
-    price: null,
-    note: { en: 'For large organizations with complex requirements.', ar: 'للمؤسسات الكبيرة ذات المتطلبات المعقدة.' },
-    features: [
-      { en: 'Unlimited assets', ar: 'أصول غير محدودة' },
-      { en: 'Unlimited team members', ar: 'أعضاء فريق غير محدودين' },
-      { en: 'Dedicated account manager', ar: 'مدير حساب مخصص' },
-      { en: '24/7 phone support', ar: 'دعم هاتفي على مدار الساعة' },
-      { en: 'Custom integrations', ar: 'تكاملات مخصصة' },
-      { en: 'White-label option', ar: 'خيار العلامة البيضاء' },
-      { en: 'Custom domain', ar: 'نطاق مخصص' },
-      { en: 'Advanced AI features', ar: 'ميزات ذكاء اصطناعي متقدمة' },
-      { en: 'SLA guarantee', ar: 'ضمان مستوى الخدمة (SLA)' },
-    ],
-  },
-];
+export type PricingConfig = {
+  minVehicles: number;
+  /** Fleets above this size get custom pricing (Talk to Sales). */
+  customAbove: number;
+  defaultCurrency: string;
+  updatedAt: string;
+  currencies: PricingCurrency[];
+};
 
-export function formatPrice(amount: number, currency: Currency, lang: 'en' | 'ar') {
-  const n = amount.toLocaleString('en-US');
-  if (currency === 'USD') return `$${n}`;
-  if (lang === 'ar') return `${n} ${currency === 'EGP' ? 'ج.م' : 'ر.س'}`;
-  return `${n} ${currency}`;
+export type Quote =
+  | { kind: 'custom'; vehicles: number }
+  | {
+      kind: 'priced';
+      vehicles: number;
+      tier: PricingTier;
+      /** Per vehicle per month at the monthly rate. */
+      perVehicleMonthly: number;
+      /** Per vehicle per year, annual billing (discount applied). */
+      perVehicleAnnual: number;
+      monthlyTotal: number;
+      /** 12 × monthly, before the annual discount. */
+      yearAtMonthly: number;
+      annualTotal: number;
+      annualSaving: number;
+      discountPercent: number;
+    };
+
+const round = (n: number, d = 2) => Math.round(n * 10 ** d) / 10 ** d;
+
+export function getCurrency(config: PricingConfig, code?: string | null): PricingCurrency {
+  return config.currencies.find((c) => c.code === code) ?? config.currencies.find((c) => c.code === config.defaultCurrency) ?? config.currencies[0];
+}
+
+export function tierFor(currency: PricingCurrency, vehicles: number): PricingTier | undefined {
+  return currency.tiers.find((t) => vehicles >= t.min && (t.max === null || vehicles <= t.max));
+}
+
+export function annualPerVehicle(currency: PricingCurrency, monthly: number) {
+  return round(monthly * 12 * (1 - currency.annualDiscountPercent / 100));
+}
+
+export function quote(config: PricingConfig, currency: PricingCurrency, vehiclesIn: number): Quote {
+  const vehicles = Math.max(config.minVehicles, Math.floor(vehiclesIn || 0));
+  const tier = tierFor(currency, vehicles);
+  if (vehicles > config.customAbove || !tier || tier.monthly === null) return { kind: 'custom', vehicles };
+  const monthlyTotal = round(tier.monthly * vehicles);
+  const yearAtMonthly = round(monthlyTotal * 12);
+  const perVehicleAnnual = annualPerVehicle(currency, tier.monthly);
+  const annualTotal = round(perVehicleAnnual * vehicles);
+  return {
+    kind: 'priced', vehicles, tier, perVehicleMonthly: tier.monthly, perVehicleAnnual, monthlyTotal, yearAtMonthly,
+    annualTotal, annualSaving: round(yearAtMonthly - annualTotal), discountPercent: currency.annualDiscountPercent,
+  };
+}
+
+/** "8,000 EGP", "$10.00", "٨٬٠٠٠ ج.م" is avoided on purpose: Latin digits in both languages. */
+export function money(n: number, currency: PricingCurrency, lang: Lang, decimals?: number) {
+  const d = decimals ?? (Number.isInteger(n) ? 0 : currency.decimals);
+  const num = n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+  const sym = lang === 'ar' ? currency.symbolAr : currency.symbol;
+  if (sym === '$' || sym === '€') return `${sym}${num}`;
+  return `${num} ${sym}`;
+}
+
+/** Tier label "5–10", "251–500", "500+". */
+export function tierLabel(t: PricingTier) {
+  return t.max === null ? `${t.min}+` : `${t.min}–${t.max}`;
+}
+
+/** Example fleet size used in the pricing table for each tier. */
+export function exampleVehicles(t: PricingTier) {
+  return t.example ?? t.max ?? t.min;
+}
+
+/** Lowest and highest per-vehicle monthly price for a currency (schema.org offers). */
+export function priceRange(currency: PricingCurrency) {
+  const prices = currency.tiers.map((t) => t.monthly).filter((p): p is number => p !== null);
+  return { low: Math.min(...prices), high: Math.max(...prices) };
+}
+
+/** Query string for Start Free / Talk to Sales so the form arrives pre-filled. */
+export function planQuery(vehicles: number, currency: string, billing: Billing) {
+  return `?vehicles=${vehicles}&currency=${currency}&billing=${billing}`;
 }

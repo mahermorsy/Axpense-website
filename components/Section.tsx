@@ -8,11 +8,12 @@ export function Section({ id, alt = false, children }: { id?: string; alt?: bool
   );
 }
 
-export function SectionHead({ eyebrow, title, description, center = false }: { eyebrow?: string; title: string; description?: string; center?: boolean }) {
+// `as="h1"` for pages whose main heading is a SectionHead (same visual style).
+export function SectionHead({ eyebrow, title, description, center = false, as: Tag = 'h2' }: { eyebrow?: string; title: string; description?: string; center?: boolean; as?: 'h1' | 'h2' }) {
   return (
     <div className={`mb-10 max-w-2xl ${center ? 'mx-auto text-center' : ''}`}>
       {eyebrow && <span className="badge-app mb-4">{eyebrow}</span>}
-      <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl text-balance">{title}</h2>
+      <Tag className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl text-balance">{title}</Tag>
       {description && <p className="mt-3 text-base leading-relaxed text-muted-foreground">{description}</p>}
     </div>
   );

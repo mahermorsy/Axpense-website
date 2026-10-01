@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12210.168 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{305EF923-6306-54F3-85E0-AE57DAF4F982}"
 EndProject
@@ -16,6 +15,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axpense.Api", "src\Axpense.Api\Axpense.Api.csproj", "{33998FEF-5224-5DC9-A291-C7CF82B3491F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axpense.Tests", "tests\Axpense.Tests\Axpense.Tests.csproj", "{D6DB8AC8-5BA2-56EC-9D7B-6C1DA87C1122}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64808149-287F-4A0F-9F97-A4B09ECBDCAD}"
+	ProjectSection(SolutionItems) = preProject
+		.env.production = .env.production
+		docker-compose.prod.yml = docker-compose.prod.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,11 +49,17 @@ Global
 		{D6DB8AC8-5BA2-56EC-9D7B-6C1DA87C1122}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6DB8AC8-5BA2-56EC-9D7B-6C1DA87C1122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C9070765-63A6-56EE-BC77-2C7908DBA34E} = {305EF923-6306-54F3-85E0-AE57DAF4F982}
 		{AB5BAA12-3766-5CBD-AD9B-6E1EB7AD4F71} = {305EF923-6306-54F3-85E0-AE57DAF4F982}
 		{018B45D5-B08E-5359-A03E-5C063E2E9E48} = {305EF923-6306-54F3-85E0-AE57DAF4F982}
 		{33998FEF-5224-5DC9-A291-C7CF82B3491F} = {305EF923-6306-54F3-85E0-AE57DAF4F982}
 		{D6DB8AC8-5BA2-56EC-9D7B-6C1DA87C1122} = {ABCAD5BB-7FA4-5E3B-8C09-43B771B21C5E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D00CBD3-0736-486D-8640-09F539E25715}
 	EndGlobalSection
 EndGlobal

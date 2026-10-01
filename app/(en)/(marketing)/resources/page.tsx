@@ -5,10 +5,11 @@ import { ResourcesView } from '@/components/pages/ListingViews';
 const LANG = 'en';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Resources',
-  description: 'Guides and tools for fleet and asset management, including a fleet management guide and a maintenance checklist.',
+  title: "Free Fleet Resources",
+  description: "Free fleet tools and guides: a cost per km calculator, a vehicle inspection checklist, a preventive maintenance checklist and practical fleet articles.",
   path: '/resources',
   arPath: '/ar/resources',
+  pageType: 'hub',
 });
 
 export default function Page() {

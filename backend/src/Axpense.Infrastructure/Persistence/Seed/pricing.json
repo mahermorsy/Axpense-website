@@ -1,0 +1,458 @@
+{
+  "minVehicles": 5,
+  "customAbove": 500,
+  "defaultCurrency": "EGP",
+  "updatedAt": "2026-09-30",
+  "currencies": [
+    {
+      "code": "EGP",
+      "flag": "🇪🇬",
+      "symbol": "EGP",
+      "symbolAr": "ج.م",
+      "name": {
+        "en": "Egyptian Pound",
+        "ar": "جنيه مصري"
+      },
+      "decimals": 0,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 350
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 320
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 290
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 260
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 230
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 200
+        }
+      ]
+    },
+    {
+      "code": "USD",
+      "flag": "🇺🇸",
+      "symbol": "$",
+      "symbolAr": "$",
+      "name": {
+        "en": "US Dollar",
+        "ar": "دولار أمريكي"
+      },
+      "decimals": 2,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 10
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 9
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 8.25
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 7.5
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 6.5
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 5.75
+        }
+      ]
+    },
+    {
+      "code": "SAR",
+      "flag": "🇸🇦",
+      "symbol": "SAR",
+      "symbolAr": "ر.س",
+      "name": {
+        "en": "Saudi Riyal",
+        "ar": "ريال سعودي"
+      },
+      "decimals": 0,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 38
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 34
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 31
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 28
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 24
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 22
+        }
+      ]
+    },
+    {
+      "code": "AED",
+      "flag": "🇦🇪",
+      "symbol": "AED",
+      "symbolAr": "د.إ",
+      "name": {
+        "en": "UAE Dirham",
+        "ar": "درهم إماراتي"
+      },
+      "decimals": 0,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 37
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 33
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 30
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 28
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 24
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 21
+        }
+      ]
+    },
+    {
+      "code": "QAR",
+      "flag": "🇶🇦",
+      "symbol": "QAR",
+      "symbolAr": "ر.ق",
+      "name": {
+        "en": "Qatari Riyal",
+        "ar": "ريال قطري"
+      },
+      "decimals": 0,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 36
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 33
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 30
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 27
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 24
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 21
+        }
+      ]
+    },
+    {
+      "code": "KWD",
+      "flag": "🇰🇼",
+      "symbol": "KWD",
+      "symbolAr": "د.ك",
+      "name": {
+        "en": "Kuwaiti Dinar",
+        "ar": "دينار كويتي"
+      },
+      "decimals": 2,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 3.1
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 2.75
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 2.55
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 2.3
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 2
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 1.75
+        }
+      ]
+    },
+    {
+      "code": "BHD",
+      "flag": "🇧🇭",
+      "symbol": "BHD",
+      "symbolAr": "د.ب",
+      "name": {
+        "en": "Bahraini Dinar",
+        "ar": "دينار بحريني"
+      },
+      "decimals": 2,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 3.75
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 3.4
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 3.1
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 2.8
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 2.45
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 2.15
+        }
+      ]
+    },
+    {
+      "code": "OMR",
+      "flag": "🇴🇲",
+      "symbol": "OMR",
+      "symbolAr": "ر.ع",
+      "name": {
+        "en": "Omani Rial",
+        "ar": "ريال عماني"
+      },
+      "decimals": 2,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 3.85
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 3.45
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 3.15
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 2.9
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 2.5
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 2.2
+        }
+      ]
+    },
+    {
+      "code": "EUR",
+      "flag": "🇪🇺",
+      "symbol": "€",
+      "symbolAr": "€",
+      "name": {
+        "en": "Euro",
+        "ar": "يورو"
+      },
+      "decimals": 2,
+      "annualDiscountPercent": 20,
+      "tiers": [
+        {
+          "min": 5,
+          "max": 10,
+          "example": 10,
+          "monthly": 8.75
+        },
+        {
+          "min": 11,
+          "max": 25,
+          "example": 25,
+          "monthly": 8
+        },
+        {
+          "min": 26,
+          "max": 50,
+          "example": 50,
+          "monthly": 7.25
+        },
+        {
+          "min": 51,
+          "max": 100,
+          "example": 100,
+          "monthly": 6.5
+        },
+        {
+          "min": 101,
+          "max": 250,
+          "example": 150,
+          "monthly": 5.75
+        },
+        {
+          "min": 251,
+          "max": 500,
+          "example": 300,
+          "monthly": 5
+        }
+      ]
+    }
+  ]
+}
