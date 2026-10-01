@@ -25,7 +25,7 @@ function isDemoPath(pathname: string) {
   return pathname === '/demo' || pathname === '/ar/demo';
 }
 
-export function DemoModalProvider({ lang, children }: { lang: Lang; children: React.ReactNode }) {
+export function DemoModalProvider({ lang }: { lang: Lang }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname() || '/';
   const searchParams = useSearchParams();
@@ -97,10 +97,10 @@ export function DemoModalProvider({ lang, children }: { lang: Lang; children: Re
     router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });
   }
 
+  if (!open) return null;
   return (
-    <div>
-      {children}
-      {open && (
+    <>
+      {(
         <div className="fixed inset-0 z-[100] overflow-y-auto bg-foreground/50 px-4 py-6 backdrop-blur-sm sm:py-10" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" onClick={close}>
           <div className="mx-auto max-w-2xl rounded-xl border border-border bg-card p-5 shadow-elevated sm:p-7" onClick={(event) => event.stopPropagation()}>
             <div className="mb-6 flex items-start justify-between gap-4">
@@ -116,6 +116,6 @@ export function DemoModalProvider({ lang, children }: { lang: Lang; children: Re
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
