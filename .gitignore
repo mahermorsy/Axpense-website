@@ -17,3 +17,6 @@ backend/**/TestResults/
 .env.production
 
 *.tsbuildinfo
+
+# Local backend runner (contains local test credentials)
+backend/run-local.cmd
